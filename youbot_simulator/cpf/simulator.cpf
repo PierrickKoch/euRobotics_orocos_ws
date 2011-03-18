@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <simple name="Level" type="long"><description>The level of continuity of the system model</description><value>0</value></simple>
+  <simple name="SysNoiseMean" type="double"><description>The mean of the system uncertainty distribution</description><value>0</value></simple>
+  <simple name="SysNoiseCovariance" type="double"><description>The covariance of the system uncertainty distribution</description><value>1</value></simple>
+  <struct name="MeasModelMatrix" type="Matrix">
+     <description>Matrix for linear measurement model</description>
+     <struct name="1" type="RowVector">
+        <description>1th row of matrix</description>
+        <simple name="Element0" type="double"><description>Sequence Element</description><value>0</value></simple>
+        <simple name="Element1" type="double"><description>Sequence Element</description><value>1</value></simple>
+        <simple name="Element2" type="double"><description>Sequence Element</description><value>0</value></simple>
+     </struct>
+  </struct>
+  <struct name="MeasModelCovariance" type="SymmetricMatrix">
+     <description>Covariance matrix of additive Gaussian noise on measurement model</description>
+     <struct name="1" type="RowVector">
+        <description>1th row of matrix</description>
+        <simple name="Element0" type="double"><description>Sequence Element</description><value>0.01</value></simple>
+     </struct>
+  </struct>
+  <struct name="MeasNoiseMean" type="ColumnVector">
+     <description>The mean of the measurement noise distribution</description>
+     <simple name="Element0" type="double"><description>Sequence Element</description><value>0</value></simple>
+     <simple name="Element1" type="double"><description>Sequence Element</description><value>0</value></simple>
+     <simple name="Element2" type="double"><description>Sequence Element</description><value>0</value></simple>
+  </struct>
+  <struct name="MeasNoiseCovariance" type="SymmetricMatrix">
+     <description>The covariance of the measurement noise distribution</description>
+     <struct name="1" type="RowVector">
+        <description>1th row of matrix</description>
+        <simple name="Element0" type="double"><description>Sequence Element</description><value>10</value></simple>
+        <simple name="Element1" type="double"><description>Sequence Element</description><value>0</value></simple>
+        <simple name="Element2" type="double"><description>Sequence Element</description><value>0</value></simple>
+     </struct>
+     <struct name="2" type="RowVector">
+        <description>2th row of matrix</description>
+        <simple name="Element0" type="double"><description>Sequence Element</description><value>0</value></simple>
+        <simple name="Element1" type="double"><description>Sequence Element</description><value>10</value></simple>
+        <simple name="Element2" type="double"><description>Sequence Element</description><value>0</value></simple>
+     </struct>
+     <struct name="3" type="RowVector">
+        <description>3th row of matrix</description>
+        <simple name="Element0" type="double"><description>Sequence Element</description><value>0</value></simple>
+        <simple name="Element1" type="double"><description>Sequence Element</description><value>0</value></simple>
+        <simple name="Element2" type="double"><description>Sequence Element</description><value>10</value></simple>
+     </struct>
+  </struct>
+  <simple name="PosStateDimension" type="long"><description>The dimension of the state space, only at position level</description><value>3</value></simple>
+  <simple name="MeasDimension" type="long"><description>The dimension of the measurement space</description><value>1</value></simple>
+  <simple name="Period" type="double"><description>Period at which the system model gets updated</description><value>0.01</value></simple>
+  <struct name="State" type="ColumnVector">
+     <description>The system state: (x,y,theta) for level = 0, ..</description>
+     <simple name="Element0" type="double"><description>Sequence Element</description><value>0</value></simple>
+     <simple name="Element1" type="double"><description>Sequence Element</description><value>0</value></simple>
+     <simple name="Element2" type="double"><description>Sequence Element</description><value>0</value></simple>
+  </struct>
+</properties>

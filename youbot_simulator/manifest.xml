@@ -1,0 +1,17 @@
+<package>
+    <description brief="Orocos youbot_simulator Component package">
+
+        This package contains the components of the youbot_simulator package
+
+    </description>
+    <license>LGPLv2.1 / BSD</license>
+    <author>Steven Bellens - steven.bellens@mech.kuleuven.be</author>
+    <depend package="rtt" />
+    <depend package="orocos_bfl" />
+    <depend package="bfl_typekit" />
+    <depend package="rtt_ros_param"/>
+    <depend package="rtt_ros_integration"/>
+    <depend package="geometry_msgs" />
+    <depend package="rtt_ros_integration_geometry_msgs" />
+
+</package>

@@ -1,0 +1,6 @@
+<launch>
+  <rosparam command="load" file="$(find youbot_simulator)/simulator.yaml"/>
+  <node  name="controller" pkg="ocl" type="deployer-gnulinux"
+  launch-prefix="xterm -e" args="-ldebug -s $(find youbot_simulator)/simulator.ops --">
+  </node>
+</launch>
