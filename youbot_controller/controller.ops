@@ -1,0 +1,24 @@
+import("youbot_controller")
+
+# Set up Controller component
+loadComponent("Controller","youbot::Controller")
+
+# Set up periodic activity
+setActivity("Controller",0.01,HighestPriority,ORO_SCHED_RT)
+
+# Create connections
+var ConnPolicy cp
+cp.transport = 3
+cp.name_id = "controller/ctrl"
+stream("Controller.ctrl",cp)
+
+# Load properties
+loadService("Controller","rosparam")
+Controller.rosparam.refreshProperty("goal_tolerance",false,true)
+Controller.rosparam.refreshProperty("control_velocity",false,true)
+
+# Configuring components
+Controller.configure()
+
+# Starting components
+Controller.start()
