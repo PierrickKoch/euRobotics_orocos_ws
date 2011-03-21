@@ -4,11 +4,11 @@ import("youbot_supervisor")
 loadComponent("ExtendedKalmanFilterComponentRobot","ExtendedKalmanFilterComponentRobot")
 loadComponent("Timer","OCL::TimerComponent")
 loadComponent("Controller","youbot::Controller")
-loadComponent("CalculateDistanceToWall","CalculateDistanceToWall")
-loadComponent("rtt_tf","rtt_tf::RTT_TF")
+loadComponent("Simulator","youbot::Simulator")
 loadComponent("Reporter","OCL::FileReporting")
 
 #Set the components activity
+setActivity("Simulator",0.01,HighestPriority,ORO_SCHED_RT)
 setActivity("Controller",0.01,HighestPriority,ORO_SCHED_RT)
 setActivity("ExtendedKalmanFilterComponentRobot",0.0,HighestPriority,ORO_SCHED_RT)
 setActivity("Timer",0.01,HighestPriority,ORO_SCHED_RT)
@@ -17,29 +17,31 @@ setActivity("Reporter",0.001,LowestPriority,ORO_SCHED_OTHER)
 # load service
 loadService("ExtendedKalmanFilterComponentRobot","marshalling")
 loadService("Reporter","marshalling")
-loadService("CalculateDistanceToWall","marshalling")
 loadService("Controller","rosparam")
+loadService("Simulator","marshalling")
 
 # Connect peers
-#connectPeers("Controller","Youbot")
+connectPeers("Controller","Simulator")
 connectPeers("ExtendedKalmanFilterComponentRobot","Timer")
-connectPeers("CalculateDistanceToWall","rtt_tf")
-connectPeers("CalculateDistanceToWall","ExtendedKalmanFilterComponentRobot")
+connectPeers("ExtendedKalmanFilterComponentRobot","Controller")
+connectPeers("ExtendedKalmanFilterComponentRobot","Simulator")
 connectPeers("Reporter","ExtendedKalmanFilterComponentRobot")
+connectPeers("Reporter","Controller")
+connectPeers("Reporter","Simulator")
 
 # Load properties
 Controller.rosparam.refreshProperty("goal_tolerance",false,true)
 Controller.rosparam.refreshProperty("control_velocity",false,true)
 ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("/home/u0063509/src/svn/stacks/euRobotics_orocos_ws/extendedKalmanFilterComponent/cpf/ekfRobot.cpf")
+Simulator.marshalling.loadProperties("/home/u0063509/src/svn/stacks/euRobotics_orocos_ws/youbot_simulator/cpf/simulator.cpf")
 
 # Create connections
 var ConnPolicy cp
-#connect("Controller.ctrl","Youbot.cmd_twist",cp)
+connect("Controller.ctrl","Simulator.ctrl",cp)
 connect("Timer.timeout","ExtendedKalmanFilterComponentRobot.TimerId",cp)
-connect("ExtendedKalmanFilterComponentRobot.Measurement","CalculateDistanceToWall.DistanceToWall",cp)
+connect("ExtendedKalmanFilterComponentRobot.EstimatedState","Controller.current_pose",cp)
+connect("Simulator.measurement","ExtendedKalmanFilterComponentRobot.Measurement",cp)
 cp.transport = 3
-cp.name_id = "scan"
-stream("CalculateDistanceToWall.LaserScan",cp)
 cp.name_id = "controller/ctrl"
 stream("Controller.ctrl",cp)
 
@@ -47,14 +49,12 @@ stream("Controller.ctrl",cp)
 Controller.configure()
 ExtendedKalmanFilterComponentRobot.configure()
 Timer.configure()
-rtt_tf.configure()
-CalculateDistanceToWall.configure()
+Simulator.configure()
 
 # Starting components
-rtt_tf.start()
 ExtendedKalmanFilterComponentRobot.start()
-CalculateDistanceToWall.start()
 Controller.start()
+Simulator.start()
 
 # What ports to report
 Reporter.reportData("ExtendedKalmanFilterComponentRobot","Level")

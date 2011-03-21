@@ -9,6 +9,7 @@
 
   <depend package="youbot_controller" />
   <depend package="youbot_simulator" />
+  <depend package="extendedKalmanFilterComponent" />
 
 </package>
 
