@@ -97,7 +97,7 @@ namespace youbot{
       /// The dimension of the state space, only at position level
       int m_posStateDimension;
       /// The dimension of the measurement space
-      unsigned int m_measDimension;
+      int m_measDimension;
       /// Period at which the system model gets updated
       double m_period;
       /// The system state: (x,y,theta) for level = 0, ...

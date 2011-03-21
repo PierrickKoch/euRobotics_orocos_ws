@@ -18,6 +18,7 @@ setActivity("Reporter",0.001,LowestPriority,ORO_SCHED_OTHER)
 loadService("ExtendedKalmanFilterComponentRobot","marshalling")
 loadService("Reporter","marshalling")
 loadService("Controller","rosparam")
+loadService("Simulator","rosparam")
 loadService("Simulator","marshalling")
 
 # Connect peers
@@ -32,8 +33,18 @@ connectPeers("Reporter","Simulator")
 # Load properties
 Controller.rosparam.refreshProperty("goal_tolerance",false,true)
 Controller.rosparam.refreshProperty("control_velocity",false,true)
-ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("/home/u0063509/src/svn/stacks/euRobotics_orocos_ws/extendedKalmanFilterComponent/cpf/ekfRobot.cpf")
+#Simulator.rosparam.refreshProperty("Level",false,true)
+#Simulator.rosparam.refreshProperty("MeasModelCovariance",false,true)
+#Simulator.rosparam.refreshProperty("MeasModelMatrix",false,true)
+#Simulator.rosparam.refreshProperty("MeasNoiseCovariance",false,true)
+#Simulator.rosparam.refreshProperty("MeasNoiseMean",false,true)
+#Simulator.rosparam.refreshProperty("Period",false,true)
+#Simulator.rosparam.refreshProperty("PosStateDimension",false,true)
+#Simulator.rosparam.refreshProperty("MeasDimension",false,true)
+#Simulator.rosparam.refreshProperty("SysNoiseCovariance",false,true)
+#Simulator.rosparam.refreshProperty("SysNoiseMean",false,true)
 Simulator.marshalling.loadProperties("/home/u0063509/src/svn/stacks/euRobotics_orocos_ws/youbot_simulator/cpf/simulator.cpf")
+ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("/home/u0063509/src/svn/stacks/euRobotics_orocos_ws/extendedKalmanFilterComponent/cpf/ekfRobot.cpf")
 
 # Create connections
 var ConnPolicy cp
@@ -47,14 +58,14 @@ stream("Controller.ctrl",cp)
 
 # Configuring components
 Controller.configure()
-ExtendedKalmanFilterComponentRobot.configure()
 Timer.configure()
 Simulator.configure()
+ExtendedKalmanFilterComponentRobot.configure()
 
 # Starting components
+Simulator.start()
 ExtendedKalmanFilterComponentRobot.start()
 Controller.start()
-Simulator.start()
 
 # What ports to report
 Reporter.reportData("ExtendedKalmanFilterComponentRobot","Level")

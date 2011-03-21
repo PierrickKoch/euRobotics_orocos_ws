@@ -1,1 +1,14 @@
 Simulator:
+  Level: 0
+  MeasDimension: 1
+  MeasModelCovariance:
+    '1': {Element0: 0.01}
+  MeasModelMatrix:
+    '1': {Element0: 0.0, Element1: 1.0, Element2: 0.0}
+  MeasNoiseCovariance:
+    '1': {Element0: 10.0}
+  MeasNoiseMean: {Element0: 0.0}
+  Period: 0.01
+  PosStateDimension: 3
+  SysNoiseCovariance: 1.0
+  SysNoiseMean: 0.0
