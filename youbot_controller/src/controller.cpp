@@ -68,7 +68,7 @@ namespace youbot{
   void Controller::updateHook(){
     /// get the time since the last update
     m_time_passed = RTT::os::TimeService::Instance()->secondsSince(m_time_begin);
-    if(goal_pose_port_status != NoData || current_pose_port_status != NoData){
+    if(goal_pose_port_status != NoData && current_pose_port_status != NoData){
       /// calculate the pose difference
       calcPoseDiff();
 
