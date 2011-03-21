@@ -1,0 +1,15 @@
+<package>
+  <description brief="youbot_supervisor">
+
+     youbot_supervisor
+
+  </description>
+  <author>Steven Bellens, steven.bellens@mech.kuleuven.be</author>
+  <license>LGPLv2.1 / BSD</license>
+
+  <depend package="youbot_controller" />
+  <depend package="youbot_simulator" />
+
+</package>
+
+

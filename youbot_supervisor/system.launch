@@ -1,0 +1,8 @@
+<launch>
+  <rosparam command="load" file="$(find youbot_controller)/controller.yaml"/>
+  <node  name="youbot" pkg="ocl" type="deployer-gnulinux" required="true" launch-prefix="xterm -e" args="-linfo -s $(find youbot_supervisor)/deploy.ops --">
+  </node>
+
+  <node name="rosbag" pkg="rosbag" type="rosbag" args="record -a -o pelican">
+  </node>
+</launch>

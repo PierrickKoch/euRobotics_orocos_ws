@@ -1,0 +1,15 @@
+<stack>
+  <description brief="euRobotics_orocos_ws">
+
+    Stack containing all software for the orocos workshop at the euRobotics
+    Forum
+
+  </description>
+  <author>Steven Bellens, Tinne De Laet</author>
+  <license>LGPLv2.1 / BSD</license>
+  <review status="unreviewed" notes=""/>
+
+  <depend stack="ros"/>
+  <depend stack="orocos_toolchain_ros"/>
+
+</stack>

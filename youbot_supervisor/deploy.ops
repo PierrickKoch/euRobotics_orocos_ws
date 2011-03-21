@@ -1,0 +1,34 @@
+import("youbot_supervisor")
+
+# Set up Simulator component
+loadComponent("Simulator","youbot::Simulator")
+loadComponent("Controller","youbot::Controller")
+
+# Set up periodic activity
+setActivity("Simulator",0.01,HighestPriority,ORO_SCHED_RT)
+setActivity("Controller",0.01,HighestPriority,ORO_SCHED_RT)
+
+# Load properties
+loadService("Simulator","marshalling")
+Simulator.marshalling.loadProperties("../src/svn/stacks/euRobotics_orocos_ws/youbot_simulator/cpf/simulator.cpf")
+loadService("Controller","rosparam")
+Controller.rosparam.refreshProperty("goal_tolerance",false,true)
+Controller.rosparam.refreshProperty("control_velocity",false,true)
+
+# Connect peers
+connectPeers("Controller","Simulator")
+
+# Create connections
+var ConnPolicy cp
+connect("Controller.ctrl","Simulator.ctrl",cp)
+cp.transport = 3
+cp.name_id = "controller/ctrl"
+stream("Controller.ctrl",cp)
+
+# Configuring components
+Controller.configure()
+Simulator.configure()
+
+# Starting components
+Simulator.start()
+Controller.start()
