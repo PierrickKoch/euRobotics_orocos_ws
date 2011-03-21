@@ -145,24 +145,19 @@ namespace youbot{
   }
 
   bool Simulator::startHook(){
-    //m_ctrl_input.linear.x = 0.0;
-    //m_ctrl_input.linear.y = 0.5;
-    //m_ctrl_input.angular.z = 0.0;
     return true;
   }
 
   void Simulator::updateHook(){
-    if(ctrl_port.read(m_ctrl_input) != NoData){
-      log(Debug) << "(Simulator - updateHook) Received control input - simulating system" << endlog();
-      m_inputs[0] = m_ctrl_input.linear.x;
-      m_inputs[1] = m_ctrl_input.linear.y;
-      m_inputs[2] = m_ctrl_input.angular.z;
-      m_inputs[3] = m_period;
-      // simulate the system one time step
-      m_state = m_sysModel->Simulate(m_state,m_inputs);
-      // simulate a new measurement
-      measurement_port.write(m_measModel->Simulate(m_state));
-    }
+    ctrl_port.read(m_ctrl_input);
+    m_inputs[0] = m_ctrl_input.linear.x;
+    m_inputs[1] = m_ctrl_input.linear.y;
+    m_inputs[2] = m_ctrl_input.angular.z;
+    m_inputs[3] = m_period;
+    // simulate the system one time step
+    m_state = m_sysModel->Simulate(m_state,m_inputs);
+    // simulate a new measurement
+    measurement_port.write(m_measModel->Simulate(m_state));
   }
 
   int Simulator::factorial (int num)
