@@ -59,7 +59,7 @@
 #include <bfl/pdf/discretepdf.h>
 #include <bfl/pdf/gaussian.h>
 
-#include "nonlinearanalyticconditionalgaussianmobile.h"
+#include <extendedKalmanFilterComponent/nonlinearanalyticconditionalgaussianmobile.h>
 
 #include <geometry_msgs/Twist.h>
 
