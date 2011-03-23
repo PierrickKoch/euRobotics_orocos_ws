@@ -66,6 +66,16 @@ namespace youbot{
 #ifndef NDEBUG
     log(Debug) << "(Simulator) ConfigureHook entered" << endlog();
 #endif
+    if(m_posStateDimension == 0)
+    {
+      log(Error) << "The dimension of the state space at position level cannot be zero" << endlog();
+      return false;
+    }
+    if(m_dimension == 0 )
+    {
+      log(Error) << "The dimension of the measurement space cannot be zero" << endlog();
+      return false;
+    }
     // dimension of the state
     m_dimension = m_posStateDimension * (m_level+1);
 
@@ -89,7 +99,7 @@ namespace youbot{
     sysNoiseMatrixOne = 0.0;
     Matrix sysNoiseMatrixNonSymOne = Matrix(m_level+1,m_level+1);
     sysNoiseMatrixNonSymOne = 0.0;
-    for(int i =0 ; i<=m_level; i++)
+    for(unsigned int i =0 ; i<=m_level; i++)
     {
       sysNoiseVector(i+1) = pow(m_period,m_level-i+1)/double(factorial(m_level-i+1));
     }
@@ -98,11 +108,11 @@ namespace youbot{
 
     SymmetricMatrix sysNoiseMatrix = SymmetricMatrix(m_dimension);
     sysNoiseMatrix = 0.0;
-    for(int i =0 ; i<=m_level; i++)
+    for(unsigned int i =0 ; i<=m_level; i++)
     {
-      for(int j =0 ; j<=m_level; j++)
+      for(unsigned int j =0 ; j<=m_level; j++)
       {
-        for (int k=1 ; k <=m_posStateDimension; k++)
+        for (unsigned int k=1 ; k <=m_posStateDimension; k++)
         {
           sysNoiseMatrix(i*m_posStateDimension+k,j*m_posStateDimension+k)=sysNoiseMatrixOne(i+1,j+1);
         }

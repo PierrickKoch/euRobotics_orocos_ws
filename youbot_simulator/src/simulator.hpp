@@ -81,7 +81,7 @@ namespace youbot{
       /// @name Properties
       //@{
       // The level of continuity of the system model
-      int m_level;
+      unsigned int m_level;
       /// The mean of the white noise on the system model
       double m_sysNoiseMean;
       /// The covariance of the white noise on the system model
@@ -95,9 +95,9 @@ namespace youbot{
       /// The covariance of the white noise on the measurement model
       SymmetricMatrix m_measNoiseCovariance;
       /// The dimension of the state space, only at position level
-      int m_posStateDimension;
+      unsigned int m_posStateDimension;
       /// The dimension of the measurement space
-      int m_measDimension;
+      unsigned int m_measDimension;
       /// Period at which the system model gets updated
       double m_period;
       /// The system state: (x,y,theta) for level = 0, ...
