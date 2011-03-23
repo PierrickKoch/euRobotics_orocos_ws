@@ -3,6 +3,6 @@
   <node  name="youbot" pkg="ocl" type="deployer-gnulinux" required="true" launch-prefix="xterm -e" args="-s $(find youbot_supervisor)/deploy.ops --">
   </node>
 
-  <node name="rosbag" pkg="rosbag" type="rosbag" args="record -a -o pelican">
+  <node name="rosbag" pkg="rosbag" type="rosbag" args="record -a -o youbot">
   </node>
 </launch>
