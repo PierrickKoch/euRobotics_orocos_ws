@@ -37,10 +37,6 @@ connect("Timer.timeout","ExtendedKalmanFilterComponentRobot.TimerId",cp)
 cp.transport = 3
 cp.name_id = "cmd_vel"
 stream("Controller.ctrl",cp)
-cp.name_id = "EKF/EstimatedState"
-stream("ExtendedKalmanFilterComponentRobot.EstimatedState",cp)
-cp.name_id = "EKF/CovarianceState"
-stream("ExtendedKalmanFilterComponentRobot.CovarianceState",cp)
 cp.name_id = "CalculateDistanceToWall/Measurement"
 stream("ExtendedKalmanFilterComponentRobot.Measurement",cp)
 
