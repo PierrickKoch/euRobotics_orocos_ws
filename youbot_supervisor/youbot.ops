@@ -13,7 +13,7 @@ setActivity("Timer",0.01,HighestPriority,ORO_SCHED_RT)
 connectPeers("Youbot","Timer")
 
 # Load properties
-Youbot.ifname = "eth0"
+Youbot.ifname = "eth1"
 
 # Create connections
 var ConnPolicy cp
@@ -24,7 +24,7 @@ stream("Youbot.odometry",cp)
 cp.name_id = "cmd_vel"
 stream("Youbot.cmd_twist",cp)
 cp.name_id = "CalculateDistanceToWall/Measurement"
-stream("CalculateDistanceToWall.Measurement",cp)
+stream("CalculateDistanceToWall.DistanceToWall",cp)
 
 # Configuring components
 Youbot.configure()
