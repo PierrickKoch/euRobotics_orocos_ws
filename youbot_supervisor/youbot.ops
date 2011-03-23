@@ -1,0 +1,39 @@
+import("youbot_supervisor")
+
+#Create the components we need
+loadComponent("Youbot","youbot_master::YouBotMasterComponent")
+loadComponent("Timer","OCL::TimerComponent")
+loadComponent("CalculateDistanceToWall","CalculateDistanceToWall")
+
+#Set the components activity
+setActivity("Youbot",0.001,HighestPriority,ORO_SCHED_RT)
+setActivity("Timer",0.01,HighestPriority,ORO_SCHED_RT)
+
+# Connect peers
+connectPeers("Youbot","Timer")
+
+# Load properties
+Youbot.ifname = "eth0"
+
+# Create connections
+var ConnPolicy cp
+connect("Youbot.watchdog","Timer.timeout",cp)
+cp.transport = 3
+cp.name_id = "odometry"
+stream("Youbot.odometry",cp)
+cp.name_id = "cmd_vel"
+stream("Youbot.cmd_twist",cp)
+cp.name_id = "CalculateDistanceToWall/Measurement"
+stream("CalculateDistanceToWall.Measurement",cp)
+
+# Configuring components
+Youbot.configure()
+Timer.configure()
+rtt_tf.configure()
+CalculateDistanceToWall.configure()
+
+# Starting components
+rtt_tf.start()
+CalculateDistanceToWall.start()
+Timer.startTimer(Youbot.state_timer,0.1)
+Timer.startTimer(Youbot.command_timer,10)

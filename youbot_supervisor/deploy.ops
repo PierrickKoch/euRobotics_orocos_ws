@@ -4,7 +4,6 @@ import("youbot_supervisor")
 loadComponent("ExtendedKalmanFilterComponentRobot","ExtendedKalmanFilterComponentRobot")
 loadComponent("Timer","OCL::TimerComponent")
 loadComponent("Controller","youbot::Controller")
-loadComponent("CalculateDistanceToWall","CalculateDistanceToWall")
 loadComponent("rtt_tf","rtt_tf::RTT_TF")
 loadComponent("Reporter","OCL::FileReporting")
 
@@ -17,17 +16,16 @@ setActivity("Reporter",0.001,LowestPriority,ORO_SCHED_OTHER)
 # load service
 loadService("ExtendedKalmanFilterComponentRobot","marshalling")
 loadService("Reporter","marshalling")
-loadService("CalculateDistanceToWall","marshalling")
 loadService("Controller","rosparam")
 
 # Connect peers
 #connectPeers("Controller","Youbot")
 connectPeers("ExtendedKalmanFilterComponentRobot","Timer")
-connectPeers("CalculateDistanceToWall","rtt_tf")
-connectPeers("CalculateDistanceToWall","ExtendedKalmanFilterComponentRobot")
+connectPeers("ExtendedKalmanFilterComponentRobot","Controller")
 connectPeers("Reporter","ExtendedKalmanFilterComponentRobot")
 
 # Load properties
+# Set Youbot Properties
 Controller.rosparam.refreshProperty("goal_tolerance",false,true)
 Controller.rosparam.refreshProperty("control_velocity",false,true)
 ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("/home/u0063509/src/svn/stacks/euRobotics_orocos_ws/extendedKalmanFilterComponent/cpf/ekfRobot.cpf")
@@ -36,28 +34,29 @@ ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("/home/u0063509/sr
 var ConnPolicy cp
 #connect("Controller.ctrl","Youbot.cmd_twist",cp)
 connect("Timer.timeout","ExtendedKalmanFilterComponentRobot.TimerId",cp)
-connect("ExtendedKalmanFilterComponentRobot.Measurement","CalculateDistanceToWall.DistanceToWall",cp)
 cp.transport = 3
-cp.name_id = "scan"
-stream("CalculateDistanceToWall.LaserScan",cp)
-cp.name_id = "controller/ctrl"
+cp.name_id = "cmd_vel"
 stream("Controller.ctrl",cp)
+cp.name_id = "EKF/EstimatedState"
+stream("ExtendedKalmanFilterComponentRobot.EstimatedState",cp)
+cp.name_id = "EKF/CovarianceState"
+stream("ExtendedKalmanFilterComponentRobot.CovarianceState",cp)
+cp.name_id = "CalculateDistanceToWall/Measurement"
+stream("ExtendedKalmanFilterComponentRobot.Measurement",cp)
 
 # Configuring components
 Controller.configure()
 ExtendedKalmanFilterComponentRobot.configure()
 Timer.configure()
 rtt_tf.configure()
-CalculateDistanceToWall.configure()
 
 # Starting components
 rtt_tf.start()
 ExtendedKalmanFilterComponentRobot.start()
-CalculateDistanceToWall.start()
 Controller.start()
 
 # What ports to report
-Reporter.reportData("ExtendedKalmanFilterComponentRobot","Level")
-Reporter.reportPort("ExtendedKalmanFilterComponentRobot","EstimatedState")
-Reporter.reportPort("ExtendedKalmanFilterComponentRobot","CovarianceState")
-Reporter.start()
+#Reporter.reportData("ExtendedKalmanFilterComponentRobot","Level")
+#Reporter.reportPort("ExtendedKalmanFilterComponentRobot","EstimatedState")
+#Reporter.reportPort("ExtendedKalmanFilterComponentRobot","CovarianceState")
+#Reporter.start()
