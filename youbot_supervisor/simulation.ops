@@ -1,6 +1,7 @@
 import("youbot_supervisor")
 
 #Create the components we need
+loadComponent("Supervisor","OCL::LuaComponent")
 loadComponent("ExtendedKalmanFilterComponentRobot","ExtendedKalmanFilterComponentRobot")
 loadComponent("Timer","OCL::TimerComponent")
 loadComponent("Controller","youbot::Controller")
@@ -8,6 +9,7 @@ loadComponent("Simulator","youbot::Simulator")
 loadComponent("Reporter","OCL::FileReporting")
 
 #Set the components activity
+setActivity("Supervisor",0.1,HighestPriority,ORO_SCHED_RT)
 setActivity("Simulator",0.01,HighestPriority,ORO_SCHED_RT)
 setActivity("Controller",0.01,HighestPriority,ORO_SCHED_RT)
 setActivity("ExtendedKalmanFilterComponentRobot",0.0,HighestPriority,ORO_SCHED_RT)
@@ -22,6 +24,9 @@ loadService("Simulator","rosparam")
 loadService("Simulator","marshalling")
 
 # Connect peers
+connectPeers("Supervisor","Controller")
+connectPeers("Supervisor","Simulator")
+connectPeers("Supervisor","ExtendedKalmanFilterComponentRobot")
 connectPeers("Controller","Simulator")
 connectPeers("ExtendedKalmanFilterComponentRobot","Timer")
 connectPeers("ExtendedKalmanFilterComponentRobot","Controller")
@@ -66,6 +71,12 @@ ExtendedKalmanFilterComponentRobot.configure()
 Simulator.start()
 ExtendedKalmanFilterComponentRobot.start()
 Controller.start()
+
+# Start the supervisor and run the state machine
+Supervisor.exec_file("/home/u0063509/src/svn/stacks/euRobotics_orocos_ws/youbot_supervisor/run.lua")
+
+Supervisor.configure
+Supervisor.start
 
 # What ports to report
 Reporter.reportData("ExtendedKalmanFilterComponentRobot","Level")
