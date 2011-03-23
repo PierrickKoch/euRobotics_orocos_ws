@@ -62,6 +62,7 @@
 #include <bfl/pdf/gaussian.h>
 
 #include <geometry_msgs/Twist.h>
+#include <geometry_msgs/Pose2D.h>
 
 namespace youbot{
 
@@ -76,7 +77,7 @@ namespace youbot{
       /// Youbot current pose
       InputPort<ColumnVector> current_pose_port;
       /// Youbot goal pose
-      InputPort<ColumnVector> goal_pose_port;
+      InputPort<geometry_msgs::Pose2D> goal_pose_port;
       /// Youbot control input
       OutputPort<geometry_msgs::Twist> ctrl_port;
       //@}
@@ -117,7 +118,7 @@ namespace youbot{
 
     private:
       /// Youbot goal pose
-      ColumnVector m_goal_pose;
+      geometry_msgs::Pose2D m_goal_pose;
       /// Youbot current pose
       ColumnVector m_current_pose;
       /// Youbot pose difference

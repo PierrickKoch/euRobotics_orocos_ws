@@ -45,8 +45,8 @@ namespace youbot{
   ,m_velocity(3,0.0)
   ,m_time_passed(0.0)
   {
-    this->addEventPort("current_pose",current_pose_port,boost::bind(&Controller::measUpdate,this,_1)).doc("Youbot pose");
-    this->addEventPort("goal_pose",goal_pose_port,boost::bind(&Controller::goalUpdate,this,_1)).doc("Youbot goal pose");
+    this->addPort("current_pose",current_pose_port).doc("Youbot pose");
+    this->addPort("goal_pose",goal_pose_port).doc("Youbot goal pose");
     this->addPort("ctrl",ctrl_port).doc("Youbot control input");
     this->addProperty("goal_tolerance",m_goal_tolerance).doc("Tolerance on goal pose [x y yaw]");
     this->addProperty("control_velocity",m_velocity).doc("Control velocity");
@@ -55,39 +55,36 @@ namespace youbot{
   Controller::~Controller(){}
 
   bool Controller::configureHook(){
+    m_delta_pose.resize(3);
     return true;
   }
 
   bool Controller::startHook(){
     m_time_begin = RTT::os::TimeService::Instance()->getTicks();
-    goal_pose_port_status = goal_pose_port.read(m_goal_pose);
-    current_pose_port_status = current_pose_port.read(m_current_pose);
     return true;
   }
 
   void Controller::updateHook(){
     /// get the time since the last update
     m_time_passed = RTT::os::TimeService::Instance()->secondsSince(m_time_begin);
+    /// read in current pose and goal pose
+    goal_pose_port_status = goal_pose_port.read(m_goal_pose);
+    current_pose_port_status = current_pose_port.read(m_current_pose);
+
     if(goal_pose_port_status != NoData && current_pose_port_status != NoData){
       /// calculate the pose difference
       calcPoseDiff();
 
       // generate control inputs
       // don't do anything for those DOFs that are within the specified tolerance
-      if(abs(m_delta_pose[0]) > m_goal_tolerance[0]){
-        if(m_delta_pose[0] > 0) m_ctrl.linear.x = abs(m_velocity[0]);
-        else m_ctrl.linear.x = -abs(m_velocity[0]);
+      if(abs(m_delta_pose[1]) > m_goal_tolerance[1]){
+        if(m_delta_pose[1] > 0) m_ctrl.linear.x = -abs(m_velocity[1]);
+        else m_ctrl.linear.x = abs(m_velocity[1]);
       }
-      if(abs(m_delta_pose[1]) < m_goal_tolerance[1]){
-        if(m_delta_pose[1] > 0) m_ctrl.linear.y = abs(m_velocity[1]);
-        else m_ctrl.linear.y = -abs(m_velocity[1]);
-      }
-      if(abs(m_delta_pose[2]) < m_goal_tolerance[2]){
+      if(abs(m_delta_pose[2]) > m_goal_tolerance[2]){
         if(m_delta_pose[2] > 0) m_ctrl.angular.z = abs(m_velocity[2]);
         else m_ctrl.angular.z = -abs(m_velocity[2]);
       }
-      // write out
-      ctrl_port.write(m_ctrl);
     }
     else{
       if(goal_pose_port_status == NoData){
@@ -96,30 +93,26 @@ namespace youbot{
       if(current_pose_port_status == NoData){
         log(Debug) << "No pose estimate received" << endlog();
       }
+      m_ctrl.linear.x = 0.0;
+      m_ctrl.linear.y = 0.0;
+      m_ctrl.linear.z = 0.0;
+      m_ctrl.angular.z = 0.0;
     }
+    // write out
+    ctrl_port.write(m_ctrl);
     m_time_begin = RTT::os::TimeService::Instance()->getTicks();
   }
 
   void Controller::calcPoseDiff(){
     // position difference expressed in the world frame
-    KDL::Vector diff_world(m_goal_pose[0] - m_current_pose[0], m_goal_pose[1] - m_current_pose[1], 0.0);
+    KDL::Vector diff_world(m_goal_pose.x - m_current_pose[0], m_goal_pose.y - m_current_pose[1], 0.0);
     // pelican to world orientation matrix
     KDL::Rotation rot = KDL::Rotation::RotZ(m_current_pose[2]);
     // transform to position difference expressed in the Youbot frame
     KDL::Vector diff_youbot = rot.Inverse(diff_world);
     m_delta_pose[0] = diff_youbot[0];
     m_delta_pose[1] = diff_youbot[1];
-    m_delta_pose[2] = m_goal_pose[2] - m_current_pose[2];
-  }
-
-  void Controller::goalUpdate(RTT::base::PortInterface* portInterface){
-    goal_pose_port_status = goal_pose_port.read(m_goal_pose);
-    this->updateHook();
-  }
-
-  void Controller::measUpdate(RTT::base::PortInterface* portInterface){
-    current_pose_port_status = current_pose_port.read(m_current_pose);
-    this->updateHook();
+    m_delta_pose[2] = m_goal_pose.theta - m_current_pose[2];
   }
 
   void Controller::stopHook(){
