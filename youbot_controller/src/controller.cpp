@@ -50,6 +50,7 @@ namespace youbot{
     this->addPort("ctrl",ctrl_port).doc("Youbot control input");
     this->addProperty("goal_tolerance",m_goal_tolerance).doc("Tolerance on goal pose [x y yaw]");
     this->addProperty("control_velocity",m_velocity).doc("Control velocity");
+    this->addProperty("current_pose",m_current_pose).doc("Current pose");
   }
 
   Controller::~Controller(){}
@@ -74,16 +75,28 @@ namespace youbot{
     if(goal_pose_port_status != NoData && current_pose_port_status != NoData){
       /// calculate the pose difference
       calcPoseDiff();
-
       // generate control inputs
       // don't do anything for those DOFs that are within the specified tolerance
+      if(abs(m_delta_pose[0]) > m_goal_tolerance[0]){
+        if(m_delta_pose[0] > 0) m_ctrl.linear.x = -abs(m_velocity[0]);
+        else m_ctrl.linear.x = abs(m_velocity[0]);
+      }
+      else{
+        m_ctrl.linear.x = 0.0;
+      }
       if(abs(m_delta_pose[1]) > m_goal_tolerance[1]){
-        if(m_delta_pose[1] > 0) m_ctrl.linear.x = -abs(m_velocity[1]);
-        else m_ctrl.linear.x = abs(m_velocity[1]);
+        if(m_delta_pose[1] > 0) m_ctrl.linear.y = -abs(m_velocity[1]);
+        else m_ctrl.linear.y = abs(m_velocity[1]);
+      }
+      else{
+        m_ctrl.linear.y = 0.0;
       }
       if(abs(m_delta_pose[2]) > m_goal_tolerance[2]){
         if(m_delta_pose[2] > 0) m_ctrl.angular.z = abs(m_velocity[2]);
         else m_ctrl.angular.z = -abs(m_velocity[2]);
+      }
+      else{
+        m_ctrl.angular.z = 0.0;
       }
     }
     else{
@@ -106,13 +119,15 @@ namespace youbot{
   void Controller::calcPoseDiff(){
     // position difference expressed in the world frame
     KDL::Vector diff_world(m_goal_pose.x - m_current_pose[0], m_goal_pose.y - m_current_pose[1], 0.0);
-    // pelican to world orientation matrix
+    // youbot to world orientation matrix
     KDL::Rotation rot = KDL::Rotation::RotZ(m_current_pose[2]);
     // transform to position difference expressed in the Youbot frame
     KDL::Vector diff_youbot = rot.Inverse(diff_world);
     m_delta_pose[0] = diff_youbot[0];
     m_delta_pose[1] = diff_youbot[1];
     m_delta_pose[2] = m_goal_pose.theta - m_current_pose[2];
+    log(Info) << "orientation matrix " << rot << endlog();
+    log(Info) << "delta_pose " << m_delta_pose << endlog();
   }
 
   void Controller::stopHook(){

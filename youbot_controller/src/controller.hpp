@@ -46,6 +46,7 @@
 #include <rtt/Component.hpp>
 
 #include <kdl/frames.hpp>
+#include <kdl/frames_io.hpp>
 
 #include <bfl/wrappers/rng/rng.h>
 #include <bfl/wrappers/matrix/matrix_wrapper.h>
