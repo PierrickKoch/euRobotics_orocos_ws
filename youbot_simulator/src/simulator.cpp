@@ -50,7 +50,6 @@ namespace youbot{
     this->addProperty("Level", m_level).doc("The level of continuity of the system model: 0 = cte position, 1= cte velocity ,... ");
     this->addProperty("SysNoiseMean", m_sysNoiseMean).doc("The mean of the noise on the marker system model");
     this->addProperty("SysNoiseCovariance", m_sysNoiseCovariance).doc("The covariance of the noise on the marker system model");
-    this->addProperty("MeasModelMatrix", m_measModelMatrix).doc("Matrix for linear measurement model");
     this->addProperty("MeasModelCovariance", m_measModelCovariance).doc("Covariance matrix of additive Gaussian noise on measurement model");
     this->addProperty("MeasNoiseMean", m_measNoiseMean).doc("The mean of the noise on the marker measurement model");
     this->addProperty("MeasNoiseCovariance", m_measNoiseCovariance).doc("The covariance of the noise on the marker measurement model");
@@ -71,7 +70,7 @@ namespace youbot{
       log(Error) << "The dimension of the state space at position level cannot be zero" << endlog();
       return false;
     }
-    if(m_dimension == 0 )
+    if(m_measDimension == 0 )
     {
       log(Error) << "The dimension of the measurement space cannot be zero" << endlog();
       return false;
@@ -129,16 +128,6 @@ namespace youbot{
     m_sysModel = new AnalyticSystemModelGaussianUncertainty(m_sysPdf);
 
     /// make measurement model
-    if(m_measDimension != m_measModelMatrix.rows())
-    {
-      log(Error) << "The size of the measurement does not fit the size of the measurement model matrix, measurement update not executed " << endlog();
-      return false;
-    }
-    if(m_dimension != m_measModelMatrix.columns() )
-    {
-      log(Error) << "The size of the measurement model matrix does not fit the state dimension, measurement update not executed " << endlog();
-      return false;
-    }
     if(m_measDimension != m_measNoiseMean.rows() )
     {
       log(Error) << "The size of the measurement does not fit the size of the mean of te mesurement noise, measurement update not executed " << endlog();
@@ -149,8 +138,8 @@ namespace youbot{
       log(Error) << "The size of the measurement covariance matrix  does not fit the size of the mean of te mesurement noise, measurement update not executed " << endlog();
     }
     Gaussian measurement_Uncertainty(m_measNoiseMean, m_measModelCovariance);
-    m_measPdf = new LinearAnalyticConditionalGaussian(m_measModelMatrix,measurement_Uncertainty);
-    m_measModel = new LinearAnalyticMeasurementModelGaussianUncertainty(m_measPdf);
+    m_measPdf = new YoubotLaserPdf(measurement_Uncertainty);
+    m_measModel = new AnalyticMeasurementModelGaussianUncertainty(m_measPdf);
     return true;
   }
 
