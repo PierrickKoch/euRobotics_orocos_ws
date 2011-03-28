@@ -21,6 +21,7 @@ namespace BFL
       mutable ColumnVector m_input;
       mutable Matrix m_df;
       Gaussian m_additiveNoise;
+      mutable ColumnVector m_expected_measurement;
     };
 } // End namespace BFL
 #endif //
