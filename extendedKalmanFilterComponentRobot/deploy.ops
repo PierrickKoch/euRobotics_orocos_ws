@@ -1,0 +1,55 @@
+#import (all dependent) package(s)
+import("extendedKalmanFilterComponentRobot")
+import("ocl")
+import("rtt_tf")
+
+#Create the components we need
+loadComponent("ExtendedKalmanFilterComponentRobot","ExtendedKalmanFilterComponentRobot")
+loadComponent("Timer","OCL::TimerComponent")
+loadComponent("CalculateDistanceToWall","CalculateDistanceToWall")
+loadComponent("rtt_tf","rtt_tf::RTT_TF")
+loadComponent("Reporter","OCL::FileReporting")
+
+#Set the components activity
+setActivity("ExtendedKalmanFilterComponentRobot",0.0,HighestPriority,ORO_SCHED_RT)
+setActivity("Timer",0.01,HighestPriority,ORO_SCHED_RT)
+setActivity("Reporter",0.001,LowestPriority,ORO_SCHED_OTHER)
+
+# load service
+loadService("ExtendedKalmanFilterComponentRobot","marshalling")
+loadService("Reporter","marshalling")
+loadService("CalculateDistanceToWall","marshalling")
+
+#add peers
+addPeer("ExtendedKalmanFilterComponentRobot","Timer")
+addPeer("CalculateDistanceToWall","rtt_tf")
+addPeer("CalculateDistanceToWall","ExtendedKalmanFilterComponentRobot")
+addPeer("Reporter","ExtendedKalmanFilterComponentRobot")
+
+# Create connections
+var ConnPolicy cp
+connect("Timer.timeout","ExtendedKalmanFilterComponentRobot.TimerId",cp)
+connect("ExtendedKalmanFilterComponentRobot.Measurement","CalculateDistanceToWall.DistanceToWall",cp)
+cp.transport = 3
+cp.name_id = "scan"
+stream("CalculateDistanceToWall.LaserScan",cp)
+
+#load properties
+ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("cpf/ekfRobot.cpf")
+
+#Configure the components
+ExtendedKalmanFilterComponentRobot.configure()
+Timer.configure()
+rtt_tf.configure()
+CalculateDistanceToWall.configure()
+
+#Fire up
+rtt_tf.start()
+ExtendedKalmanFilterComponentRobot.start()
+#CalculateDistanceToWall.start()
+
+# What ports to report
+Reporter.reportData("ExtendedKalmanFilterComponentRobot","Level")
+Reporter.reportPort("ExtendedKalmanFilterComponentRobot","EstimatedState")
+Reporter.reportPort("ExtendedKalmanFilterComponentRobot","CovarianceState")
+Reporter.start()

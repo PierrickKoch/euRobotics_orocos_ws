@@ -61,10 +61,9 @@
 #include <bfl/pdf/gaussian.h>
 
 #include <nonlinearanalyticconditionalgaussianmobile.h>
+#include <youbotLaserPdf.h>
 
 #include <geometry_msgs/Twist.h>
-
-#include "youbotLaserPdf.h"
 
 namespace youbot{
 

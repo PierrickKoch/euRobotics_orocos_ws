@@ -12,13 +12,13 @@ loadComponent("Reporter","OCL::FileReporting")
 
 #Set the components activity
 setActivity("Supervisor",0.1,HighestPriority,ORO_SCHED_RT)
-setActivity("Simulator",0,HighestPriority,ORO_SCHED_RT)
+setActivity("Simulator",0.0,HighestPriority,ORO_SCHED_RT)
 setActivity("Controller",0.01,HighestPriority,ORO_SCHED_RT)
 setActivity("ExtendedKalmanFilterComponentRobot",0.0,HighestPriority,ORO_SCHED_RT)
 setActivity("Timer",0.01,HighestPriority,ORO_SCHED_RT)
 #setActivity("TimerMeasSimulator",1.00,HighestPriority,ORO_SCHED_RT)
 #setActivity("TimerStateSimulator",0.01,HighestPriority,ORO_SCHED_RT)
-setActivity("Reporter",0.001,LowestPriority,ORO_SCHED_OTHER)
+setActivity("Reporter",0.01,LowestPriority,ORO_SCHED_OTHER)
 
 # load service
 loadService("ExtendedKalmanFilterComponentRobot","marshalling")
@@ -56,7 +56,7 @@ Controller.rosparam.refreshProperty("control_velocity",false,true)
 #Simulator.rosparam.refreshProperty("SysNoiseCovariance",false,true)
 #Simulator.rosparam.refreshProperty("SysNoiseMean",false,true)
 Simulator.marshalling.loadProperties("/home/fiep/stacks/euRobotics_orocos_ws/youbot_simulator/cpf/simulator.cpf")
-ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("/home/fiep/stacks/extendedKalmanFilterComponentRobot/cpf/ekfRobot.cpf")
+ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("/home/fiep/stacks/euRobotics_orocos_ws/extendedKalmanFilterComponentRobot/cpf/ekfRobot.cpf")
 
 
 
@@ -86,7 +86,7 @@ Simulator.start()
 ExtendedKalmanFilterComponentRobot.start()
 Controller.start()
 Timer.start()
-Timer.startTimer(Simulator.idTimerState,0.01)
+Timer.startTimer(Simulator.idTimerState,0.1)
 Timer.startTimer(Simulator.idTimerMeas,1.00)
 
 var geometry_msgs.Twist input

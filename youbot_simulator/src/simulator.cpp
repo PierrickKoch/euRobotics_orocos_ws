@@ -61,7 +61,6 @@ namespace youbot{
     this->addProperty("SysNoiseCovariance", m_sysNoiseCovariance).doc("The covariance of the noise on the marker system model");
     this->addProperty("MeasModelCovariance", m_measModelCovariance).doc("Covariance matrix of additive Gaussian noise on measurement model");
     this->addProperty("MeasNoiseMean", m_measNoiseMean).doc("The mean of the noise on the marker measurement model");
-    this->addProperty("MeasNoiseCovariance", m_measNoiseCovariance).doc("The covariance of the noise on the marker measurement model");
     this->addProperty("PosStateDimension", m_posStateDimension).doc("The dimension of the state space, only at position level");
     this->addProperty("MeasDimension", m_measDimension).doc("The dimension of the measurement space");
     this->addProperty("Period", m_period).doc("Period at which the system model gets updated");
@@ -93,7 +92,6 @@ namespace youbot{
     log(Debug) << "(Simulator) resizing initial mean and covariances" << endlog();
 #endif
     m_measNoiseMean.resize(m_measDimension);
-    m_measNoiseCovariance.resize(m_measDimension);
 
     /// resize class variables
     m_poseCovariance.resize(m_dimension);

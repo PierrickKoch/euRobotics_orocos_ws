@@ -3,7 +3,7 @@
   <windowsize>
     <width>1680</width>
     <height>986</height>
-    <active name="Measurement"/>
+    <active name="Estimation"/>
   </windowsize>
   <graphicsautosave time="1" enabled="false" format="PNG" xsize="640" ysize="480" display="0" square="false" />
   <kstfile>
@@ -18,32 +18,32 @@
   <scalar>
     <tag>P4/XMin</tag>
     <orphan/>
-    <value>152.49671428571</value>
+    <value>-0.1</value>
   </scalar>
   <scalar>
     <tag>P4/XMax</tag>
     <orphan/>
-    <value>155.009</value>
+    <value>0.1</value>
   </scalar>
   <scalar>
     <tag>P4/YMin</tag>
     <orphan/>
-    <value>-0.08486301369863</value>
+    <value>-0.105</value>
   </scalar>
   <scalar>
     <tag>P4/YMax</tag>
     <orphan/>
-    <value>-0.018123287671233</value>
+    <value>0.105</value>
   </scalar>
   <scalar>
     <tag>P8/XMin</tag>
     <orphan/>
-    <value>513.127</value>
+    <value>-0.1</value>
   </scalar>
   <scalar>
     <tag>P8/XMax</tag>
     <orphan/>
-    <value>524.546</value>
+    <value>0.1</value>
   </scalar>
   <scalar>
     <tag>P8/YMin</tag>
@@ -58,12 +58,12 @@
   <scalar>
     <tag>P12/XMin</tag>
     <orphan/>
-    <value>513.127</value>
+    <value>-0.1</value>
   </scalar>
   <scalar>
     <tag>P12/XMax</tag>
     <orphan/>
-    <value>524.546</value>
+    <value>0.1</value>
   </scalar>
   <scalar>
     <tag>P12/YMin</tag>
@@ -78,12 +78,12 @@
   <scalar>
     <tag>P16/XMin</tag>
     <orphan/>
-    <value>513.127</value>
+    <value>-0.1</value>
   </scalar>
   <scalar>
     <tag>P16/XMax</tag>
     <orphan/>
-    <value>524.546</value>
+    <value>0.1</value>
   </scalar>
   <scalar>
     <tag>P16/YMin</tag>
@@ -98,32 +98,32 @@
   <scalar>
     <tag>P19/XMin</tag>
     <orphan/>
-    <value>513.127</value>
+    <value>-0.1</value>
   </scalar>
   <scalar>
     <tag>P19/XMax</tag>
     <orphan/>
-    <value>524.546</value>
+    <value>0.1</value>
   </scalar>
   <scalar>
     <tag>P19/YMin</tag>
     <orphan/>
-    <value>-0.005</value>
+    <value>-0.105</value>
   </scalar>
   <scalar>
     <tag>P19/YMax</tag>
     <orphan/>
-    <value>0.205</value>
+    <value>0.105</value>
   </scalar>
   <scalar>
     <tag>P20/XMin</tag>
     <orphan/>
-    <value>513.127</value>
+    <value>-0.1</value>
   </scalar>
   <scalar>
     <tag>P20/XMax</tag>
     <orphan/>
-    <value>524.546</value>
+    <value>0.1</value>
   </scalar>
   <scalar>
     <tag>P20/YMin</tag>
@@ -138,122 +138,122 @@
   <scalar>
     <tag>Estimated x Position/XMin</tag>
     <orphan/>
-    <value>570.045</value>
+    <value>978.646</value>
   </scalar>
   <scalar>
     <tag>Estimated x Position/XMax</tag>
     <orphan/>
-    <value>581.53</value>
+    <value>1078.4</value>
   </scalar>
   <scalar>
     <tag>Estimated x Position/YMin</tag>
     <orphan/>
-    <value>106.00174587318</value>
+    <value>66.265493401173</value>
   </scalar>
   <scalar>
     <tag>Estimated x Position/YMax</tag>
     <orphan/>
-    <value>110.36827410087</value>
+    <value>77.33372205226</value>
   </scalar>
   <scalar>
     <tag>Estimated y Position/XMin</tag>
     <orphan/>
-    <value>570.045</value>
+    <value>978.646</value>
   </scalar>
   <scalar>
     <tag>Estimated y Position/XMax</tag>
     <orphan/>
-    <value>581.53</value>
+    <value>1078.4</value>
   </scalar>
   <scalar>
     <tag>Estimated y Position/YMin</tag>
     <orphan/>
-    <value>41.502487158245</value>
+    <value>69.620938441498</value>
   </scalar>
   <scalar>
     <tag>Estimated y Position/YMax</tag>
     <orphan/>
-    <value>42.506153011967</value>
+    <value>77.132535082484</value>
   </scalar>
   <scalar>
     <tag>Estimated Angle/XMin</tag>
     <orphan/>
-    <value>570.045</value>
+    <value>978.646</value>
   </scalar>
   <scalar>
     <tag>Estimated Angle/XMax</tag>
     <orphan/>
-    <value>581.53</value>
+    <value>1078.4</value>
   </scalar>
   <scalar>
     <tag>Estimated Angle/YMin</tag>
     <orphan/>
-    <value>0.35643051814959</value>
+    <value>0.6492375034508</value>
   </scalar>
   <scalar>
     <tag>Estimated Angle/YMax</tag>
     <orphan/>
-    <value>0.37816873591988</value>
+    <value>0.93557962092915</value>
   </scalar>
   <scalar>
     <tag>Estimated Position Robot/XMin</tag>
     <orphan/>
-    <value>107.322</value>
+    <value>-0.1</value>
   </scalar>
   <scalar>
     <tag>Estimated Position Robot/XMax</tag>
     <orphan/>
-    <value>109.482</value>
+    <value>0.1</value>
   </scalar>
   <scalar>
     <tag>Estimated Position Robot/YMin</tag>
     <orphan/>
-    <value>41.64951</value>
+    <value>-0.105</value>
   </scalar>
   <scalar>
     <tag>Estimated Position Robot/YMax</tag>
     <orphan/>
-    <value>42.52269</value>
+    <value>0.105</value>
   </scalar>
   <scalar>
     <tag>Simulated Position Robot/XMin</tag>
     <orphan/>
-    <value>41.019</value>
+    <value>-0.1</value>
   </scalar>
   <scalar>
     <tag>Simulated Position Robot/XMax</tag>
     <orphan/>
-    <value>41.8438</value>
+    <value>0.1</value>
   </scalar>
   <scalar>
     <tag>Simulated Position Robot/YMin</tag>
     <orphan/>
-    <value>41.466295</value>
+    <value>-0.105</value>
   </scalar>
   <scalar>
     <tag>Simulated Position Robot/YMax</tag>
     <orphan/>
-    <value>42.331705</value>
+    <value>0.105</value>
   </scalar>
   <scalar>
     <tag>Simulated distance to wall/XMin</tag>
     <orphan/>
-    <value>585.003</value>
+    <value>-0.1</value>
   </scalar>
   <scalar>
     <tag>Simulated distance to wall/XMax</tag>
     <orphan/>
-    <value>596.583</value>
+    <value>0.1</value>
   </scalar>
   <scalar>
     <tag>Simulated distance to wall/YMin</tag>
     <orphan/>
-    <value>42.6493575</value>
+    <value>-0.105</value>
   </scalar>
   <scalar>
     <tag>Simulated distance to wall/YMax</tag>
     <orphan/>
-    <value>43.4197425</value>
+    <value>0.105</value>
   </scalar>
   <vector>
     <tag>DS-reports.dat/TimeStamp</tag>
@@ -652,10 +652,11 @@
     <hasMinus/>
     <color>#ff0000</color>
     <hasLines/>
-    <lineWidth>3</lineWidth>
+    <lineWidth>2</lineWidth>
     <lineStyle>0</lineStyle>
-    <pointType>0</pointType>
-    <pointDensity>0</pointDensity>
+    <hasPoints/>
+    <pointType>2</pointType>
+    <pointDensity>2</pointDensity>
     <barStyle>0</barStyle>
   </curve>
   <curve>
@@ -712,10 +713,11 @@
     <hasMinus/>
     <color>#ff0000</color>
     <hasLines/>
-    <lineWidth>3</lineWidth>
+    <lineWidth>2</lineWidth>
     <lineStyle>0</lineStyle>
-    <pointType>0</pointType>
-    <pointDensity>0</pointDensity>
+    <hasPoints/>
+    <pointType>2</pointType>
+    <pointDensity>2</pointDensity>
     <barStyle>0</barStyle>
   </curve>
   <curve>
@@ -871,10 +873,11 @@
     <hasMinus/>
     <color>#ff0000</color>
     <hasLines/>
-    <lineWidth>3</lineWidth>
+    <lineWidth>2</lineWidth>
     <lineStyle>0</lineStyle>
-    <pointType>0</pointType>
-    <pointDensity>0</pointDensity>
+    <hasPoints/>
+    <pointType>2</pointType>
+    <pointDensity>2</pointDensity>
     <barStyle>1</barStyle>
   </curve>
   <equationobject>
@@ -959,9 +962,10 @@
     <color>#00aa00</color>
     <hasLines/>
     <lineWidth>0</lineWidth>
-    <lineStyle>0</lineStyle>
+    <lineStyle>2</lineStyle>
+    <hasPoints/>
     <pointType>0</pointType>
-    <pointDensity>0</pointDensity>
+    <pointDensity>2</pointDensity>
     <barStyle>0</barStyle>
   </curve>
   <curve>
@@ -971,12 +975,13 @@
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
-    <color>#009999</color>
+    <color>#309900</color>
     <hasLines/>
     <lineWidth>0</lineWidth>
     <lineStyle>0</lineStyle>
+    <hasPoints/>
     <pointType>0</pointType>
-    <pointDensity>0</pointDensity>
+    <pointDensity>2</pointDensity>
     <barStyle>0</barStyle>
   </curve>
   <curve>
@@ -986,12 +991,13 @@
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
-    <color>#0000aa</color>
+    <color>#1aaa00</color>
     <hasLines/>
     <lineWidth>0</lineWidth>
     <lineStyle>0</lineStyle>
+    <hasPoints/>
     <pointType>0</pointType>
-    <pointDensity>0</pointDensity>
+    <pointDensity>2</pointDensity>
     <barStyle>0</barStyle>
   </curve>
   <curve>
@@ -1011,7 +1017,7 @@
     <barStyle>1</barStyle>
   </curve>
   <curve>
-    <tag>.Simulator.measurement.Element0</tag>
+    <tag>Simulator.theta</tag>
     <xvectag>DS-reports.dat/TimeStamp</xvectag>
     <yvectag>DS-reports.dat/.Simulator.measurement.Element0</yvectag>
     <legend></legend>
@@ -1037,14 +1043,14 @@
     <backgroundColor>#ffffff</backgroundColor>
     <margin>0</margin>
     <padding>0</padding>
-    <xscalemode>2</xscalemode>
-    <yscalemode>2</yscalemode>
+    <xscalemode>0</xscalemode>
+    <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>152.49671428571</xmin>
-    <xmax>155.009</xmax>
-    <ymin>-0.08486301369863</ymin>
-    <ymax>-0.018123287671233</ymax>
+    <xmin>-0.1</xmin>
+    <xmax>0.1</xmax>
+    <ymin>-0.105</ymin>
+    <ymax>0.105</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -1070,14 +1076,14 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>155</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>12</size>
     </xticklabel>
     <yticklabel>
-      <text>-0.02</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1152,8 +1158,8 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>513.127</xmin>
-    <xmax>524.546</xmax>
+    <xmin>-0.1</xmin>
+    <xmax>0.1</xmax>
     <ymin>-0.105</ymin>
     <ymax>0.105</ymax>
     <xreversed>0</xreversed>
@@ -1181,7 +1187,7 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>524</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1263,8 +1269,8 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>513.127</xmin>
-    <xmax>524.546</xmax>
+    <xmin>-0.1</xmin>
+    <xmax>0.1</xmax>
     <ymin>-0.105</ymin>
     <ymax>0.105</ymax>
     <xreversed>0</xreversed>
@@ -1292,7 +1298,7 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>524</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1374,8 +1380,8 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>513.127</xmin>
-    <xmax>524.546</xmax>
+    <xmin>-0.1</xmin>
+    <xmax>0.1</xmax>
     <ymin>-0.105</ymin>
     <ymax>0.105</ymax>
     <xreversed>0</xreversed>
@@ -1403,7 +1409,7 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>524</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1485,10 +1491,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>513.127</xmin>
-    <xmax>524.546</xmax>
-    <ymin>-0.005</ymin>
-    <ymax>0.205</ymax>
+    <xmin>-0.1</xmin>
+    <xmax>0.1</xmax>
+    <ymin>-0.105</ymin>
+    <ymax>0.105</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -1514,14 +1520,14 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>524</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>12</size>
     </xticklabel>
     <yticklabel>
-      <text>0.2</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1596,8 +1602,8 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>513.127</xmin>
-    <xmax>524.546</xmax>
+    <xmin>-0.1</xmin>
+    <xmax>0.1</xmax>
     <ymin>-0.105</ymin>
     <ymax>0.105</ymax>
     <xreversed>0</xreversed>
@@ -1625,7 +1631,7 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>524</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1707,10 +1713,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>570.045</xmin>
-    <xmax>581.53</xmax>
-    <ymin>106.00174587318</ymin>
-    <ymax>110.36827410087</ymax>
+    <xmin>978.646</xmin>
+    <xmax>1078.4</xmax>
+    <ymin>66.265493401173</ymin>
+    <ymax>77.33372205226</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -1736,14 +1742,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>580</text>
+      <text>1060</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>110</text>
+      <text>76</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1761,6 +1767,7 @@
     <curvetag>x-covx-C</curvetag>
     <curvetag>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element0</curvetag>
     <curvetag>.ExtendedKal...-C</curvetag>
+    <curvetag>.Simulator.simulatedState.Element0</curvetag>
     <xmajorgrid>0</xmajorgrid>
     <ymajorgrid>0</ymajorgrid>
     <xminorgrid>0</xminorgrid>
@@ -1820,10 +1827,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>570.045</xmin>
-    <xmax>581.53</xmax>
-    <ymin>41.502487158245</ymin>
-    <ymax>42.506153011967</ymax>
+    <xmin>978.646</xmin>
+    <xmax>1078.4</xmax>
+    <ymin>69.620938441498</ymin>
+    <ymax>77.132535082484</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -1849,14 +1856,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>580</text>
+      <text>1060</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>42.4</text>
+      <text>76</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1874,6 +1881,7 @@
     <curvetag>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1</curvetag>
     <curvetag>y+covy-C</curvetag>
     <curvetag>y-covy-C</curvetag>
+    <curvetag>.Simulator.simulatedState.Element1</curvetag>
     <xmajorgrid>0</xmajorgrid>
     <ymajorgrid>0</ymajorgrid>
     <xminorgrid>0</xminorgrid>
@@ -1933,10 +1941,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>570.045</xmin>
-    <xmax>581.53</xmax>
-    <ymin>0.35643051814959</ymin>
-    <ymax>0.37816873591988</ymax>
+    <xmin>978.646</xmin>
+    <xmax>1078.4</xmax>
+    <ymin>0.6492375034508</ymin>
+    <ymax>0.93557962092915</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -1962,14 +1970,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>580</text>
+      <text>1060</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>0.375</text>
+      <text>0.9</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1987,6 +1995,7 @@
     <curvetag>theta</curvetag>
     <curvetag>theta+covtheta-C</curvetag>
     <curvetag>theta-covtheta-C</curvetag>
+    <curvetag>.Simulator.simulatedState.Element2</curvetag>
     <xmajorgrid>0</xmajorgrid>
     <ymajorgrid>0</ymajorgrid>
     <xminorgrid>0</xminorgrid>
@@ -2046,10 +2055,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>107.322</xmin>
-    <xmax>109.482</xmax>
-    <ymin>41.64951</ymin>
-    <ymax>42.52269</ymax>
+    <xmin>-0.1</xmin>
+    <xmax>0.1</xmax>
+    <ymin>-0.105</ymin>
+    <ymax>0.105</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -2075,14 +2084,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>109</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>42.4</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2098,10 +2107,10 @@
     <xlogbase>10</xlogbase>
     <ylogbase>10</ylogbase>
     <curvetag>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1-C3</curvetag>
-    <xmajorgrid>0</xmajorgrid>
-    <ymajorgrid>0</ymajorgrid>
-    <xminorgrid>0</xminorgrid>
-    <yminorgrid>0</yminorgrid>
+    <xmajorgrid>1</xmajorgrid>
+    <ymajorgrid>1</ymajorgrid>
+    <xminorgrid>1</xminorgrid>
+    <yminorgrid>1</yminorgrid>
     <majorgridcolor>#808080</majorgridcolor>
     <minorgridcolor>#808080</minorgridcolor>
     <majorgridcolordefault>1</majorgridcolordefault>
@@ -2157,10 +2166,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>41.019</xmin>
-    <xmax>41.8438</xmax>
-    <ymin>41.466295</ymin>
-    <ymax>42.331705</ymax>
+    <xmin>-0.1</xmin>
+    <xmax>0.1</xmax>
+    <ymin>-0.105</ymin>
+    <ymax>0.105</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -2186,14 +2195,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>41.8</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>42.2</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2209,10 +2218,10 @@
     <xlogbase>10</xlogbase>
     <ylogbase>10</ylogbase>
     <curvetag>.Simulator.simulatedState.Element0-C2</curvetag>
-    <xmajorgrid>0</xmajorgrid>
-    <ymajorgrid>0</ymajorgrid>
-    <xminorgrid>0</xminorgrid>
-    <yminorgrid>0</yminorgrid>
+    <xmajorgrid>1</xmajorgrid>
+    <ymajorgrid>1</ymajorgrid>
+    <xminorgrid>1</xminorgrid>
+    <yminorgrid>1</yminorgrid>
     <majorgridcolor>#808080</majorgridcolor>
     <minorgridcolor>#808080</minorgridcolor>
     <majorgridcolordefault>1</majorgridcolordefault>
@@ -2268,10 +2277,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>585.003</xmin>
-    <xmax>596.583</xmax>
-    <ymin>42.6493575</ymin>
-    <ymax>43.4197425</ymax>
+    <xmin>-0.1</xmin>
+    <xmax>0.1</xmax>
+    <ymin>-0.105</ymin>
+    <ymax>0.105</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -2297,14 +2306,14 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>596</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>12</size>
     </xticklabel>
     <yticklabel>
-      <text>43.4</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2319,7 +2328,7 @@
     </xfullticklabel>
     <xlogbase>10</xlogbase>
     <ylogbase>10</ylogbase>
-    <curvetag>.Simulator.measurement.Element0</curvetag>
+    <curvetag>Simulator.theta</curvetag>
     <xmajorgrid>0</xmajorgrid>
     <ymajorgrid>0</ymajorgrid>
     <xminorgrid>0</xminorgrid>
@@ -2365,8 +2374,8 @@
   </plot>
   <window>
     <tag>Control</tag>
-    <restore x="2" y="2" w="1676" h="864" />
-    <internal x="2" y="2" w="1676" h="864" />
+    <restore x="2" y="2" w="1676" h="893" />
+    <internal x="2" y="2" w="1676" h="893" />
     <columns>3</columns>
     <name>Control</name>
     <backgroundColor>#efefef</backgroundColor>
@@ -2398,12 +2407,86 @@
     <backgroundColor>#efefef</backgroundColor>
     <Plot>
       <tag>Estimated x Position</tag>
+      <Legend>
+        <border color="#000000" width="2" padding="0" margin="0" />
+        <border color="#000000" width="2" padding="0" margin="0" />
+        <tag>Object 682</tag>
+        <aspect x="0.1" y="0.1" w="0.2" h="0.1" />
+        <idealsize w="1" h="1" />
+        <name>unnamed</name>
+        <borderColor>#000000</borderColor>
+        <borderWidth>2</borderWidth>
+        <foregroundColor>#000000</foregroundColor>
+        <backgroundColor>#ffffff</backgroundColor>
+        <margin>0</margin>
+        <padding>0</padding>
+        <font></font>
+        <fontSize>8</fontSize>
+        <transparent>false</transparent>
+        <trackContents>true</trackContents>
+        <legendMargin>5</legendMargin>
+        <vertical>true</vertical>
+        <title></title>
+        <curvetag>x-covx-C</curvetag>
+        <curvetag>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element0</curvetag>
+        <curvetag>.ExtendedKal...-C</curvetag>
+        <curvetag>.Simulator.simulatedState.Element0</curvetag>
+      </Legend>
     </Plot>
     <Plot>
       <tag>Estimated y Position</tag>
+      <Legend>
+        <border color="#000000" width="2" padding="0" margin="0" />
+        <border color="#000000" width="2" padding="0" margin="0" />
+        <tag>Object 683</tag>
+        <aspect x="0.1" y="0.1" w="0.2" h="0.1" />
+        <idealsize w="1" h="1" />
+        <name>unnamed</name>
+        <borderColor>#000000</borderColor>
+        <borderWidth>2</borderWidth>
+        <foregroundColor>#000000</foregroundColor>
+        <backgroundColor>#ffffff</backgroundColor>
+        <margin>0</margin>
+        <padding>0</padding>
+        <font></font>
+        <fontSize>8</fontSize>
+        <transparent>false</transparent>
+        <trackContents>true</trackContents>
+        <legendMargin>5</legendMargin>
+        <vertical>true</vertical>
+        <title></title>
+        <curvetag>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1</curvetag>
+        <curvetag>y+covy-C</curvetag>
+        <curvetag>y-covy-C</curvetag>
+        <curvetag>.Simulator.simulatedState.Element1</curvetag>
+      </Legend>
     </Plot>
     <Plot>
       <tag>Estimated Angle</tag>
+      <Legend>
+        <border color="#000000" width="2" padding="0" margin="0" />
+        <border color="#000000" width="2" padding="0" margin="0" />
+        <tag>Object 681</tag>
+        <aspect x="0.1" y="0.1" w="0.2" h="0.1" />
+        <idealsize w="1" h="1" />
+        <name>Object 681</name>
+        <borderColor>#000000</borderColor>
+        <borderWidth>2</borderWidth>
+        <foregroundColor>#000000</foregroundColor>
+        <backgroundColor>#ffffff</backgroundColor>
+        <margin>0</margin>
+        <padding>0</padding>
+        <font></font>
+        <fontSize>8</fontSize>
+        <transparent>false</transparent>
+        <trackContents>true</trackContents>
+        <legendMargin>5</legendMargin>
+        <vertical>true</vertical>
+        <title></title>
+        <curvetag>theta</curvetag>
+        <curvetag>theta+covtheta-C</curvetag>
+        <curvetag>.Simulator.simulatedState.Element2</curvetag>
+      </Legend>
     </Plot>
   </window>
   <window>
@@ -2420,11 +2503,11 @@
     </Plot>
   </window>
   <window>
-    <tag>Measurement</tag>
+    <tag>Simulation</tag>
     <restore x="2" y="2" w="1676" h="864" />
     <internal x="2" y="2" w="1676" h="864" />
     <columns>1</columns>
-    <name>Measurement</name>
+    <name>Simulation</name>
     <backgroundColor>#efefef</backgroundColor>
     <Plot>
       <tag>Simulated distance to wall</tag>
