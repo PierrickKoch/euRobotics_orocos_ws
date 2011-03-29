@@ -3,7 +3,7 @@
   <windowsize>
     <width>1680</width>
     <height>986</height>
-    <active name="W3"/>
+    <active name="Measurement"/>
   </windowsize>
   <graphicsautosave time="1" enabled="false" format="PNG" xsize="640" ysize="480" display="0" square="false" />
   <kstfile>
@@ -18,32 +18,32 @@
   <scalar>
     <tag>P4/XMin</tag>
     <orphan/>
-    <value>-0.1</value>
+    <value>152.49671428571</value>
   </scalar>
   <scalar>
     <tag>P4/XMax</tag>
     <orphan/>
-    <value>0.1</value>
+    <value>155.009</value>
   </scalar>
   <scalar>
     <tag>P4/YMin</tag>
     <orphan/>
-    <value>-0.105</value>
+    <value>-0.08486301369863</value>
   </scalar>
   <scalar>
     <tag>P4/YMax</tag>
     <orphan/>
-    <value>0.105</value>
+    <value>-0.018123287671233</value>
   </scalar>
   <scalar>
     <tag>P8/XMin</tag>
     <orphan/>
-    <value>-0.1</value>
+    <value>513.127</value>
   </scalar>
   <scalar>
     <tag>P8/XMax</tag>
     <orphan/>
-    <value>0.1</value>
+    <value>524.546</value>
   </scalar>
   <scalar>
     <tag>P8/YMin</tag>
@@ -56,34 +56,14 @@
     <value>0.105</value>
   </scalar>
   <scalar>
-    <tag>P9/XMin</tag>
-    <orphan/>
-    <value>-0.1</value>
-  </scalar>
-  <scalar>
-    <tag>P9/XMax</tag>
-    <orphan/>
-    <value>0.1</value>
-  </scalar>
-  <scalar>
-    <tag>P9/YMin</tag>
-    <orphan/>
-    <value>-0.105</value>
-  </scalar>
-  <scalar>
-    <tag>P9/YMax</tag>
-    <orphan/>
-    <value>0.105</value>
-  </scalar>
-  <scalar>
     <tag>P12/XMin</tag>
     <orphan/>
-    <value>-0.1</value>
+    <value>513.127</value>
   </scalar>
   <scalar>
     <tag>P12/XMax</tag>
     <orphan/>
-    <value>0.1</value>
+    <value>524.546</value>
   </scalar>
   <scalar>
     <tag>P12/YMin</tag>
@@ -96,34 +76,14 @@
     <value>0.105</value>
   </scalar>
   <scalar>
-    <tag>P13/XMin</tag>
-    <orphan/>
-    <value>-0.1</value>
-  </scalar>
-  <scalar>
-    <tag>P13/XMax</tag>
-    <orphan/>
-    <value>0.1</value>
-  </scalar>
-  <scalar>
-    <tag>P13/YMin</tag>
-    <orphan/>
-    <value>-0.105</value>
-  </scalar>
-  <scalar>
-    <tag>P13/YMax</tag>
-    <orphan/>
-    <value>0.105</value>
-  </scalar>
-  <scalar>
     <tag>P16/XMin</tag>
     <orphan/>
-    <value>-0.1</value>
+    <value>513.127</value>
   </scalar>
   <scalar>
     <tag>P16/XMax</tag>
     <orphan/>
-    <value>0.1</value>
+    <value>524.546</value>
   </scalar>
   <scalar>
     <tag>P16/YMin</tag>
@@ -136,54 +96,34 @@
     <value>0.105</value>
   </scalar>
   <scalar>
-    <tag>P17/XMin</tag>
-    <orphan/>
-    <value>-0.1</value>
-  </scalar>
-  <scalar>
-    <tag>P17/XMax</tag>
-    <orphan/>
-    <value>0.1</value>
-  </scalar>
-  <scalar>
-    <tag>P17/YMin</tag>
-    <orphan/>
-    <value>-0.105</value>
-  </scalar>
-  <scalar>
-    <tag>P17/YMax</tag>
-    <orphan/>
-    <value>0.105</value>
-  </scalar>
-  <scalar>
     <tag>P19/XMin</tag>
     <orphan/>
-    <value>-0.1</value>
+    <value>513.127</value>
   </scalar>
   <scalar>
     <tag>P19/XMax</tag>
     <orphan/>
-    <value>0.1</value>
+    <value>524.546</value>
   </scalar>
   <scalar>
     <tag>P19/YMin</tag>
     <orphan/>
-    <value>-0.105</value>
+    <value>-0.005</value>
   </scalar>
   <scalar>
     <tag>P19/YMax</tag>
     <orphan/>
-    <value>0.105</value>
+    <value>0.205</value>
   </scalar>
   <scalar>
     <tag>P20/XMin</tag>
     <orphan/>
-    <value>-0.1</value>
+    <value>513.127</value>
   </scalar>
   <scalar>
     <tag>P20/XMax</tag>
     <orphan/>
-    <value>0.1</value>
+    <value>524.546</value>
   </scalar>
   <scalar>
     <tag>P20/YMin</tag>
@@ -196,124 +136,124 @@
     <value>0.105</value>
   </scalar>
   <scalar>
-    <tag>P21/XMin</tag>
+    <tag>Estimated x Position/XMin</tag>
     <orphan/>
-    <value>-0.1</value>
+    <value>570.045</value>
   </scalar>
   <scalar>
-    <tag>P21/XMax</tag>
+    <tag>Estimated x Position/XMax</tag>
     <orphan/>
-    <value>0.1</value>
+    <value>581.53</value>
   </scalar>
   <scalar>
-    <tag>P21/YMin</tag>
+    <tag>Estimated x Position/YMin</tag>
     <orphan/>
-    <value>-0.105</value>
+    <value>106.00174587318</value>
   </scalar>
   <scalar>
-    <tag>P21/YMax</tag>
+    <tag>Estimated x Position/YMax</tag>
     <orphan/>
-    <value>0.105</value>
+    <value>110.36827410087</value>
   </scalar>
   <scalar>
-    <tag>P22/XMin</tag>
+    <tag>Estimated y Position/XMin</tag>
     <orphan/>
-    <value>88.6908</value>
+    <value>570.045</value>
   </scalar>
   <scalar>
-    <tag>P22/XMax</tag>
+    <tag>Estimated y Position/XMax</tag>
     <orphan/>
-    <value>99.2692</value>
+    <value>581.53</value>
   </scalar>
   <scalar>
-    <tag>P22/YMin</tag>
+    <tag>Estimated y Position/YMin</tag>
     <orphan/>
-    <value>723.61417149306</value>
+    <value>41.502487158245</value>
   </scalar>
   <scalar>
-    <tag>P22/YMax</tag>
+    <tag>Estimated y Position/YMax</tag>
     <orphan/>
-    <value>839.96447396059</value>
+    <value>42.506153011967</value>
   </scalar>
   <scalar>
-    <tag>P23/XMin</tag>
+    <tag>Estimated Angle/XMin</tag>
     <orphan/>
-    <value>88.6908</value>
+    <value>570.045</value>
   </scalar>
   <scalar>
-    <tag>P23/XMax</tag>
+    <tag>Estimated Angle/XMax</tag>
     <orphan/>
-    <value>99.2692</value>
+    <value>581.53</value>
   </scalar>
   <scalar>
-    <tag>P23/YMin</tag>
+    <tag>Estimated Angle/YMin</tag>
     <orphan/>
-    <value>4.1674494345056</value>
+    <value>0.35643051814959</value>
   </scalar>
   <scalar>
-    <tag>P23/YMax</tag>
+    <tag>Estimated Angle/YMax</tag>
     <orphan/>
-    <value>7.6976785313554</value>
+    <value>0.37816873591988</value>
   </scalar>
   <scalar>
-    <tag>P24/XMin</tag>
+    <tag>Estimated Position Robot/XMin</tag>
     <orphan/>
-    <value>88.6908</value>
+    <value>107.322</value>
   </scalar>
   <scalar>
-    <tag>P24/XMax</tag>
+    <tag>Estimated Position Robot/XMax</tag>
     <orphan/>
-    <value>99.2692</value>
+    <value>109.482</value>
   </scalar>
   <scalar>
-    <tag>P24/YMin</tag>
+    <tag>Estimated Position Robot/YMin</tag>
     <orphan/>
-    <value>-0.15090742702275</value>
+    <value>41.64951</value>
   </scalar>
   <scalar>
-    <tag>P24/YMax</tag>
+    <tag>Estimated Position Robot/YMax</tag>
     <orphan/>
-    <value>0.15984043597506</value>
+    <value>42.52269</value>
   </scalar>
   <scalar>
-    <tag>P27/XMin</tag>
+    <tag>Simulated Position Robot/XMin</tag>
     <orphan/>
-    <value>756.364</value>
+    <value>41.019</value>
   </scalar>
   <scalar>
-    <tag>P27/XMax</tag>
+    <tag>Simulated Position Robot/XMax</tag>
     <orphan/>
-    <value>871.074</value>
+    <value>41.8438</value>
   </scalar>
   <scalar>
-    <tag>P27/YMin</tag>
+    <tag>Simulated Position Robot/YMin</tag>
     <orphan/>
-    <value>5.73678125</value>
+    <value>41.466295</value>
   </scalar>
   <scalar>
-    <tag>P27/YMax</tag>
+    <tag>Simulated Position Robot/YMax</tag>
     <orphan/>
-    <value>6.61326875</value>
+    <value>42.331705</value>
   </scalar>
   <scalar>
-    <tag>P2/XMin</tag>
+    <tag>Simulated distance to wall/XMin</tag>
     <orphan/>
-    <value>5.246</value>
+    <value>585.003</value>
   </scalar>
   <scalar>
-    <tag>P2/XMax</tag>
+    <tag>Simulated distance to wall/XMax</tag>
     <orphan/>
-    <value>6.04181</value>
+    <value>596.583</value>
   </scalar>
   <scalar>
-    <tag>P2/YMin</tag>
+    <tag>Simulated distance to wall/YMin</tag>
     <orphan/>
-    <value>5.7219205</value>
+    <value>42.6493575</value>
   </scalar>
   <scalar>
-    <tag>P2/YMax</tag>
+    <tag>Simulated distance to wall/YMax</tag>
     <orphan/>
-    <value>6.5568595</value>
+    <value>43.4197425</value>
   </scalar>
   <vector>
     <tag>DS-reports.dat/TimeStamp</tag>
@@ -512,6 +452,14 @@
     <provider>DS-reports.dat</provider>
     <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.Simulator.simulatedState.Element2</field>
+    <start>-1</start>
+    <num>10000</num>
+  </vector>
+  <vector>
+    <tag>DS-reports.dat/.Simulator.measurement.Element0</tag>
+    <provider>DS-reports.dat</provider>
+    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <field>.Simulator.measurement.Element0</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
@@ -1062,11 +1010,26 @@
     <pointDensity>0</pointDensity>
     <barStyle>1</barStyle>
   </curve>
+  <curve>
+    <tag>.Simulator.measurement.Element0</tag>
+    <xvectag>DS-reports.dat/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat/.Simulator.measurement.Element0</yvectag>
+    <legend></legend>
+    <interp>0</interp>
+    <hasMinus/>
+    <color>#00aa00</color>
+    <hasLines/>
+    <lineWidth>0</lineWidth>
+    <lineStyle>0</lineStyle>
+    <pointType>0</pointType>
+    <pointDensity>0</pointDensity>
+    <barStyle>0</barStyle>
+  </curve>
   <plot>
     <border color="#000000" width="0" padding="0" margin="0" />
     <tag>P4</tag>
-    <aspect x="0" y="0" w="0.25" h="0.33333333333333" />
-    <idealsize w="419" h="289" />
+    <aspect x="0.33293556085919" y="0" w="0.33293556085919" h="0.5" />
+    <idealsize w="558" h="432" />
     <name>P4</name>
     <borderColor>#000000</borderColor>
     <borderWidth>0</borderWidth>
@@ -1074,14 +1037,14 @@
     <backgroundColor>#ffffff</backgroundColor>
     <margin>0</margin>
     <padding>0</padding>
-    <xscalemode>0</xscalemode>
-    <yscalemode>5</yscalemode>
+    <xscalemode>2</xscalemode>
+    <yscalemode>2</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
-    <ymin>-0.105</ymin>
-    <ymax>0.105</ymax>
+    <xmin>152.49671428571</xmin>
+    <xmax>155.009</xmax>
+    <ymin>-0.08486301369863</ymin>
+    <ymax>-0.018123287671233</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -1107,14 +1070,14 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>0.1</text>
+      <text>155</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>12</size>
     </xticklabel>
     <yticklabel>
-      <text>0.1</text>
+      <text>-0.02</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1176,8 +1139,8 @@
   <plot>
     <border color="#000000" width="0" padding="0" margin="0" />
     <tag>P8</tag>
-    <aspect x="0.25" y="0" w="0.25" h="0.33333333333333" />
-    <idealsize w="419" h="289" />
+    <aspect x="0.66587112171838" y="0" w="0.33293556085919" h="0.5" />
+    <idealsize w="558" h="432" />
     <name>P8</name>
     <borderColor>#000000</borderColor>
     <borderWidth>0</borderWidth>
@@ -1189,8 +1152,8 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
+    <xmin>513.127</xmin>
+    <xmax>524.546</xmax>
     <ymin>-0.105</ymin>
     <ymax>0.105</ymax>
     <xreversed>0</xreversed>
@@ -1218,7 +1181,7 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>0.1</text>
+      <text>524</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1286,120 +1249,9 @@
   </plot>
   <plot>
     <border color="#000000" width="0" padding="0" margin="0" />
-    <tag>P9</tag>
-    <aspect x="0.5" y="0" w="0.25" h="0.33333333333333" />
-    <idealsize w="419" h="289" />
-    <name>P9</name>
-    <borderColor>#000000</borderColor>
-    <borderWidth>0</borderWidth>
-    <foregroundColor>#000000</foregroundColor>
-    <backgroundColor>#ffffff</backgroundColor>
-    <margin>0</margin>
-    <padding>0</padding>
-    <xscalemode>0</xscalemode>
-    <yscalemode>5</yscalemode>
-    <xscalemodedefault>0</xscalemodedefault>
-    <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
-    <ymin>-0.105</ymin>
-    <ymax>0.105</ymax>
-    <xreversed>0</xreversed>
-    <yreversed>0</yreversed>
-    <toplabel>
-      <text></text>
-      <interpret/>
-      <rotation>0</rotation>
-      <justify>0</justify>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </toplabel>
-    <xlabel>
-      <text></text>
-      <interpret/>
-      <rotation>0</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </xlabel>
-    <ylabel>
-      <text>ExtendedKalmanFilterComponentRobot.Level</text>
-      <interpret/>
-      <rotation>270</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </ylabel>
-    <xticklabel>
-      <text>0.1</text>
-      <interpret/>
-      <rotation>0</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </xticklabel>
-    <yticklabel>
-      <text>0.1</text>
-      <interpret/>
-      <rotation>0</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </yticklabel>
-    <xfullticklabel>
-      <text></text>
-      <interpret/>
-      <rotation>0</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </xfullticklabel>
-    <xlogbase>10</xlogbase>
-    <ylogbase>10</ylogbase>
-    <curvetag>ExtendedKalmanFilterComponentRobot.Level</curvetag>
-    <xmajorgrid>0</xmajorgrid>
-    <ymajorgrid>0</ymajorgrid>
-    <xminorgrid>0</xminorgrid>
-    <yminorgrid>0</yminorgrid>
-    <majorgridcolor>#808080</majorgridcolor>
-    <minorgridcolor>#808080</minorgridcolor>
-    <majorgridcolordefault>1</majorgridcolordefault>
-    <minorgridcolordefault>1</minorgridcolordefault>
-    <majorpenwidth>1</majorpenwidth>
-    <minorpenwidth>1</minorpenwidth>
-    <axispenwidth>1</axispenwidth>
-    <xminorticks>-1</xminorticks>
-    <yminorticks>-1</yminorticks>
-    <xmajorticks>5</xmajorticks>
-    <ymajorticks>5</ymajorticks>
-    <xticksinplot>1</xticksinplot>
-    <xticksoutplot>0</xticksoutplot>
-    <yticksinplot>1</yticksinplot>
-    <yticksoutplot>0</yticksoutplot>
-    <suppresstop>0</suppresstop>
-    <suppressbottom>0</suppressbottom>
-    <suppressleft>0</suppressleft>
-    <suppressright>0</suppressright>
-    <xtransformed>0</xtransformed>
-    <ytransformed>0</ytransformed>
-    <xtransformedexp></xtransformedexp>
-    <ytransformedexp></ytransformedexp>
-    <xinterpret>0</xinterpret>
-    <xinterpretas>1</xinterpretas>
-    <xdisplayas>4</xdisplayas>
-    <yinterpret>0</yinterpret>
-    <yinterpretas>1</yinterpretas>
-    <ydisplayas>4</ydisplayas>
-    <xoffsetmode>0</xoffsetmode>
-    <yoffsetmode>0</yoffsetmode>
-    <stylemarker>0</stylemarker>
-    <widthmarker>0</widthmarker>
-    <colormarker>#000000</colormarker>
-    <defaultcolormarker>1</defaultcolormarker>
-    <autoLabelTop>1</autoLabelTop>
-    <autoLabelX>1</autoLabelX>
-    <autoLabelY>1</autoLabelY>
-  </plot>
-  <plot>
-    <border color="#000000" width="0" padding="0" margin="0" />
     <tag>P12</tag>
-    <aspect x="0.75" y="0" w="0.25" h="0.33333333333333" />
-    <idealsize w="419" h="289" />
+    <aspect x="0" y="0.5" w="0.33293556085919" h="0.5" />
+    <idealsize w="558" h="432" />
     <name>P12</name>
     <borderColor>#000000</borderColor>
     <borderWidth>0</borderWidth>
@@ -1411,8 +1263,8 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
+    <xmin>513.127</xmin>
+    <xmax>524.546</xmax>
     <ymin>-0.105</ymin>
     <ymax>0.105</ymax>
     <xreversed>0</xreversed>
@@ -1440,7 +1292,7 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>0.1</text>
+      <text>524</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1508,120 +1360,9 @@
   </plot>
   <plot>
     <border color="#000000" width="0" padding="0" margin="0" />
-    <tag>P13</tag>
-    <aspect x="0" y="0.33333333333333" w="0.25" h="0.33333333333333" />
-    <idealsize w="419" h="289" />
-    <name>P13</name>
-    <borderColor>#000000</borderColor>
-    <borderWidth>0</borderWidth>
-    <foregroundColor>#000000</foregroundColor>
-    <backgroundColor>#ffffff</backgroundColor>
-    <margin>0</margin>
-    <padding>0</padding>
-    <xscalemode>0</xscalemode>
-    <yscalemode>5</yscalemode>
-    <xscalemodedefault>0</xscalemodedefault>
-    <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
-    <ymin>-0.105</ymin>
-    <ymax>0.105</ymax>
-    <xreversed>0</xreversed>
-    <yreversed>0</yreversed>
-    <toplabel>
-      <text></text>
-      <interpret/>
-      <rotation>0</rotation>
-      <justify>0</justify>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </toplabel>
-    <xlabel>
-      <text></text>
-      <interpret/>
-      <rotation>0</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </xlabel>
-    <ylabel>
-      <text>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element0</text>
-      <interpret/>
-      <rotation>270</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </ylabel>
-    <xticklabel>
-      <text>0.1</text>
-      <interpret/>
-      <rotation>0</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </xticklabel>
-    <yticklabel>
-      <text>0.1</text>
-      <interpret/>
-      <rotation>0</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </yticklabel>
-    <xfullticklabel>
-      <text></text>
-      <interpret/>
-      <rotation>0</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </xfullticklabel>
-    <xlogbase>10</xlogbase>
-    <ylogbase>10</ylogbase>
-    <curvetag>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element0</curvetag>
-    <xmajorgrid>0</xmajorgrid>
-    <ymajorgrid>0</ymajorgrid>
-    <xminorgrid>0</xminorgrid>
-    <yminorgrid>0</yminorgrid>
-    <majorgridcolor>#808080</majorgridcolor>
-    <minorgridcolor>#808080</minorgridcolor>
-    <majorgridcolordefault>1</majorgridcolordefault>
-    <minorgridcolordefault>1</minorgridcolordefault>
-    <majorpenwidth>1</majorpenwidth>
-    <minorpenwidth>1</minorpenwidth>
-    <axispenwidth>1</axispenwidth>
-    <xminorticks>-1</xminorticks>
-    <yminorticks>-1</yminorticks>
-    <xmajorticks>5</xmajorticks>
-    <ymajorticks>5</ymajorticks>
-    <xticksinplot>1</xticksinplot>
-    <xticksoutplot>0</xticksoutplot>
-    <yticksinplot>1</yticksinplot>
-    <yticksoutplot>0</yticksoutplot>
-    <suppresstop>0</suppresstop>
-    <suppressbottom>0</suppressbottom>
-    <suppressleft>0</suppressleft>
-    <suppressright>0</suppressright>
-    <xtransformed>0</xtransformed>
-    <ytransformed>0</ytransformed>
-    <xtransformedexp></xtransformedexp>
-    <ytransformedexp></ytransformedexp>
-    <xinterpret>0</xinterpret>
-    <xinterpretas>1</xinterpretas>
-    <xdisplayas>4</xdisplayas>
-    <yinterpret>0</yinterpret>
-    <yinterpretas>1</yinterpretas>
-    <ydisplayas>4</ydisplayas>
-    <xoffsetmode>0</xoffsetmode>
-    <yoffsetmode>0</yoffsetmode>
-    <stylemarker>0</stylemarker>
-    <widthmarker>0</widthmarker>
-    <colormarker>#000000</colormarker>
-    <defaultcolormarker>1</defaultcolormarker>
-    <autoLabelTop>1</autoLabelTop>
-    <autoLabelX>1</autoLabelX>
-    <autoLabelY>1</autoLabelY>
-  </plot>
-  <plot>
-    <border color="#000000" width="0" padding="0" margin="0" />
     <tag>P16</tag>
-    <aspect x="0.25" y="0.33333333333333" w="0.25" h="0.33333333333333" />
-    <idealsize w="419" h="289" />
+    <aspect x="0.33293556085919" y="0.5" w="0.33293556085919" h="0.5" />
+    <idealsize w="558" h="432" />
     <name>P16</name>
     <borderColor>#000000</borderColor>
     <borderWidth>0</borderWidth>
@@ -1633,8 +1374,8 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
+    <xmin>513.127</xmin>
+    <xmax>524.546</xmax>
     <ymin>-0.105</ymin>
     <ymax>0.105</ymax>
     <xreversed>0</xreversed>
@@ -1662,7 +1403,7 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>0.1</text>
+      <text>524</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1730,120 +1471,9 @@
   </plot>
   <plot>
     <border color="#000000" width="0" padding="0" margin="0" />
-    <tag>P17</tag>
-    <aspect x="0.5" y="0.33333333333333" w="0.25" h="0.33333333333333" />
-    <idealsize w="419" h="289" />
-    <name>P17</name>
-    <borderColor>#000000</borderColor>
-    <borderWidth>0</borderWidth>
-    <foregroundColor>#000000</foregroundColor>
-    <backgroundColor>#ffffff</backgroundColor>
-    <margin>0</margin>
-    <padding>0</padding>
-    <xscalemode>0</xscalemode>
-    <yscalemode>5</yscalemode>
-    <xscalemodedefault>0</xscalemodedefault>
-    <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
-    <ymin>-0.105</ymin>
-    <ymax>0.105</ymax>
-    <xreversed>0</xreversed>
-    <yreversed>0</yreversed>
-    <toplabel>
-      <text></text>
-      <interpret/>
-      <rotation>0</rotation>
-      <justify>0</justify>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </toplabel>
-    <xlabel>
-      <text></text>
-      <interpret/>
-      <rotation>0</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </xlabel>
-    <ylabel>
-      <text>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1</text>
-      <interpret/>
-      <rotation>270</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </ylabel>
-    <xticklabel>
-      <text>0.1</text>
-      <interpret/>
-      <rotation>0</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </xticklabel>
-    <yticklabel>
-      <text>0.1</text>
-      <interpret/>
-      <rotation>0</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </yticklabel>
-    <xfullticklabel>
-      <text></text>
-      <interpret/>
-      <rotation>0</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </xfullticklabel>
-    <xlogbase>10</xlogbase>
-    <ylogbase>10</ylogbase>
-    <curvetag>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1</curvetag>
-    <xmajorgrid>0</xmajorgrid>
-    <ymajorgrid>0</ymajorgrid>
-    <xminorgrid>0</xminorgrid>
-    <yminorgrid>0</yminorgrid>
-    <majorgridcolor>#808080</majorgridcolor>
-    <minorgridcolor>#808080</minorgridcolor>
-    <majorgridcolordefault>1</majorgridcolordefault>
-    <minorgridcolordefault>1</minorgridcolordefault>
-    <majorpenwidth>1</majorpenwidth>
-    <minorpenwidth>1</minorpenwidth>
-    <axispenwidth>1</axispenwidth>
-    <xminorticks>-1</xminorticks>
-    <yminorticks>-1</yminorticks>
-    <xmajorticks>5</xmajorticks>
-    <ymajorticks>5</ymajorticks>
-    <xticksinplot>1</xticksinplot>
-    <xticksoutplot>0</xticksoutplot>
-    <yticksinplot>1</yticksinplot>
-    <yticksoutplot>0</yticksoutplot>
-    <suppresstop>0</suppresstop>
-    <suppressbottom>0</suppressbottom>
-    <suppressleft>0</suppressleft>
-    <suppressright>0</suppressright>
-    <xtransformed>0</xtransformed>
-    <ytransformed>0</ytransformed>
-    <xtransformedexp></xtransformedexp>
-    <ytransformedexp></ytransformedexp>
-    <xinterpret>0</xinterpret>
-    <xinterpretas>1</xinterpretas>
-    <xdisplayas>4</xdisplayas>
-    <yinterpret>0</yinterpret>
-    <yinterpretas>1</yinterpretas>
-    <ydisplayas>4</ydisplayas>
-    <xoffsetmode>0</xoffsetmode>
-    <yoffsetmode>0</yoffsetmode>
-    <stylemarker>0</stylemarker>
-    <widthmarker>0</widthmarker>
-    <colormarker>#000000</colormarker>
-    <defaultcolormarker>1</defaultcolormarker>
-    <autoLabelTop>1</autoLabelTop>
-    <autoLabelX>1</autoLabelX>
-    <autoLabelY>1</autoLabelY>
-  </plot>
-  <plot>
-    <border color="#000000" width="0" padding="0" margin="0" />
     <tag>P19</tag>
-    <aspect x="0.75" y="0.33333333333333" w="0.25" h="0.33333333333333" />
-    <idealsize w="419" h="289" />
+    <aspect x="0" y="0" w="0.33293556085919" h="0.5" />
+    <idealsize w="558" h="432" />
     <name>P19</name>
     <borderColor>#000000</borderColor>
     <borderWidth>0</borderWidth>
@@ -1855,10 +1485,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
-    <ymin>-0.105</ymin>
-    <ymax>0.105</ymax>
+    <xmin>513.127</xmin>
+    <xmax>524.546</xmax>
+    <ymin>-0.005</ymin>
+    <ymax>0.205</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -1884,14 +1514,14 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>0.1</text>
+      <text>524</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>12</size>
     </xticklabel>
     <yticklabel>
-      <text>0.1</text>
+      <text>0.2</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1953,8 +1583,8 @@
   <plot>
     <border color="#000000" width="0" padding="0" margin="0" />
     <tag>P20</tag>
-    <aspect x="0" y="0.66666666666667" w="0.25" h="0.33333333333333" />
-    <idealsize w="419" h="289" />
+    <aspect x="0.66587112171838" y="0.5" w="0.33293556085919" h="0.5" />
+    <idealsize w="558" h="432" />
     <name>P20</name>
     <borderColor>#000000</borderColor>
     <borderWidth>0</borderWidth>
@@ -1966,8 +1596,8 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
+    <xmin>513.127</xmin>
+    <xmax>524.546</xmax>
     <ymin>-0.105</ymin>
     <ymax>0.105</ymax>
     <xreversed>0</xreversed>
@@ -1995,7 +1625,7 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>0.1</text>
+      <text>524</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2063,121 +1693,10 @@
   </plot>
   <plot>
     <border color="#000000" width="0" padding="0" margin="0" />
-    <tag>P21</tag>
-    <aspect x="0.25" y="0.66666666666667" w="0.25" h="0.33333333333333" />
-    <idealsize w="419" h="289" />
-    <name>P21</name>
-    <borderColor>#000000</borderColor>
-    <borderWidth>0</borderWidth>
-    <foregroundColor>#000000</foregroundColor>
-    <backgroundColor>#ffffff</backgroundColor>
-    <margin>0</margin>
-    <padding>0</padding>
-    <xscalemode>0</xscalemode>
-    <yscalemode>5</yscalemode>
-    <xscalemodedefault>0</xscalemodedefault>
-    <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
-    <ymin>-0.105</ymin>
-    <ymax>0.105</ymax>
-    <xreversed>0</xreversed>
-    <yreversed>0</yreversed>
-    <toplabel>
-      <text></text>
-      <interpret/>
-      <rotation>0</rotation>
-      <justify>0</justify>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </toplabel>
-    <xlabel>
-      <text></text>
-      <interpret/>
-      <rotation>0</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </xlabel>
-    <ylabel>
-      <text>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element2</text>
-      <interpret/>
-      <rotation>270</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </ylabel>
-    <xticklabel>
-      <text>0.1</text>
-      <interpret/>
-      <rotation>0</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </xticklabel>
-    <yticklabel>
-      <text>0.1</text>
-      <interpret/>
-      <rotation>0</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </yticklabel>
-    <xfullticklabel>
-      <text></text>
-      <interpret/>
-      <rotation>0</rotation>
-      <fontfamily>DejaVu Sans</fontfamily>
-      <size>12</size>
-    </xfullticklabel>
-    <xlogbase>10</xlogbase>
-    <ylogbase>10</ylogbase>
-    <curvetag>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element2</curvetag>
-    <xmajorgrid>0</xmajorgrid>
-    <ymajorgrid>0</ymajorgrid>
-    <xminorgrid>0</xminorgrid>
-    <yminorgrid>0</yminorgrid>
-    <majorgridcolor>#808080</majorgridcolor>
-    <minorgridcolor>#808080</minorgridcolor>
-    <majorgridcolordefault>1</majorgridcolordefault>
-    <minorgridcolordefault>1</minorgridcolordefault>
-    <majorpenwidth>1</majorpenwidth>
-    <minorpenwidth>1</minorpenwidth>
-    <axispenwidth>1</axispenwidth>
-    <xminorticks>-1</xminorticks>
-    <yminorticks>-1</yminorticks>
-    <xmajorticks>5</xmajorticks>
-    <ymajorticks>5</ymajorticks>
-    <xticksinplot>1</xticksinplot>
-    <xticksoutplot>0</xticksoutplot>
-    <yticksinplot>1</yticksinplot>
-    <yticksoutplot>0</yticksoutplot>
-    <suppresstop>0</suppresstop>
-    <suppressbottom>0</suppressbottom>
-    <suppressleft>0</suppressleft>
-    <suppressright>0</suppressright>
-    <xtransformed>0</xtransformed>
-    <ytransformed>0</ytransformed>
-    <xtransformedexp></xtransformedexp>
-    <ytransformedexp></ytransformedexp>
-    <xinterpret>0</xinterpret>
-    <xinterpretas>1</xinterpretas>
-    <xdisplayas>4</xdisplayas>
-    <yinterpret>0</yinterpret>
-    <yinterpretas>1</yinterpretas>
-    <ydisplayas>4</ydisplayas>
-    <xoffsetmode>0</xoffsetmode>
-    <yoffsetmode>0</yoffsetmode>
-    <stylemarker>0</stylemarker>
-    <widthmarker>0</widthmarker>
-    <colormarker>#000000</colormarker>
-    <defaultcolormarker>1</defaultcolormarker>
-    <autoLabelTop>1</autoLabelTop>
-    <autoLabelX>1</autoLabelX>
-    <autoLabelY>1</autoLabelY>
-  </plot>
-  <plot>
-    <border color="#000000" width="0" padding="0" margin="0" />
-    <tag>P22</tag>
+    <tag>Estimated x Position</tag>
     <aspect x="0" y="0" w="0.5" h="0.49942329873126" />
     <idealsize w="838" h="433" />
-    <name>P22</name>
+    <name>Estimated x Position</name>
     <borderColor>#000000</borderColor>
     <borderWidth>0</borderWidth>
     <foregroundColor>#000000</foregroundColor>
@@ -2188,17 +1707,17 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>88.6908</xmin>
-    <xmax>99.2692</xmax>
-    <ymin>723.61417149306</ymin>
-    <ymax>839.96447396059</ymax>
+    <xmin>570.045</xmin>
+    <xmax>581.53</xmax>
+    <ymin>106.00174587318</ymin>
+    <ymax>110.36827410087</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
-      <text></text>
+      <text>Estimated x Position</text>
       <interpret/>
       <rotation>0</rotation>
-      <justify>1</justify>
+      <justify>3</justify>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </toplabel>
@@ -2217,14 +1736,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>98</text>
+      <text>580</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>820</text>
+      <text>110</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2281,16 +1800,16 @@
     <widthmarker>0</widthmarker>
     <colormarker>#000000</colormarker>
     <defaultcolormarker>1</defaultcolormarker>
-    <autoLabelTop>1</autoLabelTop>
+    <autoLabelTop>0</autoLabelTop>
     <autoLabelX>0</autoLabelX>
     <autoLabelY>0</autoLabelY>
   </plot>
   <plot>
     <border color="#000000" width="0" padding="0" margin="0" />
-    <tag>P23</tag>
+    <tag>Estimated y Position</tag>
     <aspect x="0.5" y="0" w="0.5" h="0.49942329873126" />
     <idealsize w="838" h="433" />
-    <name>P23</name>
+    <name>Estimated y Position</name>
     <borderColor>#000000</borderColor>
     <borderWidth>0</borderWidth>
     <foregroundColor>#000000</foregroundColor>
@@ -2301,17 +1820,17 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>88.6908</xmin>
-    <xmax>99.2692</xmax>
-    <ymin>4.1674494345056</ymin>
-    <ymax>7.6976785313554</ymax>
+    <xmin>570.045</xmin>
+    <xmax>581.53</xmax>
+    <ymin>41.502487158245</ymin>
+    <ymax>42.506153011967</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
-      <text></text>
+      <text>Estimated y Position</text>
       <interpret/>
       <rotation>0</rotation>
-      <justify>1</justify>
+      <justify>3</justify>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </toplabel>
@@ -2330,14 +1849,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>98</text>
+      <text>580</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>7.5</text>
+      <text>42.4</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2394,16 +1913,16 @@
     <widthmarker>0</widthmarker>
     <colormarker>#000000</colormarker>
     <defaultcolormarker>1</defaultcolormarker>
-    <autoLabelTop>1</autoLabelTop>
+    <autoLabelTop>0</autoLabelTop>
     <autoLabelX>0</autoLabelX>
     <autoLabelY>0</autoLabelY>
   </plot>
   <plot>
     <border color="#000000" width="0" padding="0" margin="0" />
-    <tag>P24</tag>
+    <tag>Estimated Angle</tag>
     <aspect x="0" y="0.49942329873126" w="0.5" h="0.49942329873126" />
     <idealsize w="838" h="433" />
-    <name>P24</name>
+    <name>Estimated Angle</name>
     <borderColor>#000000</borderColor>
     <borderWidth>0</borderWidth>
     <foregroundColor>#000000</foregroundColor>
@@ -2414,17 +1933,17 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>88.6908</xmin>
-    <xmax>99.2692</xmax>
-    <ymin>-0.15090742702275</ymin>
-    <ymax>0.15984043597506</ymax>
+    <xmin>570.045</xmin>
+    <xmax>581.53</xmax>
+    <ymin>0.35643051814959</ymin>
+    <ymax>0.37816873591988</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
-      <text></text>
+      <text>Estimated Angle</text>
       <interpret/>
       <rotation>0</rotation>
-      <justify>1</justify>
+      <justify>3</justify>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </toplabel>
@@ -2443,14 +1962,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>98</text>
+      <text>580</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>0.15</text>
+      <text>0.375</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2507,16 +2026,16 @@
     <widthmarker>0</widthmarker>
     <colormarker>#000000</colormarker>
     <defaultcolormarker>1</defaultcolormarker>
-    <autoLabelTop>1</autoLabelTop>
+    <autoLabelTop>0</autoLabelTop>
     <autoLabelX>0</autoLabelX>
     <autoLabelY>0</autoLabelY>
   </plot>
   <plot>
     <border color="#000000" width="0" padding="0" margin="0" />
-    <tag>P27</tag>
+    <tag>Estimated Position Robot</tag>
     <aspect x="0" y="0" w="0.5" h="1" />
     <idealsize w="838" h="867" />
-    <name>P27</name>
+    <name>Estimated Position Robot</name>
     <borderColor>#000000</borderColor>
     <borderWidth>0</borderWidth>
     <foregroundColor>#000000</foregroundColor>
@@ -2527,43 +2046,43 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>756.364</xmin>
-    <xmax>871.074</xmax>
-    <ymin>5.73678125</ymin>
-    <ymax>6.61326875</ymax>
+    <xmin>107.322</xmin>
+    <xmax>109.482</xmax>
+    <ymin>41.64951</ymin>
+    <ymax>42.52269</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
-      <text></text>
+      <text>Estimated Position</text>
       <interpret/>
       <rotation>0</rotation>
-      <justify>0</justify>
+      <justify>3</justify>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </toplabel>
     <xlabel>
-      <text></text>
+      <text>x(m)</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xlabel>
     <ylabel>
-      <text></text>
+      <text>y(m)</text>
       <interpret/>
       <rotation>270</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>860</text>
+      <text>109</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>6.6</text>
+      <text>42.4</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2618,16 +2137,16 @@
     <widthmarker>0</widthmarker>
     <colormarker>#000000</colormarker>
     <defaultcolormarker>1</defaultcolormarker>
-    <autoLabelTop>1</autoLabelTop>
-    <autoLabelX>1</autoLabelX>
-    <autoLabelY>1</autoLabelY>
+    <autoLabelTop>0</autoLabelTop>
+    <autoLabelX>0</autoLabelX>
+    <autoLabelY>0</autoLabelY>
   </plot>
   <plot>
     <border color="#000000" width="0" padding="0" margin="0" />
-    <tag>P2</tag>
+    <tag>Simulated Position Robot</tag>
     <aspect x="0.5" y="0" w="0.5" h="1" />
     <idealsize w="838" h="867" />
-    <name>P2</name>
+    <name>Simulated Position Robot</name>
     <borderColor>#000000</borderColor>
     <borderWidth>0</borderWidth>
     <foregroundColor>#000000</foregroundColor>
@@ -2638,43 +2157,43 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>5.246</xmin>
-    <xmax>6.04181</xmax>
-    <ymin>5.7219205</ymin>
-    <ymax>6.5568595</ymax>
+    <xmin>41.019</xmin>
+    <xmax>41.8438</xmax>
+    <ymin>41.466295</ymin>
+    <ymax>42.331705</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
-      <text></text>
+      <text>Simulated Position</text>
       <interpret/>
       <rotation>0</rotation>
-      <justify>1</justify>
+      <justify>3</justify>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </toplabel>
     <xlabel>
-      <text></text>
+      <text>x(m)</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xlabel>
     <ylabel>
-      <text></text>
+      <text>y(m)</text>
       <interpret/>
       <rotation>270</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>6</text>
+      <text>41.8</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>6.4</text>
+      <text>42.2</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2729,16 +2248,127 @@
     <widthmarker>0</widthmarker>
     <colormarker>#000000</colormarker>
     <defaultcolormarker>1</defaultcolormarker>
-    <autoLabelTop>1</autoLabelTop>
-    <autoLabelX>1</autoLabelX>
-    <autoLabelY>1</autoLabelY>
+    <autoLabelTop>0</autoLabelTop>
+    <autoLabelX>0</autoLabelX>
+    <autoLabelY>0</autoLabelY>
+  </plot>
+  <plot>
+    <border color="#000000" width="0" padding="0" margin="0" />
+    <tag>Simulated distance to wall</tag>
+    <aspect x="0" y="0" w="1" h="1" />
+    <idealsize w="1676" h="864" />
+    <name>Simulated distance to wall</name>
+    <borderColor>#000000</borderColor>
+    <borderWidth>0</borderWidth>
+    <foregroundColor>#000000</foregroundColor>
+    <backgroundColor>#ffffff</backgroundColor>
+    <margin>0</margin>
+    <padding>0</padding>
+    <xscalemode>0</xscalemode>
+    <yscalemode>5</yscalemode>
+    <xscalemodedefault>0</xscalemodedefault>
+    <yscalemodedefault>5</yscalemodedefault>
+    <xmin>585.003</xmin>
+    <xmax>596.583</xmax>
+    <ymin>42.6493575</ymin>
+    <ymax>43.4197425</ymax>
+    <xreversed>0</xreversed>
+    <yreversed>0</yreversed>
+    <toplabel>
+      <text>Distance to Wall</text>
+      <interpret/>
+      <rotation>0</rotation>
+      <justify>3</justify>
+      <fontfamily>DejaVu Sans</fontfamily>
+      <size>12</size>
+    </toplabel>
+    <xlabel>
+      <text>Timestamp (s)</text>
+      <interpret/>
+      <rotation>0</rotation>
+      <fontfamily>DejaVu Sans</fontfamily>
+      <size>12</size>
+    </xlabel>
+    <ylabel>
+      <text>Distance (m)</text>
+      <interpret/>
+      <rotation>270</rotation>
+      <fontfamily>DejaVu Sans</fontfamily>
+      <size>12</size>
+    </ylabel>
+    <xticklabel>
+      <text>596</text>
+      <interpret/>
+      <rotation>0</rotation>
+      <fontfamily>DejaVu Sans</fontfamily>
+      <size>12</size>
+    </xticklabel>
+    <yticklabel>
+      <text>43.4</text>
+      <interpret/>
+      <rotation>0</rotation>
+      <fontfamily>DejaVu Sans</fontfamily>
+      <size>12</size>
+    </yticklabel>
+    <xfullticklabel>
+      <text></text>
+      <interpret/>
+      <rotation>0</rotation>
+      <fontfamily>DejaVu Sans</fontfamily>
+      <size>12</size>
+    </xfullticklabel>
+    <xlogbase>10</xlogbase>
+    <ylogbase>10</ylogbase>
+    <curvetag>.Simulator.measurement.Element0</curvetag>
+    <xmajorgrid>0</xmajorgrid>
+    <ymajorgrid>0</ymajorgrid>
+    <xminorgrid>0</xminorgrid>
+    <yminorgrid>0</yminorgrid>
+    <majorgridcolor>#808080</majorgridcolor>
+    <minorgridcolor>#808080</minorgridcolor>
+    <majorgridcolordefault>1</majorgridcolordefault>
+    <minorgridcolordefault>1</minorgridcolordefault>
+    <majorpenwidth>1</majorpenwidth>
+    <minorpenwidth>1</minorpenwidth>
+    <axispenwidth>1</axispenwidth>
+    <xminorticks>-1</xminorticks>
+    <yminorticks>-1</yminorticks>
+    <xmajorticks>5</xmajorticks>
+    <ymajorticks>5</ymajorticks>
+    <xticksinplot>1</xticksinplot>
+    <xticksoutplot>0</xticksoutplot>
+    <yticksinplot>1</yticksinplot>
+    <yticksoutplot>0</yticksoutplot>
+    <suppresstop>0</suppresstop>
+    <suppressbottom>0</suppressbottom>
+    <suppressleft>0</suppressleft>
+    <suppressright>0</suppressright>
+    <xtransformed>0</xtransformed>
+    <ytransformed>0</ytransformed>
+    <xtransformedexp></xtransformedexp>
+    <ytransformedexp></ytransformedexp>
+    <xinterpret>0</xinterpret>
+    <xinterpretas>1</xinterpretas>
+    <xdisplayas>4</xdisplayas>
+    <yinterpret>0</yinterpret>
+    <yinterpretas>1</yinterpretas>
+    <ydisplayas>4</ydisplayas>
+    <xoffsetmode>0</xoffsetmode>
+    <yoffsetmode>0</yoffsetmode>
+    <stylemarker>0</stylemarker>
+    <widthmarker>0</widthmarker>
+    <colormarker>#000000</colormarker>
+    <defaultcolormarker>1</defaultcolormarker>
+    <autoLabelTop>0</autoLabelTop>
+    <autoLabelX>0</autoLabelX>
+    <autoLabelY>0</autoLabelY>
   </plot>
   <window>
-    <tag>W1</tag>
-    <restore x="2" y="2" w="1676" h="893" />
-    <internal x="2" y="2" w="1676" h="893" />
-    <columns>4</columns>
-    <name>W1</name>
+    <tag>Control</tag>
+    <restore x="2" y="2" w="1676" h="864" />
+    <internal x="2" y="2" w="1676" h="864" />
+    <columns>3</columns>
+    <name>Control</name>
     <backgroundColor>#efefef</backgroundColor>
     <Plot>
       <tag>P4</tag>
@@ -2747,19 +2377,10 @@
       <tag>P8</tag>
     </Plot>
     <Plot>
-      <tag>P9</tag>
-    </Plot>
-    <Plot>
       <tag>P12</tag>
     </Plot>
     <Plot>
-      <tag>P13</tag>
-    </Plot>
-    <Plot>
       <tag>P16</tag>
-    </Plot>
-    <Plot>
-      <tag>P17</tag>
     </Plot>
     <Plot>
       <tag>P19</tag>
@@ -2767,39 +2388,46 @@
     <Plot>
       <tag>P20</tag>
     </Plot>
-    <Plot>
-      <tag>P21</tag>
-    </Plot>
   </window>
   <window>
-    <tag>W2</tag>
+    <tag>Estimation</tag>
     <restore x="2" y="2" w="1676" h="864" />
     <internal x="2" y="2" w="1676" h="864" />
     <columns>2</columns>
-    <name>W2</name>
+    <name>Estimation</name>
     <backgroundColor>#efefef</backgroundColor>
     <Plot>
-      <tag>P22</tag>
+      <tag>Estimated x Position</tag>
     </Plot>
     <Plot>
-      <tag>P23</tag>
+      <tag>Estimated y Position</tag>
     </Plot>
     <Plot>
-      <tag>P24</tag>
+      <tag>Estimated Angle</tag>
     </Plot>
   </window>
   <window>
-    <tag>W3</tag>
+    <tag>Position robot</tag>
     <restore x="2" y="2" w="1676" h="864" />
     <internal x="2" y="2" w="1676" h="864" />
-    <columns>2</columns>
-    <name>W3</name>
+    <name>Position robot</name>
     <backgroundColor>#efefef</backgroundColor>
     <Plot>
-      <tag>P27</tag>
+      <tag>Estimated Position Robot</tag>
     </Plot>
     <Plot>
-      <tag>P2</tag>
+      <tag>Simulated Position Robot</tag>
+    </Plot>
+  </window>
+  <window>
+    <tag>Measurement</tag>
+    <restore x="2" y="2" w="1676" h="864" />
+    <internal x="2" y="2" w="1676" h="864" />
+    <columns>1</columns>
+    <name>Measurement</name>
+    <backgroundColor>#efefef</backgroundColor>
+    <Plot>
+      <tag>Simulated distance to wall</tag>
     </Plot>
   </window>
 </kstdoc>

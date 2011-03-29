@@ -161,9 +161,11 @@ namespace youbot{
     //m_measPdf = new LinearAnalyticConditionalGaussian(m_measModelMatrix,measurement_Uncertainty);
     //m_measModel = new LinearAnalyticMeasurementModelGaussianUncertainty(m_measPdf);
 
-    simulatedState_port.setDataSample(ColumnVector(m_dimension));
     m_measPdf = new YoubotLaserPdf(measurement_Uncertainty);
     m_measModel = new AnalyticMeasurementModelGaussianUncertainty(m_measPdf);
+
+    simulatedState_port.setDataSample(ColumnVector(m_dimension));
+    measurement_port.setDataSample(ColumnVector(m_measDimension));
     return true;
   }
 
