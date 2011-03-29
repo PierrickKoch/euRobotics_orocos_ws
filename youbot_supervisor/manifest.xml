@@ -10,6 +10,10 @@
   <depend package="youbot_controller" />
   <depend package="youbot_simulator" />
   <depend package="extendedKalmanFilterComponentRobot" />
+  <!--
+ <depend package="extendedKalmanFilterComponent" />
+  <depend package="youbot_master_rtt" />
+-->
 
 </package>
 

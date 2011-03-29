@@ -64,6 +64,8 @@
 
 #include <geometry_msgs/Twist.h>
 
+#include "youbotLaserPdf.h"
+
 namespace youbot{
 
   using namespace std;
@@ -95,8 +97,6 @@ namespace youbot{
       double m_sysNoiseMean;
       /// The covariance of the white noise on the system model
       double m_sysNoiseCovariance;
-      /// Matrix for linear measurementModel
-      Matrix m_measModelMatrix;
       /// Covariance matrix of additive Gaussian noise on measurement model
       SymmetricMatrix m_measModelCovariance;
       /// The mean of the white noise on the measurement model
@@ -145,7 +145,7 @@ namespace youbot{
       /// The linear system model
       AnalyticSystemModelGaussianUncertainty* m_sysModel;
       /// The linear conditional Gaussian underlying the measurement model
-      LinearAnalyticConditionalGaussian* m_measPdf;
+      AnalyticConditionalGaussian* m_measPdf;
       /// The analytic measurement model with addtive Gaussian noise
       AnalyticMeasurementModelGaussianUncertainty* m_measModel;
       /// The control input

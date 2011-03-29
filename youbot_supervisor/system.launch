@@ -1,7 +1,26 @@
 <launch>
   <rosparam command="load" file="$(find youbot_controller)/controller.yaml"/>
-  <node  name="youbot" pkg="ocl" type="deployer-gnulinux" required="true" launch-prefix="xterm -e" args="-s $(find youbot_supervisor)/deploy.ops --">
+  <include file="$(find youbot_master_rtt)/pma-robot-youbot.launch"/>
+
+  <node name="youbot_estimation_control" pkg="ocl" type="deployer-gnulinux" required="true" output="screen" args="-linfo -s $(find youbot_supervisor)/deploy.ops --">
   </node>
+
+  <node name="youbot" pkg="ocl" type="deployer-gnulinux" required="true" output="screen" args="-s /home/common/src/stacks/euRobotics_orocos_ws/youbot_supervisor/youbot.ops --" machine="pma-robot-youbot">
+  </node>
+
+  <node pkg="hokuyo_node" type="hokuyo_node" required="true" name="hokuyo"
+  machine="pma-robot-youbot" args="ttyACM0"/>
+
+  <node pkg="polar_scan_matcher" type="psm_node" required="true" name="psm_node" output="log" machine="pma-robot-youbot">
+    <param name="max_error" value="0.20"/>
+    <param name="search_window" value="100"/>
+  </node>
+
+  <node pkg="tf" type="static_transform_publisher" required="true" name="base_link_to_laser" 
+    args="0.0 0.0 0.0 0 0 0 /base_link /laser 40" machine="pma-robot-youbot"/>
+
+  <!--node pkg="rviz" type="rviz" name="rviz"
+    args="-d $(find polar_scan_matcher)/demo/demo.vcg"/-->
 
   <node name="rosbag" pkg="rosbag" type="rosbag" args="record -a -o youbot">
   </node>

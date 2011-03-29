@@ -14,6 +14,6 @@ find_package(OROCOS-RTT REQUIRED ${RTT_HINTS})
 
 include(${OROCOS-RTT_USE_FILE_PATH}/UseOROCOS-RTT.cmake)
 
-orocos_component(youbot_simulator src/simulator.cpp)
+orocos_component(youbot_simulator src/simulator.cpp src/youbotLaserPdf.cpp)
 orocos_install_headers(src/simulator.hpp)
 orocos_generate_package()
