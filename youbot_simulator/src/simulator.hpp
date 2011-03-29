@@ -44,6 +44,7 @@
 #include <rtt/Property.hpp>
 #include <rtt/base/PortInterface.hpp>
 #include <rtt/Component.hpp>
+#include <rtt/os/Timer.hpp>
 
 #include <bfl/wrappers/rng/rng.h>
 #include <bfl/wrappers/matrix/matrix_wrapper.h>
@@ -73,15 +74,23 @@ namespace youbot{
     protected:
       /// @name Ports
       //@{
+      /// The simulateMeas method gets triggered each time the OCL::TimerComponent
+      //fires an event on this port
+      InputPort< RTT::os::Timer::TimerId >      _timerId;
+      /// The simulateState method gets triggered each time the OCL::TimerComponent
+      //fires an event on this port
+      //InputPort< RTT::os::Timer::TimerId >      _timerIdState;
       /// Youbot control input
       InputPort<geometry_msgs::Twist> ctrl_port;
-      /// Youbot current pose
+      /// Youbot current measurement
       OutputPort<ColumnVector> measurement_port;
+      /// Youbot current pose
+      OutputPort<ColumnVector> simulatedState_port;
       //@}
       /// @name Properties
       //@{
       // The level of continuity of the system model
-      unsigned int m_level;
+      int m_level;
       /// The mean of the white noise on the system model
       double m_sysNoiseMean;
       /// The covariance of the white noise on the system model
@@ -95,14 +104,18 @@ namespace youbot{
       /// The covariance of the white noise on the measurement model
       SymmetricMatrix m_measNoiseCovariance;
       /// The dimension of the state space, only at position level
-      unsigned int m_posStateDimension;
+      int m_posStateDimension;
       /// The dimension of the measurement space
-      unsigned int m_measDimension;
+      int m_measDimension;
       /// Period at which the system model gets updated
       double m_period;
       /// The system state: (x,y,theta) for level = 0, ...
       ColumnVector m_state;
       //@}
+      /// timer id to trigger state update 
+      int prop_timer_state;
+      /// timer id to trigger meas update 
+      int prop_timer_meas;
 
     public:
       /**
@@ -149,5 +162,18 @@ namespace youbot{
       * @return the factorial
       */
       int factorial(int);
+
+      /*!
+       * simulate a measurement
+       */
+      void simulateMeas();
+      /*!
+       * simulate the system
+       */
+      void simulateState();
+      /*!
+       * function triggered by the timer 
+       */
+      void triggerTimer(RTT::base::PortInterface*);
   };
 }
