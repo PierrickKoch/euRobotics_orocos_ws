@@ -87,12 +87,6 @@ var geometry_msgs.Twist input
 input.linear.x=0.1
 Controller.ctrl.write(input)
 
-# Start the supervisor and run the state machine
-#Supervisor.exec_file("/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/run.lua")
-#
-#Supervisor.configure
-#Supervisor.start
-
 # Configure the Reporter component. Here we say which ports it should report
 Reporter.reportData("ExtendedKalmanFilterComponentRobot","Level")
 Reporter.reportPort("ExtendedKalmanFilterComponentRobot","EstimatedState")
