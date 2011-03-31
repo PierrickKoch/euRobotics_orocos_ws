@@ -6,12 +6,6 @@ loadComponent("Simulator","youbot::Simulator")
 # Set up periodic activity
 setActivity("Simulator",0.01,HighestPriority,ORO_SCHED_RT)
 
-# Create connections
-var ConnPolicy cp
-cp.transport = 3
-#cp.name_id = "controller/ctrl"
-#stream("Simulator.ctrl",cp)
-
 # Load properties
 loadService("Simulator","marshalling")
 Simulator.marshalling.loadProperties("cpf/simulator.cpf")

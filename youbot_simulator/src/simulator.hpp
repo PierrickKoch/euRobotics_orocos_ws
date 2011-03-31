@@ -1,5 +1,5 @@
 /******************************************************************************
-*                    OROCOS Youbot simulator component                        *
+*                    OROCOS YouBot simulator component                        *
 *                                                                             *
 *                         (C) 2011 Steven Bellens                             *
 *                     steven.bellens@mech.kuleuven.be                         *
@@ -35,8 +35,14 @@
 *                                                                             *
 *******************************************************************************/
 /* @Description:
- * @brief Youbot simulator - OROCOS component
+ * @brief YouBot simulator - OROCOS component
  * @Author: Steven Bellens
+ */
+
+/* The YouBot simulator component accepts control signals and outputs a
+ * simulated distance-to-wall measurement. Thereby it replaces the real YouBot
+ * and the scan matching algorithm (which calculates the distance-to-wall using
+ * the laser scan data).
  */
 
 #include <rtt/TaskContext.hpp>
@@ -75,23 +81,19 @@ namespace youbot{
     protected:
       /// @name Ports
       //@{
-      /// The simulateMeas method gets triggered each time the OCL::TimerComponent
-      //fires an event on this port
+      /// The simulateMeas method gets triggered each time the OCL::TimerComponent fires an event on this port
       InputPort< RTT::os::Timer::TimerId >      _timerId;
-      /// The simulateState method gets triggered each time the OCL::TimerComponent
-      //fires an event on this port
-      //InputPort< RTT::os::Timer::TimerId >      _timerIdState;
-      /// Youbot control input
+      /// YouBot control input - this input comes from the Controller component
       InputPort<geometry_msgs::Twist> ctrl_port;
-      /// Youbot current measurement
+      /// YouBot current measurement - the simulated distance-to-wall measurement
       OutputPort<ColumnVector> measurement_port;
-      /// Youbot current pose
+      /// YouBot current pose - for visualization purposes, the simulator outputs the current YouBot pose as well
       OutputPort<ColumnVector> simulatedState_port;
       //@}
       /// @name Properties
       //@{
-      // The level of continuity of the system model
-      int m_level;
+      // The level of continuity of the system model: cte position, cte velocity, ...
+      unsigned int m_level;
       /// The mean of the white noise on the system model
       double m_sysNoiseMean;
       /// The covariance of the white noise on the system model
@@ -103,18 +105,18 @@ namespace youbot{
       /// The covariance of the white noise on the measurement model
       SymmetricMatrix m_measNoiseCovariance;
       /// The dimension of the state space, only at position level
-      int m_posStateDimension;
+      unsigned int m_posStateDimension;
       /// The dimension of the measurement space
-      int m_measDimension;
+      unsigned int m_measDimension;
       /// Period at which the system model gets updated
       double m_period;
       /// The system state: (x,y,theta) for level = 0, ...
       ColumnVector m_state;
-      //@}
       /// timer id to trigger state update 
       int prop_timer_state;
       /// timer id to trigger meas update 
       int prop_timer_meas;
+      //@}
 
     public:
       /**
@@ -161,17 +163,23 @@ namespace youbot{
       * @return the factorial
       */
       int factorial(int);
-
       /*!
-       * simulate a measurement
+       * /brief Simulate a measurement
+       *
+       * Simulates a measurement and outputs it on the measurement port.
        */
       void simulateMeas();
       /*!
-       * simulate the system
+       * /brief Simulate the system
+       *
+       * Simulate the next state of the system.
        */
       void simulateState();
       /*!
-       * function triggered by the timer 
+       * /brief Trigger function
+       *
+       * Function triggered by the timer component to either get a new
+       * measurement or update the system state
        */
       void triggerTimer(RTT::base::PortInterface*);
   };
