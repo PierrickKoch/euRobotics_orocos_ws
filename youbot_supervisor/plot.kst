@@ -2,8 +2,8 @@
 <kstdoc version="1.3">
   <windowsize>
     <width>1680</width>
-    <height>986</height>
-    <active name="Estimation"/>
+    <height>975</height>
+    <active name="Control"/>
   </windowsize>
   <graphicsautosave time="1" enabled="false" format="PNG" xsize="640" ysize="480" display="0" square="false" />
   <kstfile>
@@ -18,12 +18,12 @@
   <scalar>
     <tag>P4/XMin</tag>
     <orphan/>
-    <value>-0.1</value>
+    <value>10677.7</value>
   </scalar>
   <scalar>
     <tag>P4/XMax</tag>
     <orphan/>
-    <value>0.1</value>
+    <value>10769.8</value>
   </scalar>
   <scalar>
     <tag>P4/YMin</tag>
@@ -38,12 +38,12 @@
   <scalar>
     <tag>P8/XMin</tag>
     <orphan/>
-    <value>-0.1</value>
+    <value>10677.7</value>
   </scalar>
   <scalar>
     <tag>P8/XMax</tag>
     <orphan/>
-    <value>0.1</value>
+    <value>10769.8</value>
   </scalar>
   <scalar>
     <tag>P8/YMin</tag>
@@ -58,12 +58,12 @@
   <scalar>
     <tag>P12/XMin</tag>
     <orphan/>
-    <value>-0.1</value>
+    <value>10677.7</value>
   </scalar>
   <scalar>
     <tag>P12/XMax</tag>
     <orphan/>
-    <value>0.1</value>
+    <value>10769.8</value>
   </scalar>
   <scalar>
     <tag>P12/YMin</tag>
@@ -78,12 +78,12 @@
   <scalar>
     <tag>P16/XMin</tag>
     <orphan/>
-    <value>-0.1</value>
+    <value>10677.7</value>
   </scalar>
   <scalar>
     <tag>P16/XMax</tag>
     <orphan/>
-    <value>0.1</value>
+    <value>10769.8</value>
   </scalar>
   <scalar>
     <tag>P16/YMin</tag>
@@ -98,12 +98,12 @@
   <scalar>
     <tag>P19/XMin</tag>
     <orphan/>
-    <value>-0.1</value>
+    <value>10677.7</value>
   </scalar>
   <scalar>
     <tag>P19/XMax</tag>
     <orphan/>
-    <value>0.1</value>
+    <value>10769.8</value>
   </scalar>
   <scalar>
     <tag>P19/YMin</tag>
@@ -118,12 +118,12 @@
   <scalar>
     <tag>P20/XMin</tag>
     <orphan/>
-    <value>-0.1</value>
+    <value>10677.7</value>
   </scalar>
   <scalar>
     <tag>P20/XMax</tag>
     <orphan/>
-    <value>0.1</value>
+    <value>10769.8</value>
   </scalar>
   <scalar>
     <tag>P20/YMin</tag>
@@ -138,62 +138,62 @@
   <scalar>
     <tag>Estimated x Position/XMin</tag>
     <orphan/>
-    <value>978.646</value>
+    <value>10677.7</value>
   </scalar>
   <scalar>
     <tag>Estimated x Position/XMax</tag>
     <orphan/>
-    <value>1078.4</value>
+    <value>10769.8</value>
   </scalar>
   <scalar>
     <tag>Estimated x Position/YMin</tag>
     <orphan/>
-    <value>66.265493401173</value>
+    <value>-3.5250456380024</value>
   </scalar>
   <scalar>
     <tag>Estimated x Position/YMax</tag>
     <orphan/>
-    <value>77.33372205226</value>
+    <value>3.5250456380024</value>
   </scalar>
   <scalar>
     <tag>Estimated y Position/XMin</tag>
     <orphan/>
-    <value>978.646</value>
+    <value>10677.7</value>
   </scalar>
   <scalar>
     <tag>Estimated y Position/XMax</tag>
     <orphan/>
-    <value>1078.4</value>
+    <value>10769.8</value>
   </scalar>
   <scalar>
     <tag>Estimated y Position/YMin</tag>
     <orphan/>
-    <value>69.620938441498</value>
+    <value>-0.21773364804252</value>
   </scalar>
   <scalar>
     <tag>Estimated y Position/YMax</tag>
     <orphan/>
-    <value>77.132535082484</value>
+    <value>1.414026813893</value>
   </scalar>
   <scalar>
     <tag>Estimated Angle/XMin</tag>
     <orphan/>
-    <value>978.646</value>
+    <value>10677.7</value>
   </scalar>
   <scalar>
     <tag>Estimated Angle/XMax</tag>
     <orphan/>
-    <value>1078.4</value>
+    <value>10769.8</value>
   </scalar>
   <scalar>
     <tag>Estimated Angle/YMin</tag>
     <orphan/>
-    <value>0.6492375034508</value>
+    <value>-3.1100423223374</value>
   </scalar>
   <scalar>
     <tag>Estimated Angle/YMax</tag>
     <orphan/>
-    <value>0.93557962092915</value>
+    <value>3.7482503223374</value>
   </scalar>
   <scalar>
     <tag>Estimated Position Robot/XMin</tag>
@@ -208,52 +208,52 @@
   <scalar>
     <tag>Estimated Position Robot/YMin</tag>
     <orphan/>
-    <value>-0.105</value>
+    <value>0.59804815</value>
   </scalar>
   <scalar>
     <tag>Estimated Position Robot/YMax</tag>
     <orphan/>
-    <value>0.105</value>
+    <value>0.59820985</value>
   </scalar>
   <scalar>
     <tag>Simulated Position Robot/XMin</tag>
     <orphan/>
-    <value>-0.1</value>
+    <value>0.000129706</value>
   </scalar>
   <scalar>
     <tag>Simulated Position Robot/XMax</tag>
     <orphan/>
-    <value>0.1</value>
+    <value>0.000162243</value>
   </scalar>
   <scalar>
     <tag>Simulated Position Robot/YMin</tag>
     <orphan/>
-    <value>-0.105</value>
+    <value>0.49990365</value>
   </scalar>
   <scalar>
     <tag>Simulated Position Robot/YMax</tag>
     <orphan/>
-    <value>0.105</value>
+    <value>0.49996035</value>
   </scalar>
   <scalar>
     <tag>Simulated distance to wall/XMin</tag>
     <orphan/>
-    <value>-0.1</value>
+    <value>10677.7</value>
   </scalar>
   <scalar>
     <tag>Simulated distance to wall/XMax</tag>
     <orphan/>
-    <value>0.1</value>
+    <value>10769.8</value>
   </scalar>
   <scalar>
     <tag>Simulated distance to wall/YMin</tag>
     <orphan/>
-    <value>-0.105</value>
+    <value>0.676266725</value>
   </scalar>
   <scalar>
     <tag>Simulated distance to wall/YMax</tag>
     <orphan/>
-    <value>0.105</value>
+    <value>0.676782275</value>
   </scalar>
   <vector>
     <tag>DS-reports.dat/TimeStamp</tag>
@@ -1047,8 +1047,8 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
+    <xmin>10677.7</xmin>
+    <xmax>10769.8</xmax>
     <ymin>-0.105</ymin>
     <ymax>0.105</ymax>
     <xreversed>0</xreversed>
@@ -1076,7 +1076,7 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>0.1</text>
+      <text>10760</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1158,8 +1158,8 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
+    <xmin>10677.7</xmin>
+    <xmax>10769.8</xmax>
     <ymin>-0.105</ymin>
     <ymax>0.105</ymax>
     <xreversed>0</xreversed>
@@ -1187,7 +1187,7 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>0.1</text>
+      <text>10760</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1269,8 +1269,8 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
+    <xmin>10677.7</xmin>
+    <xmax>10769.8</xmax>
     <ymin>-0.105</ymin>
     <ymax>0.105</ymax>
     <xreversed>0</xreversed>
@@ -1298,7 +1298,7 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>0.1</text>
+      <text>10760</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1380,8 +1380,8 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
+    <xmin>10677.7</xmin>
+    <xmax>10769.8</xmax>
     <ymin>-0.105</ymin>
     <ymax>0.105</ymax>
     <xreversed>0</xreversed>
@@ -1409,7 +1409,7 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>0.1</text>
+      <text>10760</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1491,8 +1491,8 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
+    <xmin>10677.7</xmin>
+    <xmax>10769.8</xmax>
     <ymin>-0.105</ymin>
     <ymax>0.105</ymax>
     <xreversed>0</xreversed>
@@ -1520,7 +1520,7 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>0.1</text>
+      <text>10760</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1602,8 +1602,8 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
+    <xmin>10677.7</xmin>
+    <xmax>10769.8</xmax>
     <ymin>-0.105</ymin>
     <ymax>0.105</ymax>
     <xreversed>0</xreversed>
@@ -1631,7 +1631,7 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>0.1</text>
+      <text>10760</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1713,10 +1713,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>978.646</xmin>
-    <xmax>1078.4</xmax>
-    <ymin>66.265493401173</ymin>
-    <ymax>77.33372205226</ymax>
+    <xmin>10677.7</xmin>
+    <xmax>10769.8</xmax>
+    <ymin>-3.5250456380024</ymin>
+    <ymax>3.5250456380024</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -1742,14 +1742,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>1060</text>
+      <text>10760</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>76</text>
+      <text>3</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1827,10 +1827,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>978.646</xmin>
-    <xmax>1078.4</xmax>
-    <ymin>69.620938441498</ymin>
-    <ymax>77.132535082484</ymax>
+    <xmin>10677.7</xmin>
+    <xmax>10769.8</xmax>
+    <ymin>-0.21773364804252</ymin>
+    <ymax>1.414026813893</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -1856,14 +1856,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>1060</text>
+      <text>10760</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>76</text>
+      <text>1.4</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1941,10 +1941,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>978.646</xmin>
-    <xmax>1078.4</xmax>
-    <ymin>0.6492375034508</ymin>
-    <ymax>0.93557962092915</ymax>
+    <xmin>10677.7</xmin>
+    <xmax>10769.8</xmax>
+    <ymin>-3.1100423223374</ymin>
+    <ymax>3.7482503223374</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -1970,14 +1970,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>1060</text>
+      <text>10760</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>0.9</text>
+      <text>3</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2057,8 +2057,8 @@
     <yscalemodedefault>5</yscalemodedefault>
     <xmin>-0.1</xmin>
     <xmax>0.1</xmax>
-    <ymin>-0.105</ymin>
-    <ymax>0.105</ymax>
+    <ymin>0.59804815</ymin>
+    <ymax>0.59820985</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -2091,7 +2091,7 @@
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>0.1</text>
+      <text>0.5982</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2166,10 +2166,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
-    <ymin>-0.105</ymin>
-    <ymax>0.105</ymax>
+    <xmin>0.000129706</xmin>
+    <xmax>0.000162243</xmax>
+    <ymin>0.49990365</ymin>
+    <ymax>0.49996035</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -2195,14 +2195,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>0.1</text>
+      <text>0.00016</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>0.1</text>
+      <text>0.49996</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2277,10 +2277,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.1</xmin>
-    <xmax>0.1</xmax>
-    <ymin>-0.105</ymin>
-    <ymax>0.105</ymax>
+    <xmin>10677.7</xmin>
+    <xmax>10769.8</xmax>
+    <ymin>0.676266725</ymin>
+    <ymax>0.676782275</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -2306,14 +2306,14 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>0.1</text>
+      <text>10760</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>12</size>
     </xticklabel>
     <yticklabel>
-      <text>0.1</text>
+      <text>0.6767</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2374,8 +2374,8 @@
   </plot>
   <window>
     <tag>Control</tag>
-    <restore x="2" y="2" w="1676" h="893" />
-    <internal x="2" y="2" w="1676" h="893" />
+    <restore x="2" y="2" w="1676" h="853" />
+    <internal x="2" y="2" w="1676" h="853" />
     <columns>3</columns>
     <name>Control</name>
     <backgroundColor>#efefef</backgroundColor>
@@ -2400,8 +2400,8 @@
   </window>
   <window>
     <tag>Estimation</tag>
-    <restore x="2" y="2" w="1676" h="864" />
-    <internal x="2" y="2" w="1676" h="864" />
+    <restore x="2" y="2" w="1676" h="853" />
+    <internal x="2" y="2" w="1676" h="853" />
     <columns>2</columns>
     <name>Estimation</name>
     <backgroundColor>#efefef</backgroundColor>
@@ -2491,8 +2491,8 @@
   </window>
   <window>
     <tag>Position robot</tag>
-    <restore x="2" y="2" w="1676" h="864" />
-    <internal x="2" y="2" w="1676" h="864" />
+    <restore x="2" y="2" w="1676" h="853" />
+    <internal x="2" y="2" w="1676" h="853" />
     <name>Position robot</name>
     <backgroundColor>#efefef</backgroundColor>
     <Plot>
@@ -2504,8 +2504,8 @@
   </window>
   <window>
     <tag>Simulation</tag>
-    <restore x="2" y="2" w="1676" h="864" />
-    <internal x="2" y="2" w="1676" h="864" />
+    <restore x="2" y="2" w="1676" h="853" />
+    <internal x="2" y="2" w="1676" h="853" />
     <columns>1</columns>
     <name>Simulation</name>
     <backgroundColor>#efefef</backgroundColor>
