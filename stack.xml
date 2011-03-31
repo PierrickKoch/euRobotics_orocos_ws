@@ -11,5 +11,7 @@
 
   <depend stack="ros"/>
   <depend stack="orocos_toolchain_ros"/>
+  <depend stack="orocos_kinematics_dynamics"/>
+  <depend stack="orocos_bayesian_filtering"/>
 
 </stack>
