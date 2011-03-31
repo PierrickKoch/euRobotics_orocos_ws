@@ -1,0 +1,30 @@
+[
+{'git':{
+  'uri':
+    'http://git.mech.kuleuven.be/robotics/orocos_toolchain_ros.git',
+    'local-name': 'orocos_toolchain_ros',
+    'version': 'master'
+  }
+},
+{'git':{
+  'uri':
+    'http://git.mech.kuleuven.be/robotics/orocos_kinematics_dynamics.git',
+    'local-name': 'orocos_kinematics_dynamics',
+    'version': 'master'
+  }
+},
+{'git':{
+  'uri':
+    'http://git.mech.kuleuven.be/robotics/orocos_bayesian_filtering.git',
+    'local-name': 'orocos_bayesian_filtering',
+    'version': 'master'
+  }
+},
+{'git':{
+  'uri':
+    'git@github.com:bellenss/euRobotics_orocos_ws.git',
+    'local-name': 'euRobotics_orocos_ws',
+    'version': 'master'
+  }
+}
+]
