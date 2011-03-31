@@ -50,7 +50,6 @@ namespace youbot{
     this->addPort("ctrl",ctrl_port).doc("Youbot control input");
     this->addProperty("goal_tolerance",m_goal_tolerance).doc("Tolerance on goal pose [x y yaw]");
     this->addProperty("control_velocity",m_velocity).doc("Control velocity");
-    this->addProperty("current_pose",m_current_pose).doc("Current pose");
   }
 
   Controller::~Controller(){}
