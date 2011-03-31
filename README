@@ -1,0 +1,8 @@
+OROCOS demo application - euRobotics Forum April 7th, 2011
+
+This stack contains 3 OROCOS components:
+- extendedKalmanFilterComponentRobot: estimates the 2D pose (x,y,theta) of the
+  YouBot based on laser scans measuring the distance to a wall
+- youbot_simulator: simulates the YouBot motion and generates distance measurements
+- youbot_controller: generates control commands to steer the YouBot to the
+  desired pose
