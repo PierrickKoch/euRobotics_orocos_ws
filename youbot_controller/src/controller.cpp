@@ -44,14 +44,16 @@ namespace youbot{
   Controller::Controller(std::string name) : TaskContext(name,PreOperational)
   ,m_goal_tolerance(3,0.0)
   ,m_velocity(3,0.0)
+  ,m_goal_reached(false)
   {
     /// Add the input and output ports to the Orocos interface
     this->addPort("current_pose",current_pose_port).doc("Youbot pose");
-    this->addPort("goal_pose",goal_pose_port).doc("Youbot goal pose");
+    this->addOperation("moveTo",&Controller::moveTo,this,RTT::OwnThread).doc("Move to goal pose").arg("goal_pose","Goal pose");
     this->addPort("ctrl",ctrl_port).doc("Youbot control input");
     /// Add property variables to the Orocos interface
     this->addProperty("goal_tolerance",m_goal_tolerance).doc("Tolerance on goal pose [x y yaw]");
     this->addProperty("control_velocity",m_velocity).doc("Control velocity");
+    this->addProperty("goal_reached",m_goal_reached).doc("Goal reached");
   }
 
   Controller::~Controller(){}
@@ -68,9 +70,10 @@ namespace youbot{
     /// read in current pose and goal pose - notice that whenever one of the
     //ports does not have any data on it, the controller will tell the YouBot
     //not to move.
-    if(goal_pose_port.read(m_goal_pose) != NoData && current_pose_port.read(m_current_pose) != NoData){
+    if(current_pose_port.read(m_current_pose) != NoData){
       /// calculate the pose difference
       calcPoseDiff();
+      m_goal_reached = false;
       // Generate control inputs, but don't do anything for those DOFs that are within the specified tolerance
       // X
       if(abs(m_delta_pose[0]) > m_goal_tolerance[0]){
@@ -96,11 +99,15 @@ namespace youbot{
       else{
         m_ctrl.angular.z = 0.0;
       }
+      if (m_ctrl.linear.x == 0 && m_ctrl.linear.y == 0 && m_ctrl.angular.z ==
+        0){
+        m_goal_reached = true;
+      }
     }
     // One of the input ports did not contain any data, find out which one and
     // signal this to the user
     else{
-      log(Debug) << "No goal pose and/or current pose received" << endlog();
+      log(Debug) << "No current pose received" << endlog();
       // Tell the YouBot not to move
       m_ctrl.linear.x = 0.0;
       m_ctrl.linear.y = 0.0;
@@ -119,6 +126,11 @@ namespace youbot{
     // Express the position difference in the YouBot frame
     m_delta_pose = rot.Inverse(diff_world);
     m_delta_pose[2] = m_goal_pose.theta - m_current_pose[2];
+  }
+
+  void Controller::moveTo(geometry_msgs::Pose2D goal_pose){
+    m_goal_pose = goal_pose;
+    m_goal_reached = false;
   }
 
   void Controller::stopHook(){
