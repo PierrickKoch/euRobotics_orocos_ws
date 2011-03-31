@@ -3,6 +3,8 @@
         This package contains the components of the extendedKalmanFilterComponent package
         It is a generic component estimated the state with a n'th (configurable) order system model and a linear analytic measurement model with additive gaussian noise.
     </description>
+    <license>LGPLv2.1 / BSD</license>
+    <author>Tinne De Laet</author>
     <depend package="rtt" />
     <depend package="ocl" />
     <depend package="orocos_bfl" />
