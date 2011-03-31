@@ -68,6 +68,7 @@ ExtendedKalmanFilterComponentRobot::ExtendedKalmanFilterComponentRobot(std::stri
   this->addProperty("MeasModelCovariance", _measModelCovariance).doc("Covariance matrix of additive Gaussian noise on measurement model");
   this->addProperty("MeasNoiseMean", _measNoiseMean).doc("Mean of additive Gaussian noise on measurement model");
   this->addProperty("Period", _period).doc("Period at which the system model gets updated");
+  this->addProperty("TimerIdSystemUpdate", _timerIdSystemUpdate).doc("timerId for the system update");
 }
 
 ExtendedKalmanFilterComponentRobot::~ExtendedKalmanFilterComponentRobot(){}
@@ -255,9 +256,8 @@ bool ExtendedKalmanFilterComponentRobot::startHook()
 #ifndef NDEBUG    
   log(Debug) << "start timer component " <<  endlog();
 #endif
-  OperationCaller<bool(RTT::os::Timer::TimerId,RTT::Seconds)> startTimer = this->getPeer("Timer")->provides()->getOperation("startTimer");
-  startTimer(1,_period);
-  cout << _period << endl;
+  //OperationCaller<bool(RTT::os::Timer::TimerId,RTT::Seconds)> startTimer = this->getPeer("Timer")->provides()->getOperation("startTimer");
+  //startTimer(1,_period);
 #ifndef NDEBUG    
   log(Debug) << "(ExtendedKalmanFilterComponentRobot) startHook() ended" << endlog();
 #endif
@@ -273,7 +273,7 @@ void ExtendedKalmanFilterComponentRobot::sysUpdate(RTT::base::PortInterface* por
 {
    int timer_id;                                                                                                                                                                                             
    _timerId.read(timer_id);  
-   if( timer_id == 1){ 
+   if( timer_id == _timerIdSystemUpdate){ 
 #ifndef NDEBUG    
   log(Debug) << "(ExtendedKalmanFilterComponentRobot) sysUpdate() entered" << endlog();
 #endif

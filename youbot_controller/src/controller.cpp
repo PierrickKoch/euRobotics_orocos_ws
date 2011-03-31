@@ -78,15 +78,15 @@ namespace youbot{
       // generate control inputs
       // don't do anything for those DOFs that are within the specified tolerance
       if(abs(m_delta_pose[0]) > m_goal_tolerance[0]){
-        if(m_delta_pose[0] > 0) m_ctrl.linear.x = -abs(m_velocity[0]);
-        else m_ctrl.linear.x = abs(m_velocity[0]);
+        if(m_delta_pose[0] > 0) m_ctrl.linear.x = abs(m_velocity[0]);
+        else m_ctrl.linear.x = -abs(m_velocity[0]);
       }
       else{
         m_ctrl.linear.x = 0.0;
       }
       if(abs(m_delta_pose[1]) > m_goal_tolerance[1]){
-        if(m_delta_pose[1] > 0) m_ctrl.linear.y = -abs(m_velocity[1]);
-        else m_ctrl.linear.y = abs(m_velocity[1]);
+        if(m_delta_pose[1] > 0) m_ctrl.linear.y = abs(m_velocity[1]);
+        else m_ctrl.linear.y = -abs(m_velocity[1]);
       }
       else{
         m_ctrl.linear.y = 0.0;

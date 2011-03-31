@@ -30,4 +30,5 @@
      <simple name="Element0" type="double"><description>Sequence Element</description><value>0</value></simple>
   </struct>
   <simple name="Period" type="double"><description>Period at which the system model gets updated</description><value>0.10</value></simple>
+  <simple name="TimerIdSystemUpdate" type="long"><description>timerId for the system update</description><value>1</value></simple>
 </properties>

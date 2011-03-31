@@ -114,6 +114,8 @@ class ExtendedKalmanFilterComponentRobot : public TaskContext
       SymmetricMatrix          _measModelCovariance;
       /// Mean of additive Gaussian noise on measurement model
       ColumnVector              _measNoiseMean;
+      /// ID of timer to trigger system update
+      int                       _timerIdSystemUpdate;
 
     public:
       /*!
