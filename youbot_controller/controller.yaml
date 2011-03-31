@@ -1,3 +1,0 @@
-Controller:
-  goal_tolerance: {Element0: 0.1, Element1: 0.1, Element2: 0.1}
-  control_velocity: {Element0: 0.1, Element1: 0.1, Element2: 0.1}

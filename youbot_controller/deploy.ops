@@ -13,9 +13,8 @@ cp.name_id = "controller/ctrl"
 stream("Controller.ctrl",cp)
 
 # Load properties
-loadService("Controller","rosparam")
-Controller.rosparam.refreshProperty("goal_tolerance",false,true)
-Controller.rosparam.refreshProperty("control_velocity",false,true)
+loadService("Controller","marshalling")
+Controller.marshalling.loadProperties("/home/fiep/stacks/euRobotics_orocos_ws/youbot_controller/cpf/controller.cpf")
 
 # Configuring components
 Controller.configure()

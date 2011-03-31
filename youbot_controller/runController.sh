@@ -1,2 +1,2 @@
 #!/bin/sh
-rosrun ocl deployer-gnulinux -s controller.ops
+rosrun ocl deployer-gnulinux -s deploy.ops

@@ -23,8 +23,7 @@ setActivity("Reporter",0.01,LowestPriority,ORO_SCHED_OTHER)
 # load service
 loadService("ExtendedKalmanFilterComponentRobot","marshalling")
 loadService("Reporter","marshalling")
-loadService("Controller","rosparam")
-loadService("Simulator","rosparam")
+loadService("Controller","marshalling")
 loadService("Simulator","marshalling")
 
 # Connect peers
@@ -43,22 +42,9 @@ connectPeers("Reporter","Controller")
 connectPeers("Reporter","Simulator")
 
 # Load properties
-Controller.rosparam.refreshProperty("goal_tolerance",false,true)
-Controller.rosparam.refreshProperty("control_velocity",false,true)
-#Simulator.rosparam.refreshProperty("Level",false,true)
-#Simulator.rosparam.refreshProperty("MeasModelCovariance",false,true)
-#Simulator.rosparam.refreshProperty("MeasModelMatrix",false,true)
-#Simulator.rosparam.refreshProperty("MeasNoiseCovariance",false,true)
-#Simulator.rosparam.refreshProperty("MeasNoiseMean",false,true)
-#Simulator.rosparam.refreshProperty("Period",false,true)
-#Simulator.rosparam.refreshProperty("PosStateDimension",false,true)
-#Simulator.rosparam.refreshProperty("MeasDimension",false,true)
-#Simulator.rosparam.refreshProperty("SysNoiseCovariance",false,true)
-#Simulator.rosparam.refreshProperty("SysNoiseMean",false,true)
+Controller.marshalling.loadProperties("/home/fiep/stacks/euRobotics_orocos_ws/youbot_controller/cpf/controller.cpf")
 Simulator.marshalling.loadProperties("/home/fiep/stacks/euRobotics_orocos_ws/youbot_simulator/cpf/simulator.cpf")
 ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("/home/fiep/stacks/euRobotics_orocos_ws/extendedKalmanFilterComponentRobot/cpf/ekfRobot.cpf")
-
-
 
 # Create connections
 var ConnPolicy cp
