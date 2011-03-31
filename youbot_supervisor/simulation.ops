@@ -30,9 +30,9 @@ loadService("Controller","marshalling")
 loadService("Simulator","marshalling")
 
 # Load properties using the marshalling service we just loaded
-Controller.marshalling.loadProperties("/home/fiep/stacks/euRobotics_orocos_ws/youbot_controller/cpf/controller.cpf")
-Simulator.marshalling.loadProperties("/home/fiep/stacks/euRobotics_orocos_ws/youbot_simulator/cpf/simulator.cpf")
-ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("/home/fiep/stacks/euRobotics_orocos_ws/extendedKalmanFilterComponentRobot/cpf/ekfRobot.cpf")
+Controller.marshalling.loadProperties("../youbot_controller/cpf/controller.cpf")
+Simulator.marshalling.loadProperties("../youbot_simulator/cpf/simulator.cpf")
+ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("../extendedKalmanFilterComponentRobot/cpf/ekfRobot.cpf")
 
 # Connect peers. In order to exchange data between components, they need to be
 # neightbours or peers of each other
