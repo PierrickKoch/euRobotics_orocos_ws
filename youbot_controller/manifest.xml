@@ -15,4 +15,3 @@
     <depend package="geometry_msgs" />
     <depend package="rtt_ros_integration_geometry_msgs" />
 </package>
-
