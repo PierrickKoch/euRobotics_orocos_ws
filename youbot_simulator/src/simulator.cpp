@@ -1,7 +1,7 @@
 /******************************************************************************
 *                    OROCOS Youbot simulator component                        *
 *                                                                             *
-*                         (C) 2011 Steven Bellens                             *
+*                         (C) 2011 Steven Bellens, Tinne De Laet              *
 *                     steven.bellens@mech.kuleuven.be                         *
 *                    Department of Mechanical Engineering,                    *
 *                   Katholieke Universiteit Leuven, Belgium.                  *
@@ -55,7 +55,7 @@ namespace youbot{
     this->addProperty("SysNoiseMean", m_sysNoiseMean).doc("The mean of the noise on the marker system model");
     this->addProperty("SysNoiseCovariance", m_sysNoiseCovariance).doc("The covariance of the noise on the marker system model");
     this->addProperty("MeasNoiseMean", m_measNoiseMean).doc("The mean of the noise on the marker measurement model");
-    this->addProperty("MeasNoiseCovariance", m_measModelCovariance).doc("Covariance matrix of additive Gaussian noise on measurement model");
+    this->addProperty("MeasNoiseCovariance", m_measNoiseCovariance).doc("Covariance matrix of additive Gaussian noise on measurement model");
     this->addProperty("PosStateDimension", m_posStateDimension).doc("The dimension of the state space, only at position level");
     this->addProperty("MeasDimension", m_measDimension).doc("The dimension of the measurement space");
     this->addProperty("Period", m_period).doc("Period at which the system model gets updated");
@@ -130,21 +130,22 @@ namespace youbot{
 
     if(m_measDimension != m_measNoiseMean.rows() )
     {
-        log(Error) << "The size of the measurement does not fit the size of the mean of te mesurement noise, measurement update not executed " << endlog();
+        log(Error) << "(Simulator) The size of the measurement (" << m_measDimension << ") does not fit the size of the mean of te mesurement noise (" <<m_measNoiseMean.rows() <<"), measurement model not constructed " << endlog();
+        log(Error) << "(Simulator) The size of the measurement does not fit the size of the mean of te mesurement noise, measurement model not constructed " << endlog();
         return false;
     }
-    if(m_measDimension != m_measModelCovariance.rows() )
+    if(m_measDimension != m_measNoiseCovariance.rows() )
     {
-        log(Error) << "The size of the measurement covariance matrix  does not fit the size of the mean of te mesurement noise, measurement update not executed " << endlog();
+        log(Error) << "(Simulator) The size of the measurement (" << m_measDimension << ") does not fit the size of the covariance of te mesurement noise (" <<m_measNoiseCovariance.rows() <<"), measurement model not constructed " << endlog();
         return false;
     }
-    Gaussian measurement_Uncertainty(m_measNoiseMean, m_measModelCovariance);
+    Gaussian measurement_Uncertainty(m_measNoiseMean, m_measNoiseCovariance);
     /// The measurement model is non-linear and uses the custom YoubotLaserPdf class
     m_measPdf = new YoubotLaserPdf(measurement_Uncertainty);
     m_measModel = new AnalyticMeasurementModelGaussianUncertainty(m_measPdf);
 
     simulatedState_port.setDataSample(ColumnVector(m_dimension));
-    measurement_port.setDataSample(ColumnVector(m_measDimension));
+    measurement_port.setDataSample(0.0);
     return true;
   }
 
@@ -169,7 +170,8 @@ namespace youbot{
 
   void Simulator::simulateMeas(){
     // Simulate a new measurement and write it out
-    measurement_port.write(m_measModel->Simulate(m_state));
+    m_measurement = m_measModel->Simulate(m_state);
+    measurement_port.write(m_measurement(1));
   }
 
   void Simulator::simulateState(){

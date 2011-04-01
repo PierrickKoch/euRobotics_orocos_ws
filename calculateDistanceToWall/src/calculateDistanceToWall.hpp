@@ -73,8 +73,8 @@ class CalculateDistanceToWall : public TaskContext
       *********/
       /// The measured laser scan 
       InputPort< sensor_msgs::LaserScan >       _laserScanPort;
-      /// ColumnVector containing the calculated distance to the wall
-      OutputPort< ColumnVector>                 _distanceToWallPort;
+      /// The calculated distance to the wall
+      OutputPort< double>                        _distanceToWallPort;
 
       OperationCaller<geometry_msgs::TransformStamped(const std::string&,const std::string&)> lookupTransform;
 
@@ -103,7 +103,7 @@ class CalculateDistanceToWall : public TaskContext
     private:
       geometry_msgs::TransformStamped   _transformLaserWorld; 
       sensor_msgs::LaserScan            _laserScan;
-      ColumnVector                      _distanceToWall;
+      double                            _distanceToWall;
       /*!
        * calculate distance to wall
        */
