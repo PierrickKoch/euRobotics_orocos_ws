@@ -2,7 +2,7 @@
 import("youbot_supervisor")
 
 # Create the components we need
-loadComponent("Supervisor","OCL::LuaComponent")
+loadComponent("Supervisor","TaskContext")
 loadComponent("ExtendedKalmanFilterComponentRobot","ExtendedKalmanFilterComponentRobot")
 loadComponent("Timer","OCL::TimerComponent")
 loadComponent("Controller","youbot::Controller")
@@ -35,7 +35,7 @@ Simulator.marshalling.loadProperties("../youbot_simulator/cpf/simulator.cpf")
 ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("../extendedKalmanFilterComponentRobot/cpf/ekfRobot.cpf")
 
 # Connect peers. In order to exchange data between components, they need to be
-# neightbours or peers of each other
+# neighbours or peers of each other
 connectPeers("Supervisor","Controller")
 connectPeers("Supervisor","Simulator")
 connectPeers("Supervisor","ExtendedKalmanFilterComponentRobot")
@@ -86,6 +86,11 @@ Timer.startTimer(Simulator.idTimerMeas,1.00)
 var geometry_msgs.Twist input
 input.linear.x=0.1
 Controller.ctrl.write(input)
+
+# Start the supervisor and load the state machine in it
+Supervisor.configure()
+loadService("Supervisor","scripting")
+Supervisor.start()
 
 # Configure the Reporter component. Here we say which ports it should report
 Reporter.reportData("ExtendedKalmanFilterComponentRobot","Level")

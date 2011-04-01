@@ -3,9 +3,9 @@
 <properties>
   <struct name="goal_tolerance" type="float64[]">
      <description>Tolerance on goal pose [x y yaw]</description>
-     <simple name="Element0" type="double"><description>Sequence Element</description><value>0.1</value></simple>
-     <simple name="Element1" type="double"><description>Sequence Element</description><value>0.1</value></simple>
-     <simple name="Element2" type="double"><description>Sequence Element</description><value>0.1</value></simple>
+     <simple name="Element0" type="double"><description>Sequence Element</description><value>0.01</value></simple>
+     <simple name="Element1" type="double"><description>Sequence Element</description><value>0.01</value></simple>
+     <simple name="Element2" type="double"><description>Sequence Element</description><value>0.01</value></simple>
   </struct>
   <struct name="control_velocity" type="float64[]">
      <description>Control velocity</description>

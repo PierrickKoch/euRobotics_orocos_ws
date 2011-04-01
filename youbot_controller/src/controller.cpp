@@ -67,13 +67,13 @@ namespace youbot{
   }
 
   void Controller::updateHook(){
+    m_goal_reached = false;
     /// read in current pose and goal pose - notice that whenever one of the
     //ports does not have any data on it, the controller will tell the YouBot
     //not to move.
     if(current_pose_port.read(m_current_pose) != NoData){
       /// calculate the pose difference
       calcPoseDiff();
-      m_goal_reached = false;
       // Generate control inputs, but don't do anything for those DOFs that are within the specified tolerance
       // X
       if(abs(m_delta_pose[0]) > m_goal_tolerance[0]){
@@ -133,6 +133,7 @@ namespace youbot{
     m_goal_pose.y = y;
     m_goal_pose.theta = theta;
     m_goal_reached = false;
+    return true;
   }
 
   void Controller::stopHook(){
