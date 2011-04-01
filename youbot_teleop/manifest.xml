@@ -1,0 +1,15 @@
+<package>
+  <description brief="youbot_teleop">
+
+     youbot_teleop
+
+  </description>
+  <author>Peter Soetens</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/youbot_teleop</url>
+  <depend package="joy"/>
+  <depend package="geometry_msgs"/>
+</package>
+
+
