@@ -131,7 +131,7 @@ namespace youbot{
        *  Move to the specified goal pose. The state machine will send goal
        *  poses using this operation.
        */
-      void moveTo(geometry_msgs::Pose2D goal_pose);
+      bool moveTo(double x, double y, double theta);
       //@}
 
     private:

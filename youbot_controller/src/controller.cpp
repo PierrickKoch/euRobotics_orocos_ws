@@ -48,7 +48,7 @@ namespace youbot{
   {
     /// Add the input and output ports to the Orocos interface
     this->addPort("current_pose",current_pose_port).doc("Youbot pose");
-    this->addOperation("moveTo",&Controller::moveTo,this,RTT::OwnThread).doc("Move to goal pose").arg("goal_pose","Goal pose");
+    this->addOperation("moveTo",&Controller::moveTo,this,RTT::OwnThread).doc("Move to goal pose").arg("X","Goal X position").arg("Y","Goal Y position").arg("Theta","Goal Theta orientation");
     this->addPort("ctrl",ctrl_port).doc("Youbot control input");
     /// Add property variables to the Orocos interface
     this->addProperty("goal_tolerance",m_goal_tolerance).doc("Tolerance on goal pose [x y yaw]");
@@ -128,8 +128,10 @@ namespace youbot{
     m_delta_pose[2] = m_goal_pose.theta - m_current_pose[2];
   }
 
-  void Controller::moveTo(geometry_msgs::Pose2D goal_pose){
-    m_goal_pose = goal_pose;
+  bool Controller::moveTo(double x, double y, double theta){
+    m_goal_pose.x = x;
+    m_goal_pose.y = y;
+    m_goal_pose.theta = theta;
     m_goal_reached = false;
   }
 
