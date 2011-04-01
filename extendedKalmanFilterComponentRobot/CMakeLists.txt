@@ -44,4 +44,3 @@ include(${OROCOS-RTT_USE_FILE_PATH}/UseOROCOS-RTT.cmake)
 # and installs in the directory lib/orocos/wrench_estimation_without_forceSensor/
 #
 orocos_component(extendedKalmanFilterComponentRobot src/extendedKalmanFilterComponentRobot.cpp src/nonlinearanalyticconditionalgaussianmobile.cpp src/youbotLaserPdf.cpp) # ...you may add multiple source files
-orocos_component(calculateDistanceToWall src/calculateDistanceToWall.cpp src/calculateDistanceToWall.cpp ) # ...you may add multiple source files
