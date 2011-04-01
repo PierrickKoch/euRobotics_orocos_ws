@@ -70,6 +70,7 @@
 #include <youbotLaserPdf.h>
 
 #include <geometry_msgs/Twist.h>
+#include <std_msgs/Float64.h>
 
 namespace youbot{
 
@@ -86,7 +87,7 @@ namespace youbot{
       /// YouBot control input - this input comes from the Controller component
       InputPort<geometry_msgs::Twist> ctrl_port;
       /// YouBot current measurement - the simulated distance-to-wall measurement
-      OutputPort<double> measurement_port;
+      OutputPort<std_msgs::Float64> measurement_port;
       /// YouBot current pose - for visualization purposes, the simulator outputs the current YouBot pose as well
       OutputPort<ColumnVector> simulatedState_port;
       //@}
@@ -153,6 +154,8 @@ namespace youbot{
       SymmetricMatrix m_poseCovariance;
       /// Measurement
       ColumnVector m_measurement;
+      /// MeasurementFloat64
+      std_msgs::Float64  m_measurementFloat;
       /// System inputs
       ColumnVector m_inputs;
       /*!

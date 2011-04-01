@@ -185,8 +185,6 @@ bool ExtendedKalmanFilterComponentRobot::configureHook()
 #endif
   if(_measDimension != _measNoiseMean.rows() )
   {
-      cout << _measDimension << endl;
-      cout << _measNoiseMean.rows() << endl;
       log(Error) << "The size of the measurement does not fit the size of the mean of te mesurement noise, creating measurement model failed" << endlog();
       return false;
   }
@@ -292,8 +290,8 @@ void ExtendedKalmanFilterComponentRobot::measUpdate(RTT::base::PortInterface* po
 #ifndef NDEBUG    
     log(Debug) << "(ExtendedKalmanFilterComponentRobot) measUpdate() entered" << endlog();
 #endif
-    _measurementPort.read(_measurementDouble);
-    _measurement(1)=_measurementDouble;
+    _measurementPort.read(_measurementFloat64);
+    _measurement(1)=_measurementFloat64.data;
     if(_measurement.rows() != _measDimension )
     {
         log(Error) << "The size of the measurement does not fit the size of the measurement model matrix, measurement update not executed " << endlog();

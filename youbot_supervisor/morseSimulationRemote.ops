@@ -1,0 +1,66 @@
+# Import libraries
+import("rtt_tf")
+import("calculateDistanceToWall")
+
+# Create the components we need
+loadComponent("CalculateDistanceToWall","CalculateDistanceToWall")
+loadComponent("rtt_tf","rtt_tf::RTT_TF")
+
+# Set the components activity
+
+# Load services. The marshalling services allows to load and store properties
+# from / to xml file format.
+loadService("CalculateDistanceToWall","marshalling")
+
+#add peers
+addPeer("CalculateDistanceToWall","rtt_tf")
+
+# Connect peers. In order to exchange data between components, they need to be
+# neighbours or peers of each other
+connectPeers("CalculateDistanceToWall","rtt_tf")
+
+# Create connections. The peers are defined, so we can now connect the
+# appropriate input and output ports with each other in order to allow data flow
+# between the components
+var ConnPolicy cp
+cp.transport = 3
+cp.name_id = "scan"
+stream("CalculateDistanceToWall.LaserScan",cp)
+cp.transport = 3
+cp.name_id = "measurement"
+stream("CalculateDistanceToWall.DistanceToWall",cp)
+cp.transport = 3
+
+# Configuring components
+Controller.configure()
+Timer.configure()
+Simulator.configure()
+ExtendedKalmanFilterComponentRobot.configure()
+
+# Starting components
+Simulator.start()
+ExtendedKalmanFilterComponentRobot.start()
+Controller.start()
+Timer.start()
+# Start timers. Each timer triggers a different component port.
+Timer.startTimer(ExtendedKalmanFilterComponentRobot.TimerIdSystemUpdate,ExtendedKalmanFilterComponentRobot.Period)
+Timer.startTimer(Simulator.idTimerState,Simulator.Period)
+Timer.startTimer(Simulator.idTimerMeas,1.00)
+
+var geometry_msgs.Twist input
+input.linear.x=0.1
+Controller.ctrl.write(input)
+
+# Start the supervisor and load the state machine in it
+Supervisor.configure()
+loadService("Supervisor","scripting")
+Supervisor.start()
+
+# Configure the Reporter component. Here we say which ports it should report
+Reporter.reportData("ExtendedKalmanFilterComponentRobot","Level")
+Reporter.reportPort("ExtendedKalmanFilterComponentRobot","EstimatedState")
+Reporter.reportPort("ExtendedKalmanFilterComponentRobot","CovarianceState")
+Reporter.reportPort("Controller","ctrl")
+Reporter.reportPort("Simulator","simulatedState")
+Reporter.reportPort("Simulator","measurement")
+Reporter.start()

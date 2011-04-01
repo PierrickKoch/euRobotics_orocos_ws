@@ -145,7 +145,8 @@ namespace youbot{
     m_measModel = new AnalyticMeasurementModelGaussianUncertainty(m_measPdf);
 
     simulatedState_port.setDataSample(ColumnVector(m_dimension));
-    measurement_port.setDataSample(0.0);
+    m_measurementFloat.data=0.0;
+    measurement_port.setDataSample(m_measurementFloat);
     return true;
   }
 
@@ -171,7 +172,8 @@ namespace youbot{
   void Simulator::simulateMeas(){
     // Simulate a new measurement and write it out
     m_measurement = m_measModel->Simulate(m_state);
-    measurement_port.write(m_measurement(1));
+    m_measurementFloat.data = m_measurement(1);
+    measurement_port.write(m_measurementFloat);
   }
 
   void Simulator::simulateState(){

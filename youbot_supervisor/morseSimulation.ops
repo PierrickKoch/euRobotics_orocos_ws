@@ -1,0 +1,78 @@
+# Import libraries
+import("youbot_supervisor")
+import("rtt_tf")
+
+# Create the components we need
+loadComponent("Supervisor","TaskContext")
+loadComponent("ExtendedKalmanFilterComponentRobot","ExtendedKalmanFilterComponentRobot")
+loadComponent("Timer","OCL::TimerComponent")
+loadComponent("Controller","youbot::Controller")
+loadComponent("Reporter","OCL::FileReporting")
+
+# Set the components activity
+# The controller component runs at a fixed frequency of 100Hz
+setActivity("Controller",0.01,HighestPriority,ORO_SCHED_RT)
+# The Extended Kalman Filter component has a non-periodic activity (period = 0.0), so it will only run
+# when it receives external triggers
+setActivity("ExtendedKalmanFilterComponentRobot",0.0,HighestPriority,ORO_SCHED_RT)
+setActivity("Timer",0.01,HighestPriority,ORO_SCHED_RT)
+setActivity("Supervisor",0.1,HighestPriority,ORO_SCHED_RT)
+setActivity("Reporter",0.01,LowestPriority,ORO_SCHED_OTHER)
+
+# Load services. The marshalling services allows to load and store properties
+# from / to xml file format.
+loadService("ExtendedKalmanFilterComponentRobot","marshalling")
+loadService("Reporter","marshalling")
+loadService("Controller","marshalling")
+
+# Load properties using the marshalling service we just loaded
+Controller.marshalling.loadProperties("../youbot_controller/cpf/controller.cpf")
+ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("../extendedKalmanFilterComponentRobot/cpf/ekfRobot.cpf")
+
+# Connect peers. In order to exchange data between components, they need to be
+# neighbours or peers of each other
+connectPeers("Supervisor","Controller")
+connectPeers("Supervisor","ExtendedKalmanFilterComponentRobot")
+connectPeers("Controller","ExtendedKalmanFilterComponentRobot")
+connectPeers("ExtendedKalmanFilterComponentRobot","Timer")
+connectPeers("ExtendedKalmanFilterComponentRobot","Controller")
+connectPeers("Reporter","ExtendedKalmanFilterComponentRobot")
+connectPeers("Reporter","Controller")
+
+# Create connections. The peers are defined, so we can now connect the
+# appropriate input and output ports with each other in order to allow data flow
+# between the components
+var ConnPolicy cp
+connect("Timer.timeout","ExtendedKalmanFilterComponentRobot.TimerId",cp)
+connect("ExtendedKalmanFilterComponentRobot.EstimatedState","Controller.current_pose",cp)
+connect("ExtendedKalmanFilterComponentRobot.Input","Controller.ctrl",cp)
+cp.transport = 3
+cp.name_id = "measurement"
+stream("ExtendedKalmanFilterComponentRobot.Measurement",cp)
+cp.transport = 3
+cp.name_id = "cmd_twist"
+stream("Controller.ctrl",cp)
+
+# Configuring components
+Controller.configure()
+Timer.configure()
+ExtendedKalmanFilterComponentRobot.configure()
+
+# Starting components
+ExtendedKalmanFilterComponentRobot.start()
+Controller.start()
+Timer.start()
+# Start timers. Each timer triggers a different component port.
+Timer.startTimer(ExtendedKalmanFilterComponentRobot.TimerIdSystemUpdate,ExtendedKalmanFilterComponentRobot.Period)
+
+# Start the supervisor and load the state machine in it
+Supervisor.configure()
+loadService("Supervisor","scripting")
+Supervisor.start()
+
+# Configure the Reporter component. Here we say which ports it should report
+Reporter.reportData("ExtendedKalmanFilterComponentRobot","Level")
+Reporter.reportPort("ExtendedKalmanFilterComponentRobot","EstimatedState")
+Reporter.reportPort("ExtendedKalmanFilterComponentRobot","CovarianceState")
+Reporter.reportPort("Controller","ctrl")
+Reporter.start()

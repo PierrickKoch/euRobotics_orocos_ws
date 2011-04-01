@@ -66,6 +66,7 @@
 #include <ocl/Component.hpp>
 
 #include <geometry_msgs/Twist.h>
+#include <std_msgs/Float64.h>
 
 #include "nonlinearanalyticconditionalgaussianmobile.h"
 #include "youbotLaserPdf.h"
@@ -88,7 +89,7 @@ class ExtendedKalmanFilterComponentRobot : public TaskContext
       /// The input (velocity send to te robot)
       InputPort<geometry_msgs::Twist>           _inputPort;
       /// The measurement
-      InputPort< double >                       _measurementPort;
+      InputPort< std_msgs::Float64 >            _measurementPort;
       /// The estimated state
       OutputPort< ColumnVector >                _estimatedStatePort;
       /// The covariance on the estimated state
@@ -157,7 +158,7 @@ class ExtendedKalmanFilterComponentRobot : public TaskContext
       /// The system state covariance matrix
       SymmetricMatrix                                         _stateCovariance; 
       /// Measurement 
-      double                                                  _measurementDouble;
+      std_msgs::Float64                                       _measurementFloat64;
       /// Measurement as a ColumnVector
       ColumnVector                                            _measurement;
       /// Matrix to store the covariance

@@ -14,6 +14,7 @@
     <depend package="rtt_ros_integration_geometry_msgs" />  
     <depend package="rtt_ros_integration_sensor_msgs" />  
     <depend package="geometry_msgs" />  
+    <depend package="std_msgs" />  
     <export>
       <cpp cflags="-I${prefix}/src" lflags="-L${prefix}/lib/orocos/gnulinux -lextendedKalmanFilterComponentRobot-gnulinux -Wl,-rpath,${prefix}/lib"/>
     </export>
