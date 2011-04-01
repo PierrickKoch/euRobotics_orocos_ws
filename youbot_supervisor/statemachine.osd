@@ -2,35 +2,26 @@ StateMachine YouBot
 {
   var geometry_msgs.Pose2D goal_pose
   initial state Start{
+    entry{
+      // Move to [0, 0.5, 0]
+      Controller.moveTo(0.0,0.5,0.0)
+    }
     transition if Controller.isRunning then select DriveToWall
   }
   state DriveToWall{
-    entry{
-      // Set goal position to 0, 0.5, 0
-      goal_pose.x = 0
-      goal_pose.y = 0.5
-      goal_pose.theta = 0
-      Controller.moveTo(goal_pose)
-    }
     transition if Controller.goal_reached then select DriveAlongWall
   }
   state DriveAlongWall{
     entry{
-      // Set goal position to 1, 0.5, 0
-      goal_pose.x = 1
-      goal_pose.y = 0.5
-      goal_pose.theta = 0
-      Controller.moveTo(goal_pose)
+      // Move to [1.0, 0.5, 0.0]
+      Controller.moveTo(1.0,0.5,0.0)
     }
     transition if Controller.goal_reached then select DriveHome 
   }
   state DriveHome{
     entry{
-      // Set goal position to 0, 0, 0
-      goal_pose.x = 0
-      goal_pose.y = 0
-      goal_pose.theta = 0
-      Controller.moveTo(goal_pose)
+      // Move to [0.0, 1.0, 0.0]
+      Controller.moveTo(0.0,1.0,0.0)
     }
     transition if Controller.goal_reached then select Stop
   }
