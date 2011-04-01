@@ -34,15 +34,12 @@
 *       POSSIBILITY OF SUCH DAMAGE.                                           *
 *                                                                             *
 *******************************************************************************/
-
 #include "simulator.hpp"
 
 ORO_CREATE_COMPONENT(youbot::Simulator)
 
 namespace youbot{
   Simulator::Simulator(std::string name) : TaskContext(name,PreOperational)
-    //,_timerIdState("TimerIdState")
-    //,_timerIdMeas("TimerIdMeas")
     ,_timerId("TimerId")
     ,m_level(0)
     ,m_posStateDimension(0)
@@ -85,13 +82,12 @@ namespace youbot{
     }
     // dimension of the state
     m_dimension = m_posStateDimension * (m_level+1);
-
 #ifndef NDEBUG
     log(Debug) << "(Simulator) resizing initial mean and covariances" << endlog();
 #endif
     m_measNoiseMean.resize(m_measDimension);
 
-    /// resize class variables
+    /// Make sure the class variables are of the correct size
     m_poseCovariance.resize(m_dimension);
     m_measurement.resize(m_measDimension);
     m_inputs.resize(4);
@@ -105,7 +101,7 @@ namespace youbot{
     sysNoiseMatrixOne = 0.0;
     Matrix sysNoiseMatrixNonSymOne = Matrix(m_level+1,m_level+1);
     sysNoiseMatrixNonSymOne = 0.0;
-    for(int i =0 ; i<=m_level; i++)
+    for(unsigned int i =0 ; i<=m_level; i++)
     {
       sysNoiseVector(i+1) = pow(m_period,m_level-i+1)/double(factorial(m_level-i+1));
     }
@@ -114,11 +110,11 @@ namespace youbot{
 
     SymmetricMatrix sysNoiseMatrix = SymmetricMatrix(m_dimension);
     sysNoiseMatrix = 0.0;
-    for(int i =0 ; i<=m_level; i++)
+    for(unsigned int i =0 ; i<=m_level; i++)
     {
-      for(int j =0 ; j<=m_level; j++)
+      for(unsigned int j =0 ; j<=m_level; j++)
       {
-        for (int k=1 ; k <=m_posStateDimension; k++)
+        for (unsigned int k=1 ; k <=m_posStateDimension; k++)
         {
           sysNoiseMatrix(i*m_posStateDimension+k,j*m_posStateDimension+k)=sysNoiseMatrixOne(i+1,j+1);
         }
@@ -132,17 +128,6 @@ namespace youbot{
     m_sysPdf = new NonLinearAnalyticConditionalGaussianMobile(system_Uncertainty);
     m_sysModel = new AnalyticSystemModelGaussianUncertainty(m_sysPdf);
 
-    /// make measurement model
-    //if(m_measDimension != m_measModelMatrix.rows() )
-    //{
-    //    log(Error) << "The size of the measurement does not fit the size of the measurement model matrix, measurement update not executed " << endlog();
-    //    return false;
-    //}
-    //if(m_dimension != m_measModelMatrix.columns() )
-    //{
-    //    log(Error) << "The size of the measurement model matrix does not fit the state dimension, measurement update not executed " << endlog();
-    //    return false;
-    //}
     if(m_measDimension != m_measNoiseMean.rows() )
     {
         log(Error) << "The size of the measurement does not fit the size of the mean of te mesurement noise, measurement update not executed " << endlog();
@@ -154,9 +139,7 @@ namespace youbot{
         return false;
     }
     Gaussian measurement_Uncertainty(m_measNoiseMean, m_measModelCovariance);
-    //m_measPdf = new LinearAnalyticConditionalGaussian(m_measModelMatrix,measurement_Uncertainty);
-    //m_measModel = new LinearAnalyticMeasurementModelGaussianUncertainty(m_measPdf);
-
+    /// The measurement model is non-linear and uses the custom YoubotLaserPdf class
     m_measPdf = new YoubotLaserPdf(measurement_Uncertainty);
     m_measModel = new AnalyticMeasurementModelGaussianUncertainty(m_measPdf);
 
@@ -173,30 +156,32 @@ namespace youbot{
   }
 
   void Simulator::triggerTimer(RTT::base::PortInterface* port){
-     int timer_id;
-     _timerId.read(timer_id);
-     if( timer_id == prop_timer_state){
-     simulateState();
-     } 
-     else if( timer_id == prop_timer_meas ){
-     simulateMeas();
-     }
+    int timer_id;
+    // Check which timer triggered the port and act accordingly
+    _timerId.read(timer_id);
+    if( timer_id == prop_timer_state){
+      simulateState();
+    }
+    else if( timer_id == prop_timer_meas ){
+      simulateMeas();
+    }
   }
 
   void Simulator::simulateMeas(){
-    // simulate a new measurement
+    // Simulate a new measurement and write it out
     measurement_port.write(m_measModel->Simulate(m_state));
   }
 
   void Simulator::simulateState(){
-    // simulate a new measurement
+    // Read in the current control signals
     ctrl_port.read(m_ctrl_input);
     m_inputs(1) = m_ctrl_input.linear.x;
     m_inputs(2) = m_ctrl_input.linear.y;
     m_inputs(3) = m_ctrl_input.angular.z;
     m_inputs(4) = m_period;
-    // simulate the system one time step
+    // Simulate the system one time step
     m_state = m_sysModel->Simulate(m_state,m_inputs);
+    // Write out the estimated system state
     simulatedState_port.write(m_state);
   }
 

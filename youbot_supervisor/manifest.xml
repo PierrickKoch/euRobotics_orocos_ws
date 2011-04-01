@@ -1,20 +1,13 @@
 <package>
   <description brief="youbot_supervisor">
 
-     youbot_supervisor
+     youbot_supervisor: this package contains deploy scripts to launch the demo
+     application. It does not contain any source code
 
   </description>
   <author>Steven Bellens, steven.bellens@mech.kuleuven.be</author>
   <license>LGPLv2.1 / BSD</license>
-
   <depend package="youbot_controller" />
   <depend package="youbot_simulator" />
   <depend package="extendedKalmanFilterComponentRobot" />
-  <!--
- <depend package="extendedKalmanFilterComponent" />
-  <depend package="youbot_master_rtt" />
--->
-
 </package>
-
-
