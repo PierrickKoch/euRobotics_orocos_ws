@@ -54,13 +54,11 @@ namespace youbot{
     this->addPort("measurement",measurement_port).doc("Laser measurement output");
     this->addPort("simulatedState",simulatedState_port).doc("Simulated state");
     this->addEventPort(_timerId,boost::bind(&Simulator::triggerTimer,this,_1)).doc("Triggers simulateMeas() when new data arrives");
-    //this->addEventPort(_timerIdMeas,boost::bind(&Simulator::simulateMeas,this,_1)).doc("Triggers simulateMeas() when new data arrives");
-    //this->addEventPort(_timerIdState,boost::bind(&Simulator::simulateState,this,_1)).doc("Triggers simulateMeas() when new data arrives");
     this->addProperty("Level", m_level).doc("The level of continuity of the system model: 0 = cte position, 1= cte velocity ,... ");
     this->addProperty("SysNoiseMean", m_sysNoiseMean).doc("The mean of the noise on the marker system model");
     this->addProperty("SysNoiseCovariance", m_sysNoiseCovariance).doc("The covariance of the noise on the marker system model");
-    this->addProperty("MeasModelCovariance", m_measModelCovariance).doc("Covariance matrix of additive Gaussian noise on measurement model");
     this->addProperty("MeasNoiseMean", m_measNoiseMean).doc("The mean of the noise on the marker measurement model");
+    this->addProperty("MeasNoiseCovariance", m_measModelCovariance).doc("Covariance matrix of additive Gaussian noise on measurement model");
     this->addProperty("PosStateDimension", m_posStateDimension).doc("The dimension of the state space, only at position level");
     this->addProperty("MeasDimension", m_measDimension).doc("The dimension of the measurement space");
     this->addProperty("Period", m_period).doc("Period at which the system model gets updated");

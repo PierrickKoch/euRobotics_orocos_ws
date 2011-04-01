@@ -4,8 +4,6 @@ import("youbot_supervisor")
 loadComponent("Supervisor","OCL::LuaComponent")
 loadComponent("ExtendedKalmanFilterComponentRobot","ExtendedKalmanFilterComponentRobot")
 loadComponent("Timer","OCL::TimerComponent")
-#loadComponent("TimerMeasSimulator","OCL::TimerComponent")
-#loadComponent("TimerStateSimulator","OCL::TimerComponent")
 loadComponent("Controller","youbot::Controller")
 loadComponent("Simulator","youbot::Simulator")
 loadComponent("Reporter","OCL::FileReporting")
@@ -16,8 +14,6 @@ setActivity("Simulator",0.0,HighestPriority,ORO_SCHED_RT)
 setActivity("Controller",0.01,HighestPriority,ORO_SCHED_RT)
 setActivity("ExtendedKalmanFilterComponentRobot",0.0,HighestPriority,ORO_SCHED_RT)
 setActivity("Timer",0.01,HighestPriority,ORO_SCHED_RT)
-#setActivity("TimerMeasSimulator",1.00,HighestPriority,ORO_SCHED_RT)
-#setActivity("TimerStateSimulator",0.01,HighestPriority,ORO_SCHED_RT)
 setActivity("Reporter",0.01,LowestPriority,ORO_SCHED_OTHER)
 
 # load service
@@ -54,15 +50,10 @@ connect("Timer.timeout","Simulator.TimerId",cp)
 connect("ExtendedKalmanFilterComponentRobot.EstimatedState","Controller.current_pose",cp)
 connect("ExtendedKalmanFilterComponentRobot.Input","Controller.ctrl",cp)
 connect("Simulator.measurement","ExtendedKalmanFilterComponentRobot.Measurement",cp)
-cp.transport = 3
-cp.name_id = "controller/ctrl"
-stream("Controller.ctrl",cp)
 
 # Configuring components
 Controller.configure()
 Timer.configure()
-#TimerMeasSimulator.configure()
-#TimerStateSimulator.configure()
 Simulator.configure()
 ExtendedKalmanFilterComponentRobot.configure()
 
@@ -81,7 +72,7 @@ Controller.ctrl.write(input)
 
 # Start the supervisor and run the state machine
 #Supervisor.exec_file("/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/run.lua")
-#
+
 #Supervisor.configure
 #Supervisor.start
 
