@@ -47,7 +47,7 @@ connect("Timer.timeout","ExtendedKalmanFilterComponentRobot.TimerId",cp)
 connect("ExtendedKalmanFilterComponentRobot.EstimatedState","Controller.current_pose",cp)
 connect("ExtendedKalmanFilterComponentRobot.Input","Controller.ctrl",cp)
 cp.transport = 3
-cp.name_id = "measurement"
+cp.name_id = "meas"
 stream("ExtendedKalmanFilterComponentRobot.Measurement",cp)
 cp.transport = 3
 cp.name_id = "cmd_twist"

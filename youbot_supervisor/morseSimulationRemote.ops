@@ -27,7 +27,7 @@ cp.transport = 3
 cp.name_id = "scan"
 stream("CalculateDistanceToWall.LaserScan",cp)
 cp.transport = 3
-cp.name_id = "measurement"
+cp.name_id = "meas"
 stream("CalculateDistanceToWall.DistanceToWall",cp)
 cp.transport = 3
 

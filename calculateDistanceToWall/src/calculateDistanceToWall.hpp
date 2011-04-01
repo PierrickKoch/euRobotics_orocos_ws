@@ -51,10 +51,6 @@
 
 #include <ocl/Component.hpp>
 
-#include <bfl/wrappers/rng/rng.h>
-#include <bfl/wrappers/matrix/matrix_wrapper.h>
-#include <bfl/wrappers/matrix/vector_wrapper.h>
-
 #include <tf/tf.h>                                                                                                                                                                                             
 #include <tf/transform_datatypes.h>                                                                                                                                                                                             
 #include <tf/tfMessage.h>    
