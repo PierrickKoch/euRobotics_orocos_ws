@@ -7,8 +7,6 @@
     <author>Tinne De Laet </author>
     <depend package="rtt" />
     <depend package="ocl" />
-    <depend package="orocos_bfl" />
-    <depend package="bfl_typekit" />
     <depend package="tf" />                                                                                                                                                                                    
     <depend package="rtt_ros_integration" />                                                                                                                                                                   
     <depend package="rtt_ros_integration_geometry_msgs" />  
