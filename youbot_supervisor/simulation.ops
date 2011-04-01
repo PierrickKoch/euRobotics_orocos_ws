@@ -91,6 +91,9 @@ Controller.ctrl.write(input)
 Supervisor.configure()
 loadService("Supervisor","scripting")
 Supervisor.start()
+Supervisor.scripting.loadStateMachines("statemachine.osd")
+Supervisor.YouBotFSM.activate()
+Supervisor.YouBotFSM.start()
 
 # Configure the Reporter component. Here we say which ports it should report
 Reporter.reportData("ExtendedKalmanFilterComponentRobot","Level")
