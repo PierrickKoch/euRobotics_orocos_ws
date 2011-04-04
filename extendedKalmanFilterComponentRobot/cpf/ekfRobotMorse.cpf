@@ -4,8 +4,8 @@
   <struct name="PriorMean" type="ColumnVector">
      <description>The mean of the prior distribution on the marker state</description>
      <simple name="Element0" type="double"><description>Sequence Element</description><value>0.0</value></simple>
-     <simple name="Element1" type="double"><description>Sequence Element</description><value>0.1</value></simple>
-     <simple name="Element2" type="double"><description>Sequence Element</description><value>0.2</value></simple>
+     <simple name="Element1" type="double"><description>Sequence Element</description><value>11.0</value></simple>
+     <simple name="Element2" type="double"><description>Sequence Element</description><value>-1.57</value></simple>
   </struct>
   <struct name="PriorCovariance" type="ColumnVector">
      <description>The diagonal values of the covariance of the prior distribution: it is assumed that the initial state uncertainties are not coupled</description>
