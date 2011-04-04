@@ -1,0 +1,10 @@
+<launch>
+
+
+  <include file="$(find morse)/youbot_wall.launch"/>
+  <include file="$(find youbot_supervisor)/findPoseLaser.launch"/>
+
+  <node  name="youbot" pkg="ocl" type="deployer-gnulinux" required="true" launch-prefix="xterm -e" args="-s $(find youbot_supervisor)/morseSimulationRemote.ops --">
+  </node>
+
+</launch>
