@@ -1,32 +1,34 @@
-StateMachine YouBot 
+StateMachine YouBot
 {
-  var geometry_msgs.Pose2D goal_pose
   initial state Start{
     entry{
-      // Move to [0, 0.5, 0]
-      Controller.moveTo(0.0,0.5,0.0)
+      print.ln("In initial state")
     }
     transition if Controller.isRunning then select DriveToWall
   }
   state DriveToWall{
+    // Move to [0, 0.5, -1.57]
+    Controller.moveTo(0.0,0.5,-1.57)
     transition if Controller.goal_reached then select DriveAlongWall
   }
   state DriveAlongWall{
     entry{
-      // Move to [1.0, 0.5, 0.0]
-      Controller.moveTo(1.0,0.5,0.0)
+      // Move to [1.0, 0.5, -1.57]
+      Controller.moveTo(1.0,0.5,-1.57)
     }
-    transition if Controller.goal_reached then select DriveHome 
+    transition if Controller.goal_reached then select DriveHome
   }
   state DriveHome{
     entry{
-      // Move to [0.0, 1.0, 0.0]
-      Controller.moveTo(0.0,1.0,0.0)
+      // Move to [0.0, 1.0, -1.57]
+      Controller.moveTo(0.0,1.0,-1.57)
     }
     transition if Controller.goal_reached then select Stop
   }
   final state Stop{
-
+    entry{
+      print.ln("In final state")
+    }
   }
-}  
-RootMachine YouBot YouBotFSM 
+}
+RootMachine YouBot YouBotFSM

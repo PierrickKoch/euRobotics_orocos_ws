@@ -66,6 +66,7 @@
 #include <ocl/Component.hpp>
 
 #include <geometry_msgs/Twist.h>
+#include <std_msgs/Float64.h>
 
 #include "nonlinearanalyticconditionalgaussianmobile.h"
 #include "youbotLaserPdf.h"
@@ -86,10 +87,9 @@ class ExtendedKalmanFilterComponentRobot : public TaskContext
       //fires an event on this port
       InputPort< RTT::os::Timer::TimerId >      _timerId;
       /// The input (velocity send to te robot)
-      //InputPort< ColumnVector >                 _inputPort;
       InputPort<geometry_msgs::Twist>           _inputPort;
       /// The measurement
-      InputPort< ColumnVector >                 _measurementPort;
+      InputPort< std_msgs::Float64 >            _measurementPort;
       /// The estimated state
       OutputPort< ColumnVector >                _estimatedStatePort;
       /// The covariance on the estimated state
@@ -108,8 +108,6 @@ class ExtendedKalmanFilterComponentRobot : public TaskContext
       double                  _sysNoiseMean;
       /// The covariance of the white noise on the system model
       double                  _sysNoiseCovariance;
-      /// Matrix for linear measurementModel
-      //Matrix                   _measModelMatrix;
       /// Covariance matrix of additive Gaussian noise on measurement model
       SymmetricMatrix          _measModelCovariance;
       /// Mean of additive Gaussian noise on measurement model
@@ -160,6 +158,8 @@ class ExtendedKalmanFilterComponentRobot : public TaskContext
       /// The system state covariance matrix
       SymmetricMatrix                                         _stateCovariance; 
       /// Measurement 
+      std_msgs::Float64                                       _measurementFloat64;
+      /// Measurement as a ColumnVector
       ColumnVector                                            _measurement;
       /// Matrix to store the covariance
       SymmetricMatrix                                         _mat;

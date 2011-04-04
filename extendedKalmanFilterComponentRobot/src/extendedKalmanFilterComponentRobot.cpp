@@ -64,7 +64,6 @@ ExtendedKalmanFilterComponentRobot::ExtendedKalmanFilterComponentRobot(std::stri
   this->addProperty("SysNoiseCovariance", _sysNoiseCovariance).doc("The covariance of the noise on the marker system model");
   this->addProperty("PosStateDimension", _posStateDimension).doc("The dimension of the state space, only at position level");
   this->addProperty("MeasDimension", _measDimension).doc("The dimension of the measurement space, only for pre-allocation");
-  //this->addProperty("MeasModelMatrix", _measModelMatrix).doc("Matrix for linear measurement model");
   this->addProperty("MeasModelCovariance", _measModelCovariance).doc("Covariance matrix of additive Gaussian noise on measurement model");
   this->addProperty("MeasNoiseMean", _measNoiseMean).doc("Mean of additive Gaussian noise on measurement model");
   this->addProperty("Period", _period).doc("Period at which the system model gets updated");
@@ -87,11 +86,6 @@ bool ExtendedKalmanFilterComponentRobot::configureHook()
 #ifndef NDEBUG    
   log(Debug) << "(ExtendedKalmanFilterComponentRobot) resizing class variables" << endlog();
 #endif
-  //_priorMean.resize(_dimension);
-  //_priorCovariance.resize(_dimension);
-  //_measNoiseMean.resize(_measDimension);
-  //_measModelCovariance.resize(_measDimension);
-  
   _systemState.resize(_dimension);
   _stateCovariance.resize(_dimension);
   _measurement.resize(_measDimension);
@@ -189,34 +183,19 @@ bool ExtendedKalmanFilterComponentRobot::configureHook()
 #ifndef NDEBUG    
   log(Debug) << "(ExtendedKalmanFilterComponentRobot) make measurement model " << endlog();
 #endif
-  //_measModelMatrix.resize(_measDimension,_dimension);
-  //_measModelMatrix = 0.0;
-  //_measModelMatrix(1,2) = 1.0; // the y position of the robot is the expected distance measurement to the wall
-  //_measNoiseMean.resize(_measDimension);
-  //if(_measDimension != _measModelMatrix.rows() )
-  //{
-  //    log(Error) << "The size of the measurement does not fit the size of the measurement model matrix, measurement update not executed " << endlog();
-  //    return false;
-  //}
-  //if(_dimension != _measModelMatrix.columns() )
-  //{
-  //    log(Error) << "The size of the measurement model matrix does not fit the state dimension, measurement update not executed " << endlog();
-  //    return false;
-  //}
   if(_measDimension != _measNoiseMean.rows() )
   {
-      log(Error) << "The size of the measurement does not fit the size of the mean of te mesurement noise, measurement update not executed " << endlog();
+      log(Error) << "The size of the measurement does not fit the size of the mean of te mesurement noise, creating measurement model failed" << endlog();
       return false;
   }
   if(_measDimension != _measModelCovariance.rows() )
   {
-      log(Error) << "The size of the measurement covariance matrix  does not fit the size of the mean of te mesurement noise, measurement update not executed " << endlog();
+      log(Error) << "The size of the measurement covariance matrix  does not fit the size of the mean of te mesurement noise, creating measurement model failed " << endlog();
       return false;
   }
+  _measurement.resize(_measDimension);
 
   Gaussian measurement_Uncertainty(_measNoiseMean, _measModelCovariance);
-  //_measPdf = new LinearAnalyticConditionalGaussian(_measModelMatrix,measurement_Uncertainty);
-  //_measModel = new LinearAnalyticMeasurementModelGaussianUncertainty(_measPdf);
   _measPdf= new YoubotLaserPdf(measurement_Uncertainty);
   _measModel = new AnalyticMeasurementModelGaussianUncertainty(_measPdf);
 
@@ -252,12 +231,6 @@ bool ExtendedKalmanFilterComponentRobot::startHook()
   log(Debug) << "_stateCovariance " << _stateCovariance << endlog();
 #endif
   
-  // start a TimerComponent
-#ifndef NDEBUG    
-  log(Debug) << "start timer component " <<  endlog();
-#endif
-  //OperationCaller<bool(RTT::os::Timer::TimerId,RTT::Seconds)> startTimer = this->getPeer("Timer")->provides()->getOperation("startTimer");
-  //startTimer(1,_period);
 #ifndef NDEBUG    
   log(Debug) << "(ExtendedKalmanFilterComponentRobot) startHook() ended" << endlog();
 #endif
@@ -317,43 +290,20 @@ void ExtendedKalmanFilterComponentRobot::measUpdate(RTT::base::PortInterface* po
 #ifndef NDEBUG    
     log(Debug) << "(ExtendedKalmanFilterComponentRobot) measUpdate() entered" << endlog();
 #endif
-    _measurementPort.read(_measurement);
-    //_measModelMatrixPort.read(_measModelMatrix);
-    //_measModelCovariancePort.read(_measModelCovariance);
-    //_measModelMeanNoisePort.read(_measNoiseMean);
+    _measurementPort.read(_measurementFloat64);
+    _measurement(1)=_measurementFloat64.data;
     if(_measurement.rows() != _measDimension )
     {
         log(Error) << "The size of the measurement does not fit the size of the measurement model matrix, measurement update not executed " << endlog();
         log(Error) << "_measurement " << _measurement << endlog();
-        //log(Error) << "_measModelMatrix " << _measModelMatrix << endlog();
         return;
     }
-    //if(_dimension != _measModelMatrix.rows() )
-    //{
-    //    log(Error) << "The size of the measurement model matrix does not fit the state dimension, measurement update not executed " << endlog();
-    //    return;
-    //}
-    //if(_measurement.columns() != _measNoiseMean.columns() )
-    //{
-    //    log(Error) << "The size of the measurement does not fit the size of the mean of te mesurement noise, measurement update not executed " << endlog();
-    //    return;
-    //}
 
 #ifndef NDEBUG    
     log(Debug) << "(ExtendedKalmanFilterComponentRobot) _measurement: " << _measurement << endlog();
-    //log(Debug) << "(ExtendedKalmanFilterComponentRobot) _measModelMatrix: " << _measModelMatrix << endlog();
     log(Debug) << "(ExtendedKalmanFilterComponentRobot) _measModelCovariance: " << _measModelCovariance << endlog();
     log(Debug) << "(ExtendedKalmanFilterComponentRobot) _measNoiseMean: " << _measNoiseMean << endlog();
 #endif
-    // set the measurement model matrix
-    //_measPdf->MatrixSet(0,_measModelMatrix);
-    // set the measurement model pdf mean
-    //_measPdf->AdditiveNoiseMuSet( _measNoiseMean);
-    // set the measurement model pdf covariance
-    //_measPdf->AdditiveNoiseSigmaSet( _measModelCovariance);
-    // update the pdf of the measurement model
-    //_measModel->MeasurementPdfSet( _measPdf );
-    // update the filter with the measurement
     bool result = _extendedKalmanFilter->Update(_measModel,_measurement);
     if(!result)
     {

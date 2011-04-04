@@ -43,7 +43,6 @@ CalculateDistanceToWall::CalculateDistanceToWall(std::string name)
   : TaskContext(name,PreOperational)
   ,_laserScanPort("LaserScan")
   ,_distanceToWallPort("DistanceToWall")
-  ,_distanceToWall(1)
 { 
   this->addEventPort(_laserScanPort,boost::bind(&CalculateDistanceToWall::calculateDistance,this,_1)).doc("Triggers calcualteDistanceToWall() when new laser scan data arrives");
   this->addPort(_distanceToWallPort).doc("Calculated distance to wall");
@@ -111,13 +110,13 @@ void CalculateDistanceToWall::calculateDistance(RTT::base::PortInterface* portIn
   double yaw = tf::getYaw(_transformLaserWorld.transform.rotation);
   int laser_number = (int)((yaw-_laserScan.angle_min)/_laserScan.angle_increment);
   double distance_measurement=_laserScan.ranges[laser_number];
-  _distanceToWall(1)=distance_measurement;
+  _distanceToWall.data=distance_measurement;
   _distanceToWallPort.write(_distanceToWall);
 #ifndef NDEBUG    
   log(Debug) << "(CalculateDistanceToWall) Transform of laser wrt world " << _transformLaserWorld << endlog();
   log(Debug) << "(CalculateDistanceToWall) yaw of laser wrt world (degrees)" << yaw*180/3.14<< endlog();
   log(Debug) << "(CalculateDistanceToWall) laser_number " << laser_number<< endlog();
-  log(Debug) << "(CalculateDistanceToWall) _distanceToWall " << _distanceToWall<< endlog();
+  log(Debug) << "(CalculateDistanceToWall) _distanceToWall " << _distanceToWall.data<< endlog();
   log(Debug) << "(CalculateDistanceToWall) calculateDistance() finished " << endlog();
 #endif
 }

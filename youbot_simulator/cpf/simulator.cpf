@@ -4,7 +4,7 @@
   <simple name="Level" type="long"><description>The level of continuity of the system model</description><value>0</value></simple>
   <simple name="SysNoiseMean" type="double"><description>The mean of the system uncertainty distribution</description><value>0</value></simple>
   <simple name="SysNoiseCovariance" type="double"><description>The covariance of the system uncertainty distribution</description><value>1e-10</value></simple>
-  <struct name="MeasModelCovariance" type="SymmetricMatrix">
+  <struct name="MeasNoiseCovariance" type="SymmetricMatrix">
      <description>Covariance matrix of additive Gaussian noise on measurement model</description>
      <struct name="1" type="RowVector">
         <description>1th row of matrix</description>
@@ -22,6 +22,6 @@
      <description>The system state: (x,y,theta) for level = 0, ..</description>
      <simple name="Element0" type="double"><description>Sequence Element</description><value>0</value></simple>
      <simple name="Element1" type="double"><description>Sequence Element</description><value>0.5</value></simple>
-     <simple name="Element2" type="double"><description>Sequence Element</description><value>0.785</value></simple>
+     <simple name="Element2" type="double"><description>Sequence Element</description><value>-1.57</value></simple>
   </struct>
 </properties>

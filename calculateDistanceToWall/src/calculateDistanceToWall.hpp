@@ -51,14 +51,11 @@
 
 #include <ocl/Component.hpp>
 
-#include <bfl/wrappers/rng/rng.h>
-#include <bfl/wrappers/matrix/matrix_wrapper.h>
-#include <bfl/wrappers/matrix/vector_wrapper.h>
-
 #include <tf/tf.h>                                                                                                                                                                                             
 #include <tf/transform_datatypes.h>                                                                                                                                                                                             
 #include <tf/tfMessage.h>    
 #include <sensor_msgs/LaserScan.h>    
+#include <std_msgs/Float64.h>    
 
 using namespace std;
 using namespace BFL;
@@ -73,8 +70,8 @@ class CalculateDistanceToWall : public TaskContext
       *********/
       /// The measured laser scan 
       InputPort< sensor_msgs::LaserScan >       _laserScanPort;
-      /// ColumnVector containing the calculated distance to the wall
-      OutputPort< ColumnVector>                 _distanceToWallPort;
+      /// The calculated distance to the wall
+      OutputPort< std_msgs::Float64>            _distanceToWallPort;
 
       OperationCaller<geometry_msgs::TransformStamped(const std::string&,const std::string&)> lookupTransform;
 
@@ -103,7 +100,7 @@ class CalculateDistanceToWall : public TaskContext
     private:
       geometry_msgs::TransformStamped   _transformLaserWorld; 
       sensor_msgs::LaserScan            _laserScan;
-      ColumnVector                      _distanceToWall;
+      std_msgs::Float64                 _distanceToWall;
       /*!
        * calculate distance to wall
        */

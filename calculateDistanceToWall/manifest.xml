@@ -1,22 +1,20 @@
 <package>
-    <description brief="Orocos extendedKalmanFilterComponentRobot package">
-        This package contains the components of the extendedKalmanFilterComponent package
-        It is a generic component estimated the state with a n'th (configurable) order system model and a linear analytic measurement model with additive gaussian noise.
+    <description brief="Orocos calculateDistanceToWall Component package">
+        This package contains the components of the calculateDistanceToWall package
     </description>
-    <license>LGPLv2.1 / BSD</license>
-    <author>Tinne De Laet</author>
+    <!--NOTE: set the license and author before you publish this code-->
+    <license>LGPL, BSD</license>
+    <author>Tinne De Laet </author>
     <depend package="rtt" />
     <depend package="ocl" />
-    <depend package="orocos_bfl" />
-    <depend package="bfl_typekit" />
     <depend package="tf" />                                                                                                                                                                                    
     <depend package="rtt_ros_integration" />                                                                                                                                                                   
     <depend package="rtt_ros_integration_geometry_msgs" />  
     <depend package="rtt_ros_integration_sensor_msgs" />  
     <depend package="geometry_msgs" />  
     <depend package="std_msgs" />  
-    <export>
-      <cpp cflags="-I${prefix}/src" lflags="-L${prefix}/lib/orocos/gnulinux -lextendedKalmanFilterComponentRobot-gnulinux -Wl,-rpath,${prefix}/lib"/>
-    </export>
+    <depend package="sensor_msgs" />  
+    <depend package="rtt_tf" />  
+    <depend package="polar_scan_matcher" />  
 </package>
 

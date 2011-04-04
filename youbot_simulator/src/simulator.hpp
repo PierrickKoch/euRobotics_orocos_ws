@@ -1,7 +1,7 @@
 /******************************************************************************
 *                    OROCOS YouBot simulator component                        *
 *                                                                             *
-*                         (C) 2011 Steven Bellens                             *
+*                         (C) 2011 Steven Bellens, Tinne De Laet              *
 *                     steven.bellens@mech.kuleuven.be                         *
 *                    Department of Mechanical Engineering,                    *
 *                   Katholieke Universiteit Leuven, Belgium.                  *
@@ -36,7 +36,7 @@
 *******************************************************************************/
 /* @Description:
  * @brief YouBot simulator - OROCOS component
- * @Author: Steven Bellens
+ * @Author: Steven Bellens, Tinne De Laet
  */
 
 /* The YouBot simulator component accepts control signals and outputs a
@@ -70,6 +70,7 @@
 #include <youbotLaserPdf.h>
 
 #include <geometry_msgs/Twist.h>
+#include <std_msgs/Float64.h>
 
 namespace youbot{
 
@@ -86,7 +87,7 @@ namespace youbot{
       /// YouBot control input - this input comes from the Controller component
       InputPort<geometry_msgs::Twist> ctrl_port;
       /// YouBot current measurement - the simulated distance-to-wall measurement
-      OutputPort<ColumnVector> measurement_port;
+      OutputPort<std_msgs::Float64> measurement_port;
       /// YouBot current pose - for visualization purposes, the simulator outputs the current YouBot pose as well
       OutputPort<ColumnVector> simulatedState_port;
       //@}
@@ -98,11 +99,9 @@ namespace youbot{
       double m_sysNoiseMean;
       /// The covariance of the white noise on the system model
       double m_sysNoiseCovariance;
-      /// Covariance matrix of additive Gaussian noise on measurement model
-      SymmetricMatrix m_measModelCovariance;
       /// The mean of the white noise on the measurement model
       ColumnVector m_measNoiseMean;
-      /// The covariance of the white noise on the measurement model
+      /// Covariance matrix of additive Gaussian noise on measurement model
       SymmetricMatrix m_measNoiseCovariance;
       /// The dimension of the state space, only at position level
       unsigned int m_posStateDimension;
@@ -155,6 +154,8 @@ namespace youbot{
       SymmetricMatrix m_poseCovariance;
       /// Measurement
       ColumnVector m_measurement;
+      /// MeasurementFloat64
+      std_msgs::Float64  m_measurementFloat;
       /// System inputs
       ColumnVector m_inputs;
       /*!
