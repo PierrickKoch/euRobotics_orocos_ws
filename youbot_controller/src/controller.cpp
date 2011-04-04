@@ -63,55 +63,53 @@ namespace youbot{
   }
 
   bool Controller::startHook(){
-    return true;
+    if(current_pose_port.read(m_current_pose) == NoData){
+      log(Debug) << "No current pose received" << endlog();
+      return false;
+    }
+    else{
+      m_goal_pose.x = m_current_pose[0];
+      m_goal_pose.y = m_current_pose[1];
+      m_goal_pose.theta = m_current_pose[2];
+      return true;
+    }
   }
 
   void Controller::updateHook(){
     m_goal_reached = false;
-    /// read in current pose and goal pose - notice that whenever one of the
-    //ports does not have any data on it, the controller will tell the YouBot
-    //not to move.
-    if(current_pose_port.read(m_current_pose) != NoData){
-      /// calculate the pose difference
-      calcPoseDiff();
-      // Generate control inputs, but don't do anything for those DOFs that are within the specified tolerance
-      // X
-      if(abs(m_delta_pose[0]) > m_goal_tolerance[0]){
-        if(m_delta_pose[0] > 0) m_ctrl.linear.x = abs(m_velocity[0]);
-        else m_ctrl.linear.x = -abs(m_velocity[0]);
-      }
-      else{
-        m_ctrl.linear.x = 0.0;
-      }
-      // Y
-      if(abs(m_delta_pose[1]) > m_goal_tolerance[1]){
-        if(m_delta_pose[1] > 0) m_ctrl.linear.y = abs(m_velocity[1]);
-        else m_ctrl.linear.y = -abs(m_velocity[1]);
-      }
-      else{
-        m_ctrl.linear.y = 0.0;
-      }
-      // Theta
-      if(abs(m_delta_pose[2]) > m_goal_tolerance[2]){
-        if(m_delta_pose[2] > 0) m_ctrl.angular.z = abs(m_velocity[2]);
-        else m_ctrl.angular.z = -abs(m_velocity[2]);
-      }
-      else{
-        m_ctrl.angular.z = 0.0;
-      }
-      if (m_ctrl.linear.x == 0 && m_ctrl.linear.y == 0 && m_ctrl.angular.z ==
-        0){
-        m_goal_reached = true;
-      }
+    /// Read in the current pose
+    current_pose_port.read(m_current_pose);
+    /// Calculate the pose difference
+    calcPoseDiff();
+    // Generate control inputs, but don't do anything for those DOFs that are within the specified tolerance
+    // X
+    if(abs(m_delta_pose[0]) > m_goal_tolerance[0]){
+      if(m_delta_pose[0] > 0) m_ctrl.linear.x = abs(m_velocity[0]);
+      else m_ctrl.linear.x = -abs(m_velocity[0]);
     }
-    // One of the input ports did not contain any data, find out which one and
-    // signal this to the user
     else{
-      log(Debug) << "No current pose received" << endlog();
-      // Tell the YouBot not to move
       m_ctrl.linear.x = 0.0;
+    }
+    // Y
+    if(abs(m_delta_pose[1]) > m_goal_tolerance[1]){
+      if(m_delta_pose[1] > 0) m_ctrl.linear.y = abs(m_velocity[1]);
+      else m_ctrl.linear.y = -abs(m_velocity[1]);
+    }
+    else{
       m_ctrl.linear.y = 0.0;
+    }
+    // Theta
+    if(abs(m_delta_pose[2]) > m_goal_tolerance[2]){
+      if(m_delta_pose[2] > 0) m_ctrl.angular.z = abs(m_velocity[2]);
+      else m_ctrl.angular.z = -abs(m_velocity[2]);
+    }
+    else{
       m_ctrl.angular.z = 0.0;
+    }
+    /// Did the YouBot reach its goal yet?
+    if (m_ctrl.linear.x == 0 && m_ctrl.linear.y == 0 && m_ctrl.angular.z ==
+      0){
+      m_goal_reached = true;
     }
     // Write the control values to the ctrl output port
     ctrl_port.write(m_ctrl);
