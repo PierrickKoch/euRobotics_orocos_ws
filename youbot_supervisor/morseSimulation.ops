@@ -28,7 +28,7 @@ loadService("Controller","marshalling")
 
 # Load properties using the marshalling service we just loaded
 Controller.marshalling.loadProperties("../youbot_controller/cpf/controller.cpf")
-ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("../extendedKalmanFilterComponentRobot/cpf/ekfRobot.cpf")
+ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("../extendedKalmanFilterComponentRobot/cpf/ekfRobotMorse.cpf")
 
 # Connect peers. In order to exchange data between components, they need to be
 # neighbours or peers of each other
@@ -51,7 +51,7 @@ cp.transport = 3
 cp.name_id = "meas"
 stream("ExtendedKalmanFilterComponentRobot.Measurement",cp)
 cp.transport = 3
-cp.name_id = "cmd_twist"
+cp.name_id = "cmd_vel"
 stream("Controller.ctrl",cp)
 
 # Configuring components
