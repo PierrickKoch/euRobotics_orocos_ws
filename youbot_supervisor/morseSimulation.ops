@@ -1,6 +1,7 @@
 # Import libraries
 import("youbot_supervisor")
 import("rtt_tf")
+require("print")
 
 # Create the components we need
 loadComponent("Supervisor","TaskContext")
@@ -69,6 +70,9 @@ Timer.startTimer(ExtendedKalmanFilterComponentRobot.TimerIdSystemUpdate,Extended
 Supervisor.configure()
 loadService("Supervisor","scripting")
 Supervisor.start()
+Supervisor.scripting.loadStateMachines("statemachine.osd")
+Supervisor.YouBotFSM.activate()
+Supervisor.YouBotFSM.start()
 
 # Configure the Reporter component. Here we say which ports it should report
 Reporter.reportData("ExtendedKalmanFilterComponentRobot","Level")
