@@ -1,6 +1,7 @@
 # Import libraries
 import("youbot_supervisor")
 import("rtt_tf")
+require("print")
 
 # Create the components we need
 loadComponent("Supervisor","TaskContext")
@@ -27,7 +28,7 @@ loadService("Controller","marshalling")
 
 # Load properties using the marshalling service we just loaded
 Controller.marshalling.loadProperties("../youbot_controller/cpf/controller.cpf")
-ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("../extendedKalmanFilterComponentRobot/cpf/ekfRobot.cpf")
+ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("../extendedKalmanFilterComponentRobot/cpf/ekfRobotMorse.cpf")
 
 # Connect peers. In order to exchange data between components, they need to be
 # neighbours or peers of each other
@@ -69,6 +70,9 @@ Timer.startTimer(ExtendedKalmanFilterComponentRobot.TimerIdSystemUpdate,Extended
 Supervisor.configure()
 loadService("Supervisor","scripting")
 Supervisor.start()
+Supervisor.scripting.loadStateMachines("statemachine.osd")
+Supervisor.YouBotFSM.activate()
+Supervisor.YouBotFSM.start()
 
 # Configure the Reporter component. Here we say which ports it should report
 Reporter.reportData("ExtendedKalmanFilterComponentRobot","Level")

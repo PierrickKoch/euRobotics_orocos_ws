@@ -1,0 +1,15 @@
+StateMachine YouBot
+{
+  initial state Start{
+    entry{
+      print.ln("In initial state")
+    }
+  }
+
+  final state Stop{
+    entry{
+      print.ln("In final state")
+    }
+  }
+}
+RootMachine YouBot YouBotFSM
