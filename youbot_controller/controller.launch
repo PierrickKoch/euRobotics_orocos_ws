@@ -1,5 +1,0 @@
-<launch>
-  <node  name="controller" pkg="ocl" type="deployer-gnulinux"
-  launch-prefix="xterm -e" args="-ldebug -s $(find youbot_controller)/deploy.ops --">
-  </node>
-</launch>

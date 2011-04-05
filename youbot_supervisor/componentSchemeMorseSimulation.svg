@@ -14,7 +14,7 @@
    height="744.09448"
    id="svg25370"
    sodipodi:version="0.32"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.1 r9760"
    sodipodi:docname="componentSchemeMorseSimulation.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    inkscape:export-filename="/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/componentSchemeMorseSimulation.png"
@@ -334,9 +334,9 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="false"
-     inkscape:window-width="1680"
-     inkscape:window-height="989"
-     inkscape:window-x="1277"
+     inkscape:window-width="1440"
+     inkscape:window-height="880"
+     inkscape:window-x="-3"
      inkscape:window-y="-3"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -406,28 +406,6 @@
          id="tspan4590-6"
          x="-331.95013"
          y="-40.153641">Reporter (simplification)</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
-       d="M 0,0 0,0"
-       id="path5083"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0"
-       inkscape:connection-start="#path6010"
-       inkscape:connection-start-point="d4"
-       inkscape:connection-end="#path6827"
-       inkscape:connection-end-point="d4"
-       transform="translate(-944.61258,-626.49474)" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
-       d="M 0,0 0,0"
-       id="path5085"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0"
-       inkscape:connection-start="#path4904"
-       inkscape:connection-start-point="d4"
-       inkscape:connection-end="#path7014"
-       inkscape:connection-end-point="d4"
-       transform="translate(-944.61258,-626.49474)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 559.17307,280.41505 8.03497,4.82898"
@@ -1183,7 +1161,7 @@
          sodipodi:role="line"
          id="tspan6886"
          x="-851.77338"
-         y="-515.94751">Morse Simulation</tspan></text>
+         y="-515.94751">Morse / Gazebo Simulation</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text6944"

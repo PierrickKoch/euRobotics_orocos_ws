@@ -20,8 +20,7 @@ setActivity("Timer",0.01,HighestPriority,ORO_SCHED_RT)
 setActivity("Supervisor",0.1,HighestPriority,ORO_SCHED_RT)
 setActivity("Reporter",0.01,LowestPriority,ORO_SCHED_OTHER)
 
-# Load services. The marshalling services allows to load and store properties
-# from / to xml file format.
+# load service
 loadService("ExtendedKalmanFilterComponentRobot","marshalling")
 loadService("Reporter","marshalling")
 loadService("Controller","marshalling")
