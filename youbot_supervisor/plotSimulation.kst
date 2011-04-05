@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kstdoc version="1.3">
   <windowsize>
-    <width>1680</width>
-    <height>931</height>
-    <active name="Control"/>
+    <width>1022</width>
+    <height>690</height>
+    <active name="Estimation"/>
   </windowsize>
   <graphicsautosave time="1" enabled="false" format="PNG" xsize="640" ysize="480" display="0" square="false" />
   <kstfile>
@@ -13,17 +13,26 @@
     <index vector="INDEX" interpretation="1"/>
     <comment delimiters="#/c!;"/>
     <columns type="0"/>
-    <header start="4" fields="0"/>
+    <header start="4"/>
+  </kstfile>
+  <kstfile>
+    <tag>DS-reports.dat-2</tag>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <type>ASCII</type>
+    <index vector="INDEX" interpretation="1"/>
+    <comment delimiters="#/c!;"/>
+    <columns type="0"/>
+    <header start="3" fields="0"/>
   </kstfile>
   <scalar>
     <tag>P4/XMin</tag>
     <orphan/>
-    <value>23.2125</value>
+    <value>34.0949</value>
   </scalar>
   <scalar>
     <tag>P4/XMax</tag>
     <orphan/>
-    <value>122.282</value>
+    <value>123.095</value>
   </scalar>
   <scalar>
     <tag>P4/YMin</tag>
@@ -38,32 +47,32 @@
   <scalar>
     <tag>P19/XMin</tag>
     <orphan/>
-    <value>23.2125</value>
+    <value>34.0949</value>
   </scalar>
   <scalar>
     <tag>P19/XMax</tag>
     <orphan/>
-    <value>122.282</value>
+    <value>123.095</value>
   </scalar>
   <scalar>
     <tag>P19/YMin</tag>
     <orphan/>
-    <value>-0.0025</value>
+    <value>-0.105</value>
   </scalar>
   <scalar>
     <tag>P19/YMax</tag>
     <orphan/>
-    <value>0.1025</value>
+    <value>0.105</value>
   </scalar>
   <scalar>
     <tag>P20/XMin</tag>
     <orphan/>
-    <value>23.2125</value>
+    <value>34.0949</value>
   </scalar>
   <scalar>
     <tag>P20/XMax</tag>
     <orphan/>
-    <value>122.282</value>
+    <value>123.095</value>
   </scalar>
   <scalar>
     <tag>P20/YMin</tag>
@@ -78,387 +87,387 @@
   <scalar>
     <tag>Estimated x Position/XMin</tag>
     <orphan/>
-    <value>22.4724</value>
+    <value>94.1649</value>
   </scalar>
   <scalar>
     <tag>Estimated x Position/XMax</tag>
     <orphan/>
-    <value>121.542</value>
+    <value>187.815</value>
   </scalar>
   <scalar>
     <tag>Estimated x Position/YMin</tag>
     <orphan/>
-    <value>-1.1476821097686</value>
+    <value>-1.2415553505083</value>
   </scalar>
   <scalar>
     <tag>Estimated x Position/YMax</tag>
     <orphan/>
-    <value>3.1192725831519</value>
+    <value>1.2441829905083</value>
   </scalar>
   <scalar>
     <tag>Estimated y Position/XMin</tag>
     <orphan/>
-    <value>22.4724</value>
+    <value>94.1649</value>
   </scalar>
   <scalar>
     <tag>Estimated y Position/XMax</tag>
     <orphan/>
-    <value>121.542</value>
+    <value>187.815</value>
   </scalar>
   <scalar>
     <tag>Estimated y Position/YMin</tag>
     <orphan/>
-    <value>0.30173289014538</value>
+    <value>-0.25452659130977</value>
   </scalar>
   <scalar>
     <tag>Estimated y Position/YMax</tag>
     <orphan/>
-    <value>2.3524093362791</value>
+    <value>0.24355029130977</value>
   </scalar>
   <scalar>
     <tag>Estimated Angle/XMin</tag>
     <orphan/>
-    <value>22.4724</value>
+    <value>94.1649</value>
   </scalar>
   <scalar>
     <tag>Estimated Angle/XMax</tag>
     <orphan/>
-    <value>121.542</value>
+    <value>187.815</value>
   </scalar>
   <scalar>
     <tag>Estimated Angle/YMin</tag>
     <orphan/>
-    <value>-0.75125436546553</value>
+    <value>-0.97119013475432</value>
   </scalar>
   <scalar>
     <tag>Estimated Angle/YMax</tag>
     <orphan/>
-    <value>1.5302122339679</value>
+    <value>0.98309879475432</value>
   </scalar>
   <scalar>
     <tag>Estimated Position Robot/XMin</tag>
     <orphan/>
-    <value>0</value>
+    <value>-0.1</value>
   </scalar>
   <scalar>
     <tag>Estimated Position Robot/XMax</tag>
     <orphan/>
-    <value>1.84229</value>
+    <value>0.1</value>
   </scalar>
   <scalar>
     <tag>Estimated Position Robot/YMin</tag>
     <orphan/>
-    <value>0.55879185</value>
+    <value>-0.105</value>
   </scalar>
   <scalar>
     <tag>Estimated Position Robot/YMax</tag>
     <orphan/>
-    <value>2.21368215</value>
+    <value>0.105</value>
   </scalar>
   <scalar>
     <tag>Simulated Position Robot/XMin</tag>
     <orphan/>
-    <value>-0.0741709</value>
+    <value>-0.1</value>
   </scalar>
   <scalar>
     <tag>Simulated Position Robot/XMax</tag>
     <orphan/>
-    <value>1.84903</value>
+    <value>0.1</value>
   </scalar>
   <scalar>
     <tag>Simulated Position Robot/YMin</tag>
     <orphan/>
-    <value>0.457788075</value>
+    <value>-0.105</value>
   </scalar>
   <scalar>
     <tag>Simulated Position Robot/YMax</tag>
     <orphan/>
-    <value>2.228294925</value>
+    <value>0.105</value>
   </scalar>
   <scalar>
     <tag>Simulated distance to wall/XMin</tag>
     <orphan/>
-    <value>20.4924</value>
+    <value>-0.1</value>
   </scalar>
   <scalar>
     <tag>Simulated distance to wall/XMax</tag>
     <orphan/>
-    <value>119.542</value>
+    <value>0.1</value>
   </scalar>
   <scalar>
     <tag>Simulated distance to wall/YMin</tag>
     <orphan/>
-    <value>0.63674565</value>
+    <value>-0.105</value>
   </scalar>
   <scalar>
     <tag>Simulated distance to wall/YMax</tag>
     <orphan/>
-    <value>2.30542035</value>
+    <value>0.105</value>
   </scalar>
   <scalar>
     <tag>Simulated x-position/XMin</tag>
     <orphan/>
-    <value>20.4924</value>
+    <value>-0.1</value>
   </scalar>
   <scalar>
     <tag>Simulated x-position/XMax</tag>
     <orphan/>
-    <value>119.542</value>
+    <value>0.1</value>
   </scalar>
   <scalar>
     <tag>Simulated x-position/YMin</tag>
     <orphan/>
-    <value>-0.1207561725</value>
+    <value>-0.105</value>
   </scalar>
   <scalar>
     <tag>Simulated x-position/YMax</tag>
     <orphan/>
-    <value>1.8358252725</value>
+    <value>0.105</value>
   </scalar>
   <scalar>
     <tag>selected y-position/XMin</tag>
     <orphan/>
-    <value>20.4924</value>
+    <value>-0.1</value>
   </scalar>
   <scalar>
     <tag>selected y-position/XMax</tag>
     <orphan/>
-    <value>119.542</value>
+    <value>0.1</value>
   </scalar>
   <scalar>
     <tag>selected y-position/YMin</tag>
     <orphan/>
-    <value>0.458731825</value>
+    <value>-0.105</value>
   </scalar>
   <scalar>
     <tag>selected y-position/YMax</tag>
     <orphan/>
-    <value>2.189601175</value>
+    <value>0.105</value>
   </scalar>
   <scalar>
     <tag>Simulated angle/XMin</tag>
     <orphan/>
-    <value>20.4924</value>
+    <value>-0.1</value>
   </scalar>
   <scalar>
     <tag>Simulated angle/XMax</tag>
     <orphan/>
-    <value>119.542</value>
+    <value>0.1</value>
   </scalar>
   <scalar>
     <tag>Simulated angle/YMin</tag>
     <orphan/>
-    <value>0.693446675</value>
+    <value>-0.105</value>
   </scalar>
   <scalar>
     <tag>Simulated angle/YMax</tag>
     <orphan/>
-    <value>1.176460325</value>
+    <value>0.105</value>
   </scalar>
   <vector>
-    <tag>DS-reports.dat/TimeStamp</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/TimeStamp</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>TimeStamp</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/INDEX</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/INDEX</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>INDEX</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/TimeStamp-1</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/TimeStamp-1</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>TimeStamp</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/ExtendedKalmanFilterComponentRobot.Level</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/ExtendedKalmanFilterComponentRobot.Level</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>ExtendedKalmanFilterComponentRobot.Level</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element0</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element0</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element0</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element2</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element2</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element2</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element0</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element0</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element0</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element1</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element1</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element1</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element2</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element2</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element2</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element0</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element0</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element0</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element1</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element1</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element1</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element2</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element2</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element2</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element0</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element0</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element0</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element1</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element1</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element1</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element2</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element2</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element2</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.Controller.ctrl.linear.x</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.Controller.ctrl.linear.x</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.Controller.ctrl.linear.x</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.Controller.ctrl.linear.y</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.Controller.ctrl.linear.y</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.Controller.ctrl.linear.y</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.Controller.ctrl.linear.z</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.Controller.ctrl.linear.z</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.Controller.ctrl.linear.z</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.Controller.ctrl.angular.x</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.Controller.ctrl.angular.x</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.Controller.ctrl.angular.x</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.Controller.ctrl.angular.y</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.Controller.ctrl.angular.y</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.Controller.ctrl.angular.y</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.Controller.ctrl.angular.z</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.Controller.ctrl.angular.z</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.Controller.ctrl.angular.z</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.Simulator.simulatedState.Element0</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.Simulator.simulatedState.Element0</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.Simulator.simulatedState.Element0</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.Simulator.simulatedState.Element1</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.Simulator.simulatedState.Element1</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.Simulator.simulatedState.Element1</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.Simulator.simulatedState.Element2</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.Simulator.simulatedState.Element2</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.Simulator.simulatedState.Element2</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.Simulator.measurement</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.Simulator.measurement</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.Simulator.measurement.data</field>
     <start>-1</start>
     <num>10000</num>
@@ -472,17 +481,17 @@
     <num>10000</num>
   </vector>
   <vector>
-    <tag>DS-reports.dat/.Simulator.measurement.data</tag>
-    <provider>DS-reports.dat</provider>
-    <filename>/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
+    <tag>DS-reports.dat-2/.Simulator.measurement.data</tag>
+    <provider>DS-reports.dat-2</provider>
+    <filename>/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor/reports.dat</filename>
     <field>.Simulator.measurement.data</field>
     <start>-1</start>
     <num>10000</num>
   </vector>
   <curve>
     <tag>INDEX</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/INDEX</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/INDEX</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -496,8 +505,8 @@
   </curve>
   <curve>
     <tag>.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element0</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element0</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element0</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -511,8 +520,8 @@
   </curve>
   <curve>
     <tag>.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element2</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element2</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element2</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -526,8 +535,8 @@
   </curve>
   <curve>
     <tag>.Controller.ctrl.linear.y</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.Controller.ctrl.linear.y</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.Controller.ctrl.linear.y</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -541,8 +550,8 @@
   </curve>
   <curve>
     <tag>TimeStamp-1</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/TimeStamp-1</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/TimeStamp-1</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -556,8 +565,8 @@
   </curve>
   <curve>
     <tag>.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element1</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element1</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element1</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -571,8 +580,8 @@
   </curve>
   <curve>
     <tag>.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element0</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element0</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element0</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -586,8 +595,8 @@
   </curve>
   <curve>
     <tag>.Controller.ctrl.linear.z</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.Controller.ctrl.linear.z</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.Controller.ctrl.linear.z</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -601,8 +610,8 @@
   </curve>
   <curve>
     <tag>ExtendedKalmanFilterComponentRobot.Level</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/ExtendedKalmanFilterComponentRobot.Level</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/ExtendedKalmanFilterComponentRobot.Level</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -616,8 +625,8 @@
   </curve>
   <curve>
     <tag>.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element2</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element2</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element2</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -631,8 +640,8 @@
   </curve>
   <curve>
     <tag>.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element1</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element1</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element1</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -646,8 +655,8 @@
   </curve>
   <curve>
     <tag>.Controller.ctrl.angular.x</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.Controller.ctrl.angular.x</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.Controller.ctrl.angular.x</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -661,8 +670,8 @@
   </curve>
   <curve>
     <tag>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element0</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element0</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element0</yvectag>
     <legend>estimated x-position</legend>
     <interp>0</interp>
     <hasMinus/>
@@ -677,8 +686,8 @@
   </curve>
   <curve>
     <tag>.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element0</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element0</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element0</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -692,8 +701,8 @@
   </curve>
   <curve>
     <tag>.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element2</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element2</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element2</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -707,8 +716,8 @@
   </curve>
   <curve>
     <tag>.Controller.ctrl.angular.y</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.Controller.ctrl.angular.y</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.Controller.ctrl.angular.y</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -722,8 +731,8 @@
   </curve>
   <curve>
     <tag>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1</yvectag>
     <legend>estimated y-position</legend>
     <interp>0</interp>
     <hasMinus/>
@@ -738,8 +747,8 @@
   </curve>
   <curve>
     <tag>.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element1</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element1</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element1</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -753,8 +762,8 @@
   </curve>
   <curve>
     <tag>.Controller.ctrl.linear.x</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.Controller.ctrl.linear.x</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.Controller.ctrl.linear.x</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -768,8 +777,8 @@
   </curve>
   <curve>
     <tag>.Controller.ctrl.angular.z</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.Controller.ctrl.angular.z</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.Controller.ctrl.angular.z</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -783,8 +792,8 @@
   </curve>
   <curve>
     <tag>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element2</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element2</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element2</yvectag>
     <legend>estimated angle</legend>
     <interp>0</interp>
     <hasMinus/>
@@ -798,8 +807,7 @@
   </curve>
   <equationobject>
     <tag>x+covx</tag>
-    <equation>[.ExtendedKalmanFilterComponentRobot.EstimatedState.Element0]+SQRT([.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element0])</equation>
-    <xvector>DS-reports.dat/TimeStamp</xvector>
+    <xvector>DS-reports.dat-2/TimeStamp</xvector>
     <interpolate/>
   </equationobject>
   <curve>
@@ -819,8 +827,8 @@
   </curve>
   <equationobject>
     <tag>x-covx</tag>
-    <equation>[.ExtendedKalmanFilterComponentRobot.EstimatedState.Element0]-SQRT([.ExtendedKalmanFilterComponentRobot.CovarianceState.1.Element0])</equation>
-    <xvector>DS-reports.dat/TimeStamp</xvector>
+    <equation>-SQRT()</equation>
+    <xvector>DS-reports.dat-2/TimeStamp</xvector>
     <interpolate/>
   </equationobject>
   <curve>
@@ -840,8 +848,7 @@
   </curve>
   <equationobject>
     <tag>y+covy</tag>
-    <equation>[.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1]+SQRT([.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element1])</equation>
-    <xvector>DS-reports.dat/TimeStamp</xvector>
+    <xvector>DS-reports.dat-2/TimeStamp</xvector>
     <interpolate/>
   </equationobject>
   <curve>
@@ -861,8 +868,8 @@
   </curve>
   <equationobject>
     <tag>y-covy</tag>
-    <equation>[.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1]-SQRT([.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element1])</equation>
-    <xvector>DS-reports.dat/TimeStamp</xvector>
+    <equation>-SQRT()</equation>
+    <xvector>DS-reports.dat-2/TimeStamp</xvector>
     <interpolate/>
   </equationobject>
   <curve>
@@ -882,8 +889,8 @@
   </curve>
   <curve>
     <tag>theta</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element2</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element2</yvectag>
     <legend>estimated angle</legend>
     <interp>0</interp>
     <hasMinus/>
@@ -898,8 +905,7 @@
   </curve>
   <equationobject>
     <tag>theta+covtheta</tag>
-    <equation>[.ExtendedKalmanFilterComponentRobot.EstimatedState.Element2]+SQRT([.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element2])</equation>
-    <xvector>DS-reports.dat/TimeStamp</xvector>
+    <xvector>DS-reports.dat-2/TimeStamp</xvector>
     <interpolate/>
   </equationobject>
   <curve>
@@ -919,8 +925,8 @@
   </curve>
   <equationobject>
     <tag>theta-covtheta</tag>
-    <equation>[.ExtendedKalmanFilterComponentRobot.EstimatedState.Element2]-SQRT([.ExtendedKalmanFilterComponentRobot.CovarianceState.3.Element2])</equation>
-    <xvector>DS-reports.dat/TimeStamp</xvector>
+    <equation>-SQRT()</equation>
+    <xvector>DS-reports.dat-2/TimeStamp</xvector>
     <interpolate/>
   </equationobject>
   <curve>
@@ -940,8 +946,8 @@
   </curve>
   <curve>
     <tag>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1-C2</tag>
-    <xvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element0</xvectag>
-    <yvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1</yvectag>
+    <xvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.CovarianceState.2.Element0</xvectag>
+    <yvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -955,8 +961,8 @@
   </curve>
   <curve>
     <tag>.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1-C3</tag>
-    <xvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element0</xvectag>
-    <yvectag>DS-reports.dat/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1</yvectag>
+    <xvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element0</xvectag>
+    <yvectag>DS-reports.dat-2/.ExtendedKalmanFilterComponentRobot.EstimatedState.Element1</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -970,8 +976,8 @@
   </curve>
   <curve>
     <tag>.Simulator.simulatedState.Element0</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.Simulator.simulatedState.Element0</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.Simulator.simulatedState.Element0</yvectag>
     <legend>simulated x-position</legend>
     <interp>0</interp>
     <hasMinus/>
@@ -986,8 +992,8 @@
   </curve>
   <curve>
     <tag>.Simulator.simulatedState.Element1</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.Simulator.simulatedState.Element1</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.Simulator.simulatedState.Element1</yvectag>
     <legend>simulated y-position</legend>
     <interp>0</interp>
     <hasMinus/>
@@ -1002,8 +1008,8 @@
   </curve>
   <curve>
     <tag>.Simulator.simulatedState.Element2</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.Simulator.simulatedState.Element2</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.Simulator.simulatedState.Element2</yvectag>
     <legend>simulated angle</legend>
     <interp>0</interp>
     <hasMinus/>
@@ -1018,8 +1024,8 @@
   </curve>
   <curve>
     <tag>.Simulator.simulatedState.Element0-C2</tag>
-    <xvectag>DS-reports.dat/.Simulator.simulatedState.Element0</xvectag>
-    <yvectag>DS-reports.dat/.Simulator.simulatedState.Element1</yvectag>
+    <xvectag>DS-reports.dat-2/.Simulator.simulatedState.Element0</xvectag>
+    <yvectag>DS-reports.dat-2/.Simulator.simulatedState.Element1</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -1034,8 +1040,8 @@
   </curve>
   <curve>
     <tag>Simulator.measurementDouble</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.Simulator.measurement</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.Simulator.measurement</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -1050,7 +1056,7 @@
   </curve>
   <curve>
     <tag>x+covx_sv</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
     <yvectag>x+covx/sv</yvectag>
     <legend>x + sigma(x)</legend>
     <interp>0</interp>
@@ -1065,7 +1071,7 @@
   </curve>
   <curve>
     <tag>x+covx_xsv</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
     <yvectag>x+covx/xsv</yvectag>
     <legend>x + sigma(x)</legend>
     <interp>0</interp>
@@ -1080,7 +1086,7 @@
   </curve>
   <curve>
     <tag>Simulator.measurement</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
     <yvectag>DS-reports.dat/Simulator.measurement</yvectag>
     <legend></legend>
     <interp>0</interp>
@@ -1095,8 +1101,8 @@
   </curve>
   <curve>
     <tag>.Simulator.measurement.data</tag>
-    <xvectag>DS-reports.dat/TimeStamp</xvectag>
-    <yvectag>DS-reports.dat/.Simulator.measurement.data</yvectag>
+    <xvectag>DS-reports.dat-2/TimeStamp</xvectag>
+    <yvectag>DS-reports.dat-2/.Simulator.measurement.data</yvectag>
     <legend></legend>
     <interp>0</interp>
     <hasMinus/>
@@ -1124,8 +1130,8 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>23.2125</xmin>
-    <xmax>122.282</xmax>
+    <xmin>34.0949</xmin>
+    <xmax>123.095</xmax>
     <ymin>-0.105</ymin>
     <ymax>0.105</ymax>
     <xreversed>0</xreversed>
@@ -1235,8 +1241,8 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>23.2125</xmin>
-    <xmax>122.282</xmax>
+    <xmin>34.0949</xmin>
+    <xmax>123.095</xmax>
     <ymin>-0.105</ymin>
     <ymax>0.105</ymax>
     <xreversed>0</xreversed>
@@ -1346,10 +1352,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>23.2125</xmin>
-    <xmax>122.282</xmax>
-    <ymin>-0.0025</ymin>
-    <ymax>0.1025</ymax>
+    <xmin>34.0949</xmin>
+    <xmax>123.095</xmax>
+    <ymin>-0.105</ymin>
+    <ymax>0.105</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -1457,10 +1463,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>22.4724</xmin>
-    <xmax>121.542</xmax>
-    <ymin>-1.1476821097686</ymin>
-    <ymax>3.1192725831519</ymax>
+    <xmin>94.1649</xmin>
+    <xmax>187.815</xmax>
+    <ymin>-1.2415553505083</ymin>
+    <ymax>1.2441829905083</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -1486,14 +1492,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>120</text>
+      <text>180</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>3</text>
+      <text>1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1571,10 +1577,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>22.4724</xmin>
-    <xmax>121.542</xmax>
-    <ymin>0.30173289014538</ymin>
-    <ymax>2.3524093362791</ymax>
+    <xmin>94.1649</xmin>
+    <xmax>187.815</xmax>
+    <ymin>-0.25452659130977</ymin>
+    <ymax>0.24355029130977</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -1600,14 +1606,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>120</text>
+      <text>180</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>2</text>
+      <text>0.2</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1685,10 +1691,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>22.4724</xmin>
-    <xmax>121.542</xmax>
-    <ymin>-0.75125436546553</ymin>
-    <ymax>1.5302122339679</ymax>
+    <xmin>94.1649</xmin>
+    <xmax>187.815</xmax>
+    <ymin>-0.97119013475432</ymin>
+    <ymax>0.98309879475432</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -1714,14 +1720,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>120</text>
+      <text>180</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>1.5</text>
+      <text>0.5</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1799,10 +1805,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>0</xmin>
-    <xmax>1.84229</xmax>
-    <ymin>0.55879185</ymin>
-    <ymax>2.21368215</ymax>
+    <xmin>-0.1</xmin>
+    <xmax>0.1</xmax>
+    <ymin>-0.105</ymin>
+    <ymax>0.105</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -1828,14 +1834,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>1.5</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>2.2</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -1910,10 +1916,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>-0.0741709</xmin>
-    <xmax>1.84903</xmax>
-    <ymin>0.457788075</ymin>
-    <ymax>2.228294925</ymax>
+    <xmin>-0.1</xmin>
+    <xmax>0.1</xmax>
+    <ymin>-0.105</ymin>
+    <ymax>0.105</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -1939,14 +1945,14 @@
       <size>1</size>
     </ylabel>
     <xticklabel>
-      <text>1.5</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>1</size>
     </xticklabel>
     <yticklabel>
-      <text>2</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2021,10 +2027,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>20.4924</xmin>
-    <xmax>119.542</xmax>
-    <ymin>0.63674565</ymin>
-    <ymax>2.30542035</ymax>
+    <xmin>-0.1</xmin>
+    <xmax>0.1</xmax>
+    <ymin>-0.105</ymin>
+    <ymax>0.105</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -2050,14 +2056,14 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>100</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>12</size>
     </xticklabel>
     <yticklabel>
-      <text>2.2</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2132,10 +2138,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>20.4924</xmin>
-    <xmax>119.542</xmax>
-    <ymin>-0.1207561725</ymin>
-    <ymax>1.8358252725</ymax>
+    <xmin>-0.1</xmin>
+    <xmax>0.1</xmax>
+    <ymin>-0.105</ymin>
+    <ymax>0.105</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -2161,14 +2167,14 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>100</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>12</size>
     </xticklabel>
     <yticklabel>
-      <text>1.8</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2243,10 +2249,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>20.4924</xmin>
-    <xmax>119.542</xmax>
-    <ymin>0.458731825</ymin>
-    <ymax>2.189601175</ymax>
+    <xmin>-0.1</xmin>
+    <xmax>0.1</xmax>
+    <ymin>-0.105</ymin>
+    <ymax>0.105</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -2272,14 +2278,14 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>100</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>12</size>
     </xticklabel>
     <yticklabel>
-      <text>2</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2354,10 +2360,10 @@
     <yscalemode>5</yscalemode>
     <xscalemodedefault>0</xscalemodedefault>
     <yscalemodedefault>5</yscalemodedefault>
-    <xmin>20.4924</xmin>
-    <xmax>119.542</xmax>
-    <ymin>0.693446675</ymin>
-    <ymax>1.176460325</ymax>
+    <xmin>-0.1</xmin>
+    <xmax>0.1</xmax>
+    <ymin>-0.105</ymin>
+    <ymax>0.105</ymax>
     <xreversed>0</xreversed>
     <yreversed>0</yreversed>
     <toplabel>
@@ -2383,14 +2389,14 @@
       <size>12</size>
     </ylabel>
     <xticklabel>
-      <text>100</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
       <size>12</size>
     </xticklabel>
     <yticklabel>
-      <text>1.1</text>
+      <text>0.1</text>
       <interpret/>
       <rotation>0</rotation>
       <fontfamily>DejaVu Sans</fontfamily>
@@ -2451,8 +2457,8 @@
   </plot>
   <window>
     <tag>Control</tag>
-    <restore x="2" y="2" w="1676" h="809" />
-    <internal x="2" y="2" w="1676" h="809" />
+    <restore x="2" y="2" w="1018" h="574" />
+    <internal x="2" y="2" w="1018" h="574" />
     <name>Control</name>
     <backgroundColor>#efefef</backgroundColor>
     <Plot>
@@ -2467,8 +2473,8 @@
   </window>
   <window>
     <tag>Estimation</tag>
-    <restore x="2" y="2" w="1676" h="809" />
-    <internal x="2" y="2" w="1676" h="809" />
+    <restore x="2" y="2" w="1018" h="574" />
+    <internal x="2" y="2" w="1018" h="574" />
     <columns>3</columns>
     <name>Estimation</name>
     <backgroundColor>#efefef</backgroundColor>
@@ -2559,8 +2565,8 @@
   </window>
   <window>
     <tag>Position robot</tag>
-    <restore x="2" y="2" w="1676" h="809" />
-    <internal x="2" y="2" w="1676" h="809" />
+    <restore x="2" y="2" w="1018" h="574" />
+    <internal x="2" y="2" w="1018" h="574" />
     <name>Position robot</name>
     <backgroundColor>#efefef</backgroundColor>
     <Plot>
@@ -2572,8 +2578,8 @@
   </window>
   <window>
     <tag>Simulation</tag>
-    <restore x="2" y="2" w="1676" h="809" />
-    <internal x="2" y="2" w="1676" h="809" />
+    <restore x="2" y="2" w="1018" h="574" />
+    <internal x="2" y="2" w="1018" h="574" />
     <name>Simulation</name>
     <backgroundColor>#efefef</backgroundColor>
     <Plot>
