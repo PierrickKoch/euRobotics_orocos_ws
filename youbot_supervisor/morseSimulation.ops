@@ -27,7 +27,7 @@ loadService("Reporter","marshalling")
 loadService("Controller","marshalling")
 
 # Load properties using the marshalling service we just loaded
-Controller.marshalling.loadProperties("../youbot_controller/cpf/controller.cpf")
+Controller.marshalling.loadProperties("../youbot_controller/cpf/controllerMorse.cpf")
 ExtendedKalmanFilterComponentRobot.marshalling.loadProperties("../extendedKalmanFilterComponentRobot/cpf/ekfRobotMorse.cpf")
 
 # Connect peers. In order to exchange data between components, they need to be
@@ -61,7 +61,7 @@ ExtendedKalmanFilterComponentRobot.configure()
 
 # Starting components
 ExtendedKalmanFilterComponentRobot.start()
-Controller.start()
+#Controller.start()
 Timer.start()
 # Start timers. Each timer triggers a different component port.
 Timer.startTimer(ExtendedKalmanFilterComponentRobot.TimerIdSystemUpdate,ExtendedKalmanFilterComponentRobot.Period)
