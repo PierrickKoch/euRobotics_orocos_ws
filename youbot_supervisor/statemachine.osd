@@ -7,8 +7,10 @@ StateMachine YouBot
     transition if Controller.isRunning then select DriveToWall
   }
   state DriveToWall{
-    // Move to [0, 0.5, -1.57]
-    Controller.moveTo(0.0,0.5,-1.57)
+    entry{
+      // Move to [0, 0.5, -1.57]
+      Controller.moveTo(0.0,0.5,-1.57)
+    }
     transition if Controller.goal_reached then select DriveAlongWall
   }
   state DriveAlongWall{
