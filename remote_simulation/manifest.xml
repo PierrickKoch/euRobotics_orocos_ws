@@ -1,0 +1,15 @@
+<package>
+  <description brief="remote_simulator">
+
+     remote_simulator: this package contains the code to launch the remote (morse and gazebo) simulator 
+
+  </description>
+  <author>Tinne De Laet, Ruben Smits, Steven Bellens, first.last@mech.kuleuven.be</author>
+  <license>LGPLv2.1 / BSD</license>
+  <depend package="youbot_supervisor" />
+  <depend package="youbot_description" />
+  <depend package="calculateDistanceToWall" />
+  <depend package="rtt_tf" />
+  <depend package="polar_scan_matcher" />
+  <depend package="tf" />
+</package>

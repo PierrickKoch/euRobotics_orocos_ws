@@ -1,0 +1,15 @@
+#!/bin/sh 
+sed "s%/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor%$(pwd)%" plotSimulation.kst > plotSimulation1.kst
+sed "s%/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor%$(pwd)%" plotSimulation1.kst > plotSimulation2.kst
+mv plotSimulation2.kst plotSimulation.kst
+rm plotSimulation1.kst 
+
+sed "s%/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor%$(pwd)%" plotRemoteSimulation.kst > plotRemoteSimulation1.kst
+sed "s%/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor%$(pwd)%" plotRemoteSimulation1.kst > plotRemoteSimulation2.kst
+mv plotRemoteSimulation2.kst plotRemoteSimulation.kst
+rm plotRemoteSimulation1.kst 
+
+sed "s%/home/orocos/ros/euRobotics_orocos_ws/youbot_supervisor%$(pwd)%" plotRealRobot.kst > plotRealRobot1.kst
+sed "s%/home/fiep/stacks/euRobotics_orocos_ws/youbot_supervisor%$(pwd)%" plotRealRobot1.kst > plotRealRobot2.kst
+mv plotRealRobot2.kst plotRealRobot.kst
+rm plotRealRobot1.kst 

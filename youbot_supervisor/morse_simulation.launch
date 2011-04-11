@@ -1,6 +1,5 @@
 <launch>
 
-
   <include file="$(find morse)/youbot_wall.launch"/>
   <include file="$(find youbot_supervisor)/findPoseLaser.launch"/>
 
