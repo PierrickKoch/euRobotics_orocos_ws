@@ -1,0 +1,11 @@
+<launch>
+
+  <include file="$(find remote_simulation)/launch/youbot_with_wall_description.launch"/>
+  <include file="$(find remote_simulation)/launch/youbot_with_wall_publisher.launch"/>
+
+  <include file="$(find remote_simulation)/launch/findPoseLaserGazebo.launch"/>
+
+  <node  name="youbot" pkg="ocl" type="deployer-gnulinux" required="true" launch-prefix="xterm -e" args="-s $(find remote_simulation)/morseSimulationRemote.ops --">
+  </node>
+
+</launch>
