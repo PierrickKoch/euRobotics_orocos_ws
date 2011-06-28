@@ -4,8 +4,29 @@ StateMachine YouBot
     entry{
       print.ln("In initial state")
     }
+    transition if Controller.isRunning then select DriveToWall
   }
-
+  state DriveToWall{
+    entry{
+      // Move to [0, 0.5, -1.57]
+      Controller.moveTo(0.0,0.5,-1.57)
+    }
+    transition if Controller.goal_reached then select DriveAlongWall
+  }
+  state DriveAlongWall{
+    entry{
+      // Move to [1.0, 0.5, -1.57]
+      Controller.moveTo(1.0,0.5,-1.57)
+    }
+    transition if Controller.goal_reached then select DriveHome
+  }
+  state DriveHome{
+    entry{
+      // Move to [0.0, 1.0, -1.57]
+      Controller.moveTo(0.0,1.0,-1.57)
+    }
+    transition if Controller.goal_reached then select Stop
+  }
   final state Stop{
     entry{
       print.ln("In final state")
