@@ -75,8 +75,8 @@ Supervisor.YouBotFSM.activate()
 Supervisor.YouBotFSM.start()
 
 # Configure the Reporter component. Here we say which ports it should report
-Reporter.reportData("ExtendedKalmanFilterComponentRobot","Level")
-Reporter.reportPort("ExtendedKalmanFilterComponentRobot","EstimatedState")
-Reporter.reportPort("ExtendedKalmanFilterComponentRobot","CovarianceState")
-Reporter.reportPort("Controller","ctrl")
-Reporter.start()
+#Reporter.reportData("ExtendedKalmanFilterComponentRobot","Level")
+#Reporter.reportPort("ExtendedKalmanFilterComponentRobot","EstimatedState")
+#Reporter.reportPort("ExtendedKalmanFilterComponentRobot","CovarianceState")
+#Reporter.reportPort("Controller","ctrl")
+#Reporter.start()
